@@ -566,8 +566,13 @@ const useRetellCall = () => {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ agent_id: agentId }),
       });
-      if (!res.ok) throw new Error('Failed to create web call');
+      if (!res.ok) {
+        const errorBody = await res.json().catch(() => ({}));
+        console.error('API error:', res.status, errorBody);
+        throw new Error(errorBody.error || `Server returned ${res.status}`);
+      }
       const { access_token } = await res.json();
+      if (!access_token) throw new Error('No access token received');
       await clientRef.current.startCall({ accessToken: access_token, sampleRate: 24000 });
     } catch (err) {
       console.error('Call failed:', err);
