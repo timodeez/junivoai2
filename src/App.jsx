@@ -39,6 +39,7 @@ const translations = {
       receptionist: "AI Receptionist",
       salesAgent: "Sales Agent",
       chatbot: "Human Chatbot",
+      analytics: "Conversation Intelligence",
       solutions: "Solutions",
       pricing: "Pricing",
       login: "Client Login",
@@ -79,25 +80,65 @@ const translations = {
         ]
     },
     solutions: {
-        title: "Tailored to Your Practice",
-        subtitle: "JuniVo is not a generic tool. It is pre-trained on the complex workflows and compliance requirements of premium service sectors.",
-        tabs: ["Medical", "Legal", "Home Services", "Real Estate"],
+        title: "Built for Your Industry",
+        subtitle: "JuniVo isn't a one-size-fits-all tool. Each AI agent is pre-trained on the specific workflows, compliance requirements, and customer journeys of your industry.",
+        tabs: ["Medical & Med Spa", "Legal", "Home Services", "Real Estate"],
         content: {
             Medical: {
                 title: "The AI Patient Coordinator",
-                points: ["Strict HIPAA Compliant Infrastructure", "Direct EMR Integration (DrChrono, Athena)", "Pre-op & Post-op Instructions", "After-hours Emergency Triage & Escalation"]
+                desc: "Purpose-built for clinics, med spas, dental offices, and specialty practices. Handles the entire patient journey from first inquiry to booked appointment.",
+                points: [
+                    "HIPAA-compliant call handling & data storage",
+                    "Books consultations & appointments to your calendar",
+                    "Answers treatment questions (pricing, prep, recovery)",
+                    "Pre-op & post-op instruction delivery",
+                    "After-hours emergency triage & smart escalation",
+                    "EMR/EHR integration (DrChrono, Athena, & more)",
+                    "Insurance verification & eligibility questions",
+                    "Automated appointment reminders & no-show follow-up"
+                ]
             },
             Legal: {
-                title: "The Virtual Case Manager",
-                points: ["24/7 Confidential Client Intake", "Automated Conflict of Interest Checks", "Retainer Agreement Dispatch", "Court Date & Consultation Reminders"]
+                title: "The Virtual Intake Specialist",
+                desc: "Built for law firms, solo attorneys, and legal practices. Captures every potential client, qualifies cases, and keeps your calendar full — without adding headcount.",
+                points: [
+                    "24/7 confidential client intake on every call",
+                    "Case type qualification & conflict of interest screening",
+                    "Retainer agreement & engagement letter dispatch",
+                    "Court date, deposition & consultation reminders",
+                    "Captures case details, contact info & urgency level",
+                    "Routes high-priority cases to attorneys immediately",
+                    "Follows up on web inquiries & consultation no-shows",
+                    "Multilingual intake for diverse client demographics"
+                ]
             },
             HomeServices: {
-                title: "The Automated Dispatcher",
-                points: ["Instant Quote Generation & Qualification", "Intelligent Tech Dispatching", "Emergency Call Handling & Routing", "Post-Service Review Generation"]
+                title: "The AI Dispatcher",
+                desc: "Designed for HVAC, plumbing, electrical, cleaning, and general contracting businesses. Never lose a job to a missed call or slow quote again.",
+                points: [
+                    "Instant quote generation & service qualification",
+                    "Intelligent technician dispatching & scheduling",
+                    "Emergency call handling with priority routing",
+                    "Captures job details, photos & site information",
+                    "Automated follow-up for estimates & pending jobs",
+                    "Post-service review & feedback collection",
+                    "Seasonal campaign support (AC tune-ups, winterization)",
+                    "Handles warranty questions & repeat service booking"
+                ]
             },
             RealEstate: {
-                title: "The ISA That Never Sleeps",
-                points: ["Instant Lead Prequalification", "Automated Showing Scheduling", "Open House Follow-up Sequences", "Seamless Mortgage Partner Handoff"]
+                title: "The AI Inside Sales Agent",
+                desc: "Built for brokerages, teams, and solo agents. Responds to every lead instantly, qualifies buyers and sellers, and keeps your pipeline full 24/7.",
+                points: [
+                    "Instant lead response on every web inquiry",
+                    "Buyer & seller prequalification (budget, timeline, motivation)",
+                    "Automated showing scheduling & confirmation",
+                    "Open house follow-up sequences & drip campaigns",
+                    "Mortgage partner warm handoff & pre-approval routing",
+                    "Neighborhood & property FAQ handling",
+                    "Re-engages cold leads with personalized outreach",
+                    "CRM sync (Follow Up Boss, KvCORE, Salesforce)"
+                ]
             }
         }
     },
@@ -207,6 +248,7 @@ const translations = {
       receptionist: "AI 리셉셔니스트",
       salesAgent: "세일즈 에이전트",
       chatbot: "휴먼 챗봇",
+      analytics: "대화 인텔리전스",
       solutions: "솔루션",
       pricing: "요금제",
       login: "고객 로그인",
@@ -247,25 +289,65 @@ const translations = {
         ]
     },
     solutions: {
-        title: "귀하의 비즈니스에 맞춤화",
-        subtitle: "JuniVo는 일반적인 도구가 아닙니다. 프리미엄 서비스 부문의 복잡한 워크플로우와 규정 준수 요구 사항에 대해 사전 교육을 받았습니다.",
-        tabs: ["의료", "법률", "홈 서비스", "부동산"],
+        title: "귀하의 업계를 위해 설계",
+        subtitle: "JuniVo는 범용 도구가 아닙니다. 각 AI 에이전트는 귀하의 업계 고유 워크플로우, 규정 준수 요구 사항, 고객 여정에 맞춰 사전 학습됩니다.",
+        tabs: ["의료 & 메디스파", "법률", "홈 서비스", "부동산"],
         content: {
             Medical: {
                 title: "AI 환자 코디네이터",
-                points: ["엄격한 HIPAA 준수 인프라", "직접적인 EMR 통합 (DrChrono, Athena 등)", "수술 전후 안내", "업무 시간 외 응급 분류 및 에스컬레이션"]
+                desc: "클리닉, 메디스파, 치과, 전문 진료소를 위해 설계. 첫 문의부터 예약까지 전체 환자 여정을 처리합니다.",
+                points: [
+                    "HIPAA 준수 통화 처리 및 데이터 저장",
+                    "캘린더에 상담 및 예약 직접 등록",
+                    "시술 관련 질문 답변 (가격, 준비, 회복)",
+                    "시술 전후 안내 전달",
+                    "업무 외 시간 응급 분류 및 스마트 에스컬레이션",
+                    "EMR/EHR 통합 (DrChrono, Athena 등)",
+                    "보험 확인 및 자격 질문 처리",
+                    "자동 예약 알림 및 노쇼 팔로업"
+                ]
             },
             Legal: {
-                title: "가상 사건 관리자",
-                points: ["24/7 기밀 유지 의뢰인 접수", "자동화된 이해 상충 확인", "수임 계약서 발송", "법원 기일 및 상담 알림"]
+                title: "가상 인테이크 전문가",
+                desc: "법률 사무소, 개인 변호사, 법률 사무소를 위해 설계. 모든 잠재 의뢰인을 확보하고, 사건을 자격 심사하며, 인원 추가 없이 캘린더를 채웁니다.",
+                points: [
+                    "모든 전화에서 24/7 기밀 유지 의뢰인 접수",
+                    "사건 유형 자격 심사 및 이해 상충 스크리닝",
+                    "수임 계약서 및 위임장 발송",
+                    "법원 기일, 증언, 상담 알림",
+                    "사건 세부 정보, 연락처 및 긴급도 확보",
+                    "고우선 사건을 변호사에게 즉시 라우팅",
+                    "웹 문의 및 상담 노쇼 팔로업",
+                    "다양한 의뢰인을 위한 다국어 접수"
+                ]
             },
             HomeServices: {
-                title: "자동화된 배차 관리자",
-                points: ["즉시 견적 생성 및 자격 확인", "지능형 기술자 배차", "긴급 통화 처리 및 라우팅", "서비스 후 리뷰 생성"]
+                title: "AI 배차 관리자",
+                desc: "HVAC, 배관, 전기, 청소, 종합 건설 비즈니스를 위해 설계. 부재중 전화나 늦은 견적으로 더 이상 일을 놓치지 마세요.",
+                points: [
+                    "즉시 견적 생성 및 서비스 자격 확인",
+                    "지능형 기술자 배차 및 일정 관리",
+                    "우선 라우팅으로 긴급 통화 처리",
+                    "작업 세부 정보, 사진 및 현장 정보 확보",
+                    "견적 및 대기 중인 작업 자동 팔로업",
+                    "서비스 후 리뷰 및 피드백 수집",
+                    "시즌 캠페인 지원 (에어컨 점검, 겨울 준비)",
+                    "보증 질문 및 재방문 예약 처리"
+                ]
             },
             RealEstate: {
-                title: "잠들지 않는 ISA",
-                points: ["즉각적인 리드 사전 자격 심사", "자동화된 쇼잉 일정 잡기", "오픈 하우스 후속 조치 시퀀스", "원활한 모기지 파트너 인계"]
+                title: "AI 내부 영업 에이전트",
+                desc: "중개업체, 팀, 개인 에이전트를 위해 설계. 모든 리드에 즉시 응답하고, 매수자와 매도자를 자격 심사하며, 24/7 파이프라인을 채웁니다.",
+                points: [
+                    "모든 웹 문의에 즉시 리드 응답",
+                    "매수자 & 매도자 사전 자격 심사 (예산, 일정, 동기)",
+                    "자동 쇼잉 일정 잡기 및 확인",
+                    "오픈 하우스 후속 조치 시퀀스 및 드립 캠페인",
+                    "모기지 파트너 따뜻한 인계 및 사전 승인 라우팅",
+                    "지역 및 매물 FAQ 처리",
+                    "개인화된 아웃리치로 냉각된 리드 재참여",
+                    "CRM 동기화 (Follow Up Boss, KvCORE, Salesforce)"
+                ]
             }
         }
     },
@@ -431,6 +513,10 @@ const Navbar = ({ lang, setLang, t, currentPage, setCurrentPage }) => {
                   <button onClick={() => { setCurrentPage('chatbot'); setPlatformOpen(false); }} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium text-slate-600 hover:bg-indigo-50 hover:text-indigo-700 transition-colors text-left">
                     <MessageSquare size={16} /> {t.nav.chatbot}
                   </button>
+                  <div className="border-t border-slate-100 my-1"></div>
+                  <button onClick={() => { setCurrentPage('product'); setPlatformOpen(false); }} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium text-slate-600 hover:bg-amber-50 hover:text-amber-700 transition-colors text-left">
+                    <BarChart3 size={16} /> {t.nav.analytics}
+                  </button>
                 </div>
               </div>
             )}
@@ -481,6 +567,7 @@ const Navbar = ({ lang, setLang, t, currentPage, setCurrentPage }) => {
               <button onClick={() => { setCurrentPage('receptionist'); setMobileMenuOpen(false); }} className="text-slate-600 hover:text-slate-900 text-left font-medium flex items-center gap-2"><Phone size={14} /> {t.nav.receptionist}</button>
               <button onClick={() => { setCurrentPage('sales-agent'); setMobileMenuOpen(false); }} className="text-slate-600 hover:text-slate-900 text-left font-medium flex items-center gap-2"><Zap size={14} /> {t.nav.salesAgent}</button>
               <button onClick={() => { setCurrentPage('chatbot'); setMobileMenuOpen(false); }} className="text-slate-600 hover:text-slate-900 text-left font-medium flex items-center gap-2"><MessageSquare size={14} /> {t.nav.chatbot}</button>
+              <button onClick={() => { setCurrentPage('product'); setMobileMenuOpen(false); }} className="text-slate-600 hover:text-slate-900 text-left font-medium flex items-center gap-2"><BarChart3 size={14} /> {t.nav.analytics}</button>
             </div>
           )}
           <button onClick={() => { setCurrentPage('solutions'); setMobileMenuOpen(false); }} className="text-slate-600 hover:text-slate-900 text-left font-medium">{t.nav.solutions}</button>
@@ -1136,36 +1223,22 @@ const SolutionsPage = ({ t }) => {
                 </div>
 
                 {/* Tab Content */}
-                <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-16 shadow-sm animate-fade-in">
-                    <div className="grid md:grid-cols-2 gap-16 items-center">
-                        <div>
-                             <h2 className="text-3xl font-bold mb-8 text-slate-900">{t.solutions.content[activeTab].title}</h2>
-                             <div className="space-y-5">
-                                {t.solutions.content[activeTab].points.map((point, i) => (
-                                    <div key={i} className="flex items-center gap-5 p-5 rounded-2xl bg-slate-50 border border-slate-100">
-                                        <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0">
-                                            <CheckCircle2 size={20} />
-                                        </div>
-                                        <span className="text-lg text-slate-700 font-medium">{point}</span>
-                                    </div>
-                                ))}
-                             </div>
-                        </div>
-                        <div className="relative h-full min-h-[350px] bg-slate-50 rounded-2xl border border-slate-200 p-8 flex items-center justify-center overflow-hidden">
-                             {/* Abstract Visualization */}
-                             <div className="absolute inset-0 bg-blue-50/50"></div>
-                             <div className="relative z-10 text-center bg-white p-10 rounded-full shadow-lg border border-slate-100">
-                                 <div className="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-600 animate-pulse">
-                                     {activeTab === 'Medical' && <Stethoscope size={48} />}
-                                     {activeTab === 'Legal' && <Scale size={48} />}
-                                     {activeTab === 'HomeServices' && <Wrench size={48} />}
-                                     {activeTab === 'RealEstate' && <Building size={48} />}
-                                 </div>
-                                 <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">
-                                     {activeTab === 'Medical' ? 'HIPAA SECURE CHANNEL' : 'ENCRYPTED DATA STREAM'}
-                                 </p>
-                             </div>
-                        </div>
+                <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 shadow-sm animate-fade-in">
+                    <div className="mb-10">
+                        <h2 className="text-3xl font-bold mb-4 text-slate-900">{t.solutions.content[activeTab].title}</h2>
+                        {t.solutions.content[activeTab].desc && (
+                            <p className="text-lg text-slate-600 leading-relaxed max-w-3xl">{t.solutions.content[activeTab].desc}</p>
+                        )}
+                    </div>
+                    <div className="grid md:grid-cols-2 gap-4">
+                        {t.solutions.content[activeTab].points.map((point, i) => (
+                            <div key={i} className="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100">
+                                <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0 mt-0.5">
+                                    <CheckCircle2 size={16} />
+                                </div>
+                                <span className="text-slate-700 font-medium">{point}</span>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
