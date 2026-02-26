@@ -43,10 +43,10 @@ const translations = {
       getStarted: "Get Started"
     },
     hero: {
-      status: "24/7 INTELLIGENT RECEPTION",
-      headline: "Never miss a call, a sale, or a patient.",
-      headlineHighlight: "Without adding overhead.",
-      subheadline: "Elevate your practice with a premium AI workforce. Answer every inquiry instantly, schedule appointments, and provide a flawless patient experience—day or night.",
+      status: "BUILT FOR MED SPAS",
+      headline: "Every missed call is a consultation that never happened.",
+      headlineHighlight: "We fix that.",
+      subheadline: "JuniVo is an AI receptionist built specifically for med spas. It answers every call, qualifies every lead, and books consultations on your calendar — 24/7, with a voice that sounds like your best front desk coordinator.",
       demoInputPlaceholder: "(555) 123-4567",
       callMe: "Experience It",
       dialing: "Connecting...",
@@ -68,33 +68,33 @@ const translations = {
     },
     product: {
         title: "Every Conversation. Recorded. Analyzed. Optimized.",
-        subtitle: "Every call is automatically recorded, transcribed, and analyzed by AI. Know exactly what's being said, how your customers feel, and where revenue is being lost — in real time.",
+        subtitle: "Every call to your med spa is automatically recorded, transcribed, and analyzed by AI. Know exactly what prospects are asking, how they feel about pricing, and which calls convert to booked consultations.",
         features: [
-            { title: "Full Call Recording & Transcripts", desc: "Every conversation is recorded and transcribed with high accuracy. Review any call instantly — no detail is ever lost." },
-            { title: "AI-Powered Sentiment Analysis", desc: "Real-time sentiment scoring detects caller frustration, satisfaction, and intent. Know how every interaction lands — not just what was said, but how it felt." },
-            { title: "Post-Call AI Analysis", desc: "Automated summaries, outcome tagging, and conversion tracking on every call. Surface patterns across hundreds of conversations in seconds." }
+            { title: "Full Call Recording & Transcripts", desc: "Every patient conversation is captured and transcribed with high accuracy. Review any call instantly — see exactly what was said about Botox, fillers, laser treatments, and more." },
+            { title: "AI-Powered Sentiment Analysis", desc: "Real-time sentiment scoring detects hesitation, excitement, and buying intent. Know which callers are ready to book and which need nurturing — before they hang up." },
+            { title: "Consultation Conversion Tracking", desc: "Automated tracking on every call: who booked, who didn't, and why. Surface the patterns that turn inquiries into $3,000+ consultation commitments." }
         ]
     },
     solutions: {
-        title: "Tailored to Your Practice",
-        subtitle: "JuniVo is not a generic tool. It is pre-trained on the complex workflows and compliance requirements of premium service sectors.",
-        tabs: ["Medical", "Legal", "Home Services", "Real Estate"],
+        title: "Built for the Med Spa Industry",
+        subtitle: "JuniVo isn't a generic AI assistant. It's trained on how med spas actually operate — consultations, treatment menus, pricing objections, and the patient journey from first call to booked appointment.",
+        tabs: ["Consultations", "Treatments", "Follow-ups", "After Hours"],
         content: {
             Medical: {
-                title: "The AI Patient Coordinator",
-                points: ["Strict HIPAA Compliant Infrastructure", "Direct EMR Integration (DrChrono, Athena)", "Pre-op & Post-op Instructions", "After-hours Emergency Triage & Escalation"]
+                title: "Consultation Booking Engine",
+                points: ["Qualifies callers by treatment interest & budget", "Books consultations directly to your calendar", "Handles pricing questions with trained responses", "Confirms appointments via SMS follow-up"]
             },
             Legal: {
-                title: "The Virtual Case Manager",
-                points: ["24/7 Confidential Client Intake", "Automated Conflict of Interest Checks", "Retainer Agreement Dispatch", "Court Date & Consultation Reminders"]
+                title: "Treatment Knowledge Expert",
+                points: ["Trained on your full treatment menu & pricing", "Answers questions about Botox, fillers, laser & more", "Explains pre & post-treatment care instructions", "Recommends treatments based on patient concerns"]
             },
             HomeServices: {
-                title: "The Automated Dispatcher",
-                points: ["Instant Quote Generation & Qualification", "Intelligent Tech Dispatching", "Emergency Call Handling & Routing", "Post-Service Review Generation"]
+                title: "Lead Follow-up & Nurturing",
+                points: ["Follows up on every web inquiry within seconds", "Re-engages no-shows and cancelled consultations", "Sends personalized treatment recommendations", "Tracks conversion from lead to booked consultation"]
             },
             RealEstate: {
-                title: "The ISA That Never Sleeps",
-                points: ["Instant Lead Prequalification", "Automated Showing Scheduling", "Open House Follow-up Sequences", "Seamless Mortgage Partner Handoff"]
+                title: "24/7 After-Hours Coverage",
+                points: ["Answers calls nights, weekends & holidays", "Books consultations while your team sleeps", "Handles urgent questions with empathy & accuracy", "Never puts a high-value prospect on hold"]
             }
         }
     },
@@ -108,86 +108,86 @@ const translations = {
         ]
     },
     features: {
-      title: "Voice. Chat. Trained on Your Business.",
-      subtitle: "Every business gets a custom AI that actually knows your services, your pricing, and your brand — deployed across voice and chat so you never miss a lead.",
+      title: "Three AI Agents. One Goal: Booked Consultations.",
+      subtitle: "Voice, sales, and chat — all trained on your med spa's treatments, pricing, and brand voice. Every interaction is designed to move prospects closer to a committed consultation.",
       cards: [
         {
           title: "The Receptionist",
-          description: "Your 24/7 AI front desk. Answers every call with a custom voice trained on your business — books appointments, handles FAQs, and never puts anyone on hold.",
+          description: "Your AI front desk that never calls in sick. Answers every call with warmth and expertise, knows your treatment menu cold, and books consultations directly to your calendar.",
           features: [
-            "Custom voice tailored to your brand",
-            "Trained on your services, pricing & FAQs",
-            "Books directly to your calendar",
-            "Seamless handoff to live staff when needed"
+            "Custom voice that matches your brand",
+            "Trained on your treatments, pricing & FAQs",
+            "Books consultations directly to your calendar",
+            "Warm handoff to your team when needed"
           ]
         },
         {
           title: "The Sales Director",
-          description: "An AI sales agent that follows up on every lead, qualifies prospects, and closes bookings — so your team only talks to people ready to buy.",
+          description: "An AI closer that follows up on every single lead. Handles pricing objections, creates urgency around limited availability, and converts hesitant callers into committed consultations.",
           features: [
-            "Outbound follow-up on every lead",
-            "Qualifies prospects by intent & budget",
-            "Handles objections with trained responses",
-            "Conversion tracking & sentiment analysis"
+            "Follows up on every web inquiry & missed call",
+            "Overcomes pricing objections with trained scripts",
+            "Qualifies leads by treatment interest & budget",
+            "Tracks every lead from first call to booked consult"
           ]
         },
         {
           title: "The Human Chatbot",
-          description: "A website chat assistant that feels human. Trained on your entire knowledge base, it answers questions, captures leads, and books appointments 24/7.",
+          description: "A website chat assistant so natural, visitors think they're talking to your staff. Answers treatment questions, shares before/afters context, and books consultations 24/7.",
           features: [
-            "Trained on your docs, FAQs & service menus",
-            "Natural, human-like conversation flow",
-            "Captures lead info & books appointments",
-            "Multilingual — 20+ languages supported"
+            "Trained on your full treatment menu & knowledge",
+            "Natural conversation — not robotic replies",
+            "Captures lead info & books consultations",
+            "Multilingual — serves every patient demographic"
           ]
         }
       ]
     },
     roi: {
-        title: "The Cost of Missed Opportunities",
-        subtitle: "Calculate the revenue left on the table due to missed calls, voicemail drop-offs, and delayed follow-ups.",
+        title: "How Much Revenue Are You Losing?",
+        subtitle: "Every missed call is a potential $2,000–$10,000 treatment package. Calculate what unanswered calls and slow follow-ups are actually costing your med spa.",
         missedCalls: "Missed Calls Per Week",
-        dealValue: "Average Patient/Client Value",
+        dealValue: "Average Consultation Value",
         yearlyLossLabel: "Potential Annual Revenue Lost",
         disclaimer1: "Calculated based on a standard 52-week operating year.",
-        disclaimer2: "JuniVo is designed to recover 100% of this lost revenue."
+        disclaimer2: "JuniVo is built to recover this revenue — starting day one."
     },
     tech: {
         title: "Enterprise-Grade Security & Intelligence",
         multilingualTitle: "Multilingual Fluency",
-        multilingualDesc: "Instantly detects and switches between English, Spanish, French, and 20+ other languages mid-conversation.",
+        multilingualDesc: "Serves every patient demographic. Instantly detects and switches between English, Spanish, Korean, and 20+ other languages mid-conversation.",
         humanLoopTitle: "Human-In-The-Loop Escalation",
-        humanLoopDesc: "Real-time sentiment monitoring flags sensitive or complex calls for immediate human intervention.",
+        humanLoopDesc: "Real-time sentiment monitoring flags high-value or hesitant callers for immediate human follow-up from your team.",
         integrationTitle: "Seamless Integration",
-        integrationDesc: "Secure, two-way sync with leading EMRs, Salesforce, HubSpot, and practice management software.",
+        integrationDesc: "Syncs with your booking system, CRM, and patient management software — consultations go straight to your calendar.",
         transcriptTitle: "SECURE TRANSCRIPT LOG",
         activeStatus: "ENCRYPTED & ACTIVE",
         aiLabel: "AI",
         userLabel: "Patient",
-        aiText1: "Thank you for calling Summit Dental. Are you looking to schedule a new cleaning or adjust an existing appointment?",
-        userText1: "I need to book a cleaning, but do you accept Delta Dental?",
-        aiText2: "Yes, we certainly accept Delta Dental. I have an opening this Thursday at 2:00 PM. Would you like me to reserve that for you?",
-        tagBooking: "INTENT: SCHEDULING",
-        tagInsurance: "VERIFICATION: INSURANCE"
+        aiText1: "Thank you for calling Glow Aesthetics! Are you interested in scheduling a consultation, or do you have questions about a specific treatment?",
+        userText1: "I'm interested in Botox but I'm not sure about pricing. Do you offer any packages?",
+        aiText2: "Great question! We offer several Botox packages starting at $12/unit. I'd love to get you booked for a free consultation so our provider can create a personalized plan. I have openings this Thursday — would afternoon work for you?",
+        tagBooking: "INTENT: CONSULTATION BOOKING",
+        tagInsurance: "TREATMENT: BOTOX"
     },
     cta: {
-        title: "Ready to elevate your practice?",
-        subtitle: "Join the industry leaders saving 20+ administrative hours a week while significantly increasing their booking rates.",
-        btnStrategy: "Schedule a Consultation",
-        btnPricing: "Review Pricing Options"
+        title: "Stop losing consultations to voicemail.",
+        subtitle: "Med spas using JuniVo book 3x more consultations from the same call volume. Your AI receptionist starts working the moment you turn it on.",
+        btnStrategy: "Book a Free Demo",
+        btnPricing: "See Pricing"
     },
     trust: {
-      trustedBy: "TRUSTED BY PREMIUM PRACTICES & FIRMS IN",
-      niches: ['Medical Aesthetics', 'Legal Services', 'Specialty Clinics', 'Luxury Real Estate']
+      trustedBy: "TRUSTED BY PREMIUM MED SPAS ACROSS",
+      niches: ['Medical Aesthetics', 'Dermatology', 'Plastic Surgery', 'Wellness & Anti-Aging']
     },
     footer: {
-        desc: "The premier autonomous front office for high-end service businesses. Capture, qualify, and close with elegance.",
+        desc: "The AI front office built for med spas. Answer every call, book every consultation, and grow your practice — on autopilot.",
         product: "Platform",
         company: "Company",
         links: {
-            receptionist: "Voice Receptionist",
-            sales: "Intake Coordinator",
-            chat: "Digital Concierge",
+            receptionist: "AI Receptionist",
+            sales: "Sales Director",
+            chat: "Human Chatbot",
             integrations: "Integrations",
             about: "Our Story",
             careers: "Careers",
@@ -208,10 +208,10 @@ const translations = {
       getStarted: "시작하기"
     },
     hero: {
-      status: "24/7 지능형 리셉션",
-      headline: "놓치는 전화, 매출, 환자가 없습니다.",
-      headlineHighlight: "추가 인건비 없이 완벽하게.",
-      subheadline: "프리미엄 AI 인력으로 귀하의 비즈니스를 격상시키세요. 주야간 상관없이 모든 문의에 즉시 응답하고, 일정을 예약하며, 완벽한 고객 경험을 제공합니다.",
+      status: "메디스파 전용 AI",
+      headline: "놓친 전화 한 통이 성사되지 못한 상담입니다.",
+      headlineHighlight: "저희가 해결합니다.",
+      subheadline: "JuniVo는 메디스파 전용 AI 리셉셔니스트입니다. 모든 전화에 응답하고, 모든 리드를 자격 심사하며, 상담을 캘린더에 예약합니다 — 24/7, 최고의 프론트 데스크 직원 같은 음성으로.",
       demoInputPlaceholder: "010-1234-5678",
       callMe: "직접 체험하기",
       dialing: "연결 중...",
@@ -233,33 +233,33 @@ const translations = {
     },
     product: {
         title: "모든 대화. 녹음. 분석. 최적화.",
-        subtitle: "모든 통화가 자동으로 녹음, 전사, AI 분석됩니다. 무슨 말이 오갔는지, 고객이 어떻게 느꼈는지, 어디서 매출이 빠지는지 — 실시간으로 파악하세요.",
+        subtitle: "메디스파의 모든 통화가 자동으로 녹음, 전사, AI 분석됩니다. 잠재 고객이 무엇을 묻는지, 가격에 대해 어떻게 느끼는지, 어떤 통화가 상담 예약으로 전환되는지 정확히 파악하세요.",
         features: [
-            { title: "전체 통화 녹음 및 전사", desc: "모든 대화가 높은 정확도로 녹음 및 전사됩니다. 어떤 통화든 즉시 검토 — 단 하나의 디테일도 놓치지 않습니다." },
-            { title: "AI 기반 감정 분석", desc: "실시간 감정 점수가 발신자의 불만, 만족도, 의도를 감지합니다. 모든 상호작용이 어떻게 전달되었는지 파악하세요." },
-            { title: "통화 후 AI 분석", desc: "모든 통화에 대한 자동 요약, 결과 태깅, 전환 추적. 수백 건의 대화에서 패턴을 몇 초 만에 파악하세요." }
+            { title: "전체 통화 녹음 및 전사", desc: "모든 환자 대화가 높은 정확도로 캡처 및 전사됩니다. 보톡스, 필러, 레이저 시술 등에 대해 정확히 무슨 말이 오갔는지 즉시 확인하세요." },
+            { title: "AI 기반 감정 분석", desc: "실시간 감정 점수가 망설임, 흥분, 구매 의도를 감지합니다. 누가 예약 준비가 되었고 누가 육성이 필요한지 — 전화를 끊기 전에 파악하세요." },
+            { title: "상담 전환 추적", desc: "모든 통화에 대한 자동 추적: 누가 예약했고, 누가 하지 않았고, 왜 그런지. 문의를 고가 상담 예약으로 전환하는 패턴을 발견하세요." }
         ]
     },
     solutions: {
-        title: "귀하의 비즈니스에 맞춤화",
-        subtitle: "JuniVo는 일반적인 도구가 아닙니다. 프리미엄 서비스 부문의 복잡한 워크플로우와 규정 준수 요구 사항에 대해 사전 교육을 받았습니다.",
-        tabs: ["의료", "법률", "홈 서비스", "부동산"],
+        title: "메디스파 업계를 위해 설계",
+        subtitle: "JuniVo는 일반 AI가 아닙니다. 메디스파의 실제 운영 방식 — 상담, 시술 메뉴, 가격 이의, 첫 통화에서 예약까지의 환자 여정에 맞춰 학습되었습니다.",
+        tabs: ["상담", "시술", "팔로업", "업무 외 시간"],
         content: {
             Medical: {
-                title: "AI 환자 코디네이터",
-                points: ["엄격한 HIPAA 준수 인프라", "직접적인 EMR 통합 (DrChrono, Athena 등)", "수술 전후 안내", "업무 시간 외 응급 분류 및 에스컬레이션"]
+                title: "상담 예약 엔진",
+                points: ["시술 관심사 및 예산별 발신자 자격 심사", "캘린더에 직접 상담 예약", "학습된 응답으로 가격 문의 처리", "SMS 팔로업으로 예약 확인"]
             },
             Legal: {
-                title: "가상 사건 관리자",
-                points: ["24/7 기밀 유지 의뢰인 접수", "자동화된 이해 상충 확인", "수임 계약서 발송", "법원 기일 및 상담 알림"]
+                title: "시술 지식 전문가",
+                points: ["전체 시술 메뉴 및 가격 학습", "보톡스, 필러, 레이저 등 질문 답변", "시술 전후 관리 지침 설명", "환자 고민에 맞춘 시술 추천"]
             },
             HomeServices: {
-                title: "자동화된 배차 관리자",
-                points: ["즉시 견적 생성 및 자격 확인", "지능형 기술자 배차", "긴급 통화 처리 및 라우팅", "서비스 후 리뷰 생성"]
+                title: "리드 팔로업 및 육성",
+                points: ["모든 웹 문의에 몇 초 내 팔로업", "노쇼 및 취소된 상담 재참여", "개인화된 시술 추천 발송", "리드에서 상담 예약까지 전환 추적"]
             },
             RealEstate: {
-                title: "잠들지 않는 ISA",
-                points: ["즉각적인 리드 사전 자격 심사", "자동화된 쇼잉 일정 잡기", "오픈 하우스 후속 조치 시퀀스", "원활한 모기지 파트너 인계"]
+                title: "24/7 업무 외 시간 커버리지",
+                points: ["야간, 주말, 공휴일 전화 응답", "팀이 쉬는 동안 상담 예약", "공감과 정확성으로 긴급 질문 처리", "고가치 잠재 고객을 절대 대기시키지 않음"]
             }
         }
     },
@@ -273,86 +273,86 @@ const translations = {
         ]
     },
      trust: {
-      trustedBy: "프리미엄 병원 및 기업들이 신뢰합니다",
-      niches: ['의료 미용', '법률 서비스', '전문 클리닉', '고급 부동산']
+      trustedBy: "프리미엄 메디스파들이 신뢰합니다",
+      niches: ['의료 미용', '피부과', '성형외과', '웰니스 & 안티에이징']
     },
     features: {
-      title: "음성. 채팅. 귀사의 비즈니스에 맞춘 AI.",
-      subtitle: "모든 비즈니스가 자사의 서비스, 가격, 브랜드를 정확히 아는 맞춤형 AI를 제공받습니다 — 음성과 채팅으로 배포되어 단 하나의 리드도 놓치지 않습니다.",
+      title: "3개의 AI 에이전트. 하나의 목표: 상담 예약.",
+      subtitle: "음성, 세일즈, 채팅 — 모두 메디스파의 시술, 가격, 브랜드 음성으로 학습됩니다. 모든 상호작용이 잠재 고객을 상담 예약에 더 가까이 이끌도록 설계되었습니다.",
       cards: [
         {
           title: "리셉셔니스트",
-          description: "24/7 AI 프론트 데스크. 귀사의 비즈니스에 학습된 맞춤 음성으로 모든 전화에 응답 — 예약, FAQ 처리, 대기 시간 제로.",
+          description: "절대 결근하지 않는 AI 프론트 데스크. 따뜻함과 전문성으로 모든 전화에 응답하고, 시술 메뉴를 완벽히 파악하며, 캘린더에 직접 상담을 예약합니다.",
           features: [
             "브랜드에 맞춘 커스텀 음성",
-            "서비스, 가격, FAQ 기반 학습",
-            "캘린더에 직접 예약",
-            "필요 시 실시간 직원 연결"
+            "시술, 가격, FAQ 기반 학습",
+            "캘린더에 직접 상담 예약",
+            "필요 시 팀에 따뜻한 인계"
           ]
         },
         {
           title: "세일즈 디렉터",
-          description: "모든 리드를 팔로업하고, 잠재 고객을 자격 심사하며, 예약을 성사시키는 AI 세일즈 에이전트 — 팀은 구매 준비가 된 고객만 상대합니다.",
+          description: "모든 리드를 팔로업하는 AI 클로저. 가격 이의를 처리하고, 제한된 가용성으로 긴박감을 조성하며, 망설이는 발신자를 상담 예약으로 전환합니다.",
           features: [
-            "모든 리드에 대한 아웃바운드 팔로업",
-            "의도 및 예산별 잠재 고객 자격 심사",
-            "학습된 응대로 이의 처리",
-            "전환 추적 및 감정 분석"
+            "모든 웹 문의 및 부재중 전화 팔로업",
+            "학습된 스크립트로 가격 이의 극복",
+            "시술 관심사 및 예산별 리드 자격 심사",
+            "첫 통화에서 상담 예약까지 모든 리드 추적"
           ]
         },
         {
           title: "휴먼 챗봇",
-          description: "사람처럼 느껴지는 웹사이트 채팅 어시스턴트. 귀사의 전체 지식 기반으로 학습되어 질문 답변, 리드 확보, 24/7 예약을 처리합니다.",
+          description: "방문자가 직원과 대화한다고 생각할 정도로 자연스러운 웹사이트 채팅 어시스턴트. 시술 질문에 답하고 24/7 상담을 예약합니다.",
           features: [
-            "문서, FAQ, 서비스 메뉴 기반 학습",
-            "자연스럽고 사람 같은 대화 흐름",
-            "리드 정보 확보 및 예약 접수",
-            "다국어 지원 — 20개 이상 언어"
+            "전체 시술 메뉴 및 지식 기반 학습",
+            "로봇 같지 않은 자연스러운 대화",
+            "리드 정보 확보 및 상담 예약",
+            "다국어 — 모든 환자 인구 통계 대응"
           ]
         }
       ]
     },
     roi: {
-        title: "놓친 기회의 비용",
-        subtitle: "부재중 전화, 음성 사서함 이탈, 늦은 후속 조치로 인해 손실된 수익을 계산해 보세요.",
+        title: "얼마나 많은 매출을 잃고 있나요?",
+        subtitle: "놓친 전화 한 통은 잠재적으로 200만~1,000만원의 시술 패키지입니다. 응답하지 않은 전화와 느린 팔로업이 메디스파에 실제로 얼마의 비용을 초래하는지 계산해 보세요.",
         missedCalls: "주당 부재중 전화",
-        dealValue: "평균 환자/고객 가치",
+        dealValue: "평균 상담 가치",
         yearlyLossLabel: "예상 연간 매출 손실",
         disclaimer1: "표준 52주 운영 연도를 기준으로 계산되었습니다.",
-        disclaimer2: "JuniVo는 이 손실된 수익을 100% 회복하도록 설계되었습니다."
+        disclaimer2: "JuniVo는 이 매출을 회복하도록 설계되었습니다 — 첫날부터."
     },
     tech: {
         title: "엔터프라이즈급 보안 및 지능",
         multilingualTitle: "다국어 유창성",
-        multilingualDesc: "대화 중 영어, 스페인어, 프랑스어 및 기타 20개 이상의 언어를 즉시 감지하고 전환합니다.",
-        humanLoopTitle: "휴먼 인 더 루프 (HITL) 에스컬레이션",
-        humanLoopDesc: "실시간 감정 모니터링을 통해 민감하거나 복잡한 통화를 식별하여 즉시 상담원 개입을 요청합니다.",
+        multilingualDesc: "모든 환자 인구 통계를 대응합니다. 대화 중 영어, 스페인어, 한국어 및 20개 이상의 언어를 즉시 감지하고 전환합니다.",
+        humanLoopTitle: "휴먼 인 더 루프 에스컬레이션",
+        humanLoopDesc: "실시간 감정 모니터링이 고가치 또는 망설이는 발신자를 식별하여 팀의 즉각적인 인적 팔로업을 요청합니다.",
         integrationTitle: "원활한 통합",
-        integrationDesc: "주요 EMR, Salesforce, HubSpot 및 업무 관리 소프트웨어와의 안전한 양방향 동기화.",
+        integrationDesc: "예약 시스템, CRM, 환자 관리 소프트웨어와 동기화 — 상담이 바로 캘린더에 들어갑니다.",
         transcriptTitle: "보안 스크립트 로그",
         activeStatus: "암호화 및 활성화됨",
         aiLabel: "AI",
         userLabel: "환자",
-        aiText1: "서밋 치과에 전화해 주셔서 감사합니다. 새로운 스케일링 예약을 하시겠습니까, 아니면 기존 예약을 변경하시겠습니까?",
-        userText1: "스케일링 예약을 하고 싶은데, 델타 덴탈 보험 되나요?",
-        aiText2: "네, 델타 덴탈 보험을 적용해 드립니다. 이번 주 목요일 오후 2시에 시간이 비어 있습니다. 예약해 드릴까요?",
-        tagBooking: "의도: 일정 예약",
-        tagInsurance: "확인: 보험"
+        aiText1: "글로우 에스테틱에 전화해 주셔서 감사합니다! 상담 예약에 관심이 있으신가요, 아니면 특정 시술에 대해 궁금한 점이 있으신가요?",
+        userText1: "보톡스에 관심이 있는데 가격이 어떻게 되나요? 패키지가 있나요?",
+        aiText2: "좋은 질문이세요! 보톡스 패키지는 유닛당 $12부터 시작합니다. 전문의가 맞춤 계획을 세울 수 있도록 무료 상담을 예약해 드릴까요? 이번 주 목요일에 시간이 있습니다 — 오후가 괜찮으신가요?",
+        tagBooking: "의도: 상담 예약",
+        tagInsurance: "시술: 보톡스"
     },
     cta: {
-        title: "비즈니스를 한 단계 격상시킬 준비가 되셨나요?",
-        subtitle: "예약률을 크게 높이면서 주당 20시간 이상의 관리 시간을 절약하고 있는 업계 리더들과 함께하세요.",
-        btnStrategy: "상담 예약하기",
-        btnPricing: "요금 옵션 검토"
+        title: "음성 사서함에 상담을 빼앗기지 마세요.",
+        subtitle: "JuniVo를 사용하는 메디스파는 동일한 통화량에서 3배 더 많은 상담을 예약합니다. AI 리셉셔니스트는 켜는 순간부터 작동합니다.",
+        btnStrategy: "무료 데모 예약",
+        btnPricing: "요금제 보기"
     },
     footer: {
-        desc: "하이엔드 서비스 비즈니스를 위한 최고의 자율 프론트 오피스. 우아하게 리드를 포착, 자격 심사, 마감하세요.",
+        desc: "메디스파를 위한 AI 프론트 오피스. 모든 전화에 응답하고, 모든 상담을 예약하고, 자동으로 성장하세요.",
         product: "플랫폼",
         company: "회사",
         links: {
-            receptionist: "음성 리셉셔니스트",
-            sales: "인테이크 코디네이터",
-            chat: "디지털 컨시어지",
+            receptionist: "AI 리셉셔니스트",
+            sales: "세일즈 디렉터",
+            chat: "휴먼 챗봇",
             integrations: "통합",
             about: "우리의 이야기",
             careers: "채용",
