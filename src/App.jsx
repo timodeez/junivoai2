@@ -92,6 +92,7 @@ const translations = {
                 color: "blue",
                 stat: "62%",
                 statLabel: "of patients who reach voicemail hang up and call a competitor",
+                source: "Medical Practice Phone Statistics, AgentZap 2024",
                 painPoint: "Your front desk closes at 5 PM. Your patients don't. When callers hit voicemail, 62% won't leave a message — they'll book with whoever answers next.",
                 points: [
                     "HIPAA-compliant call handling & data storage",
@@ -115,6 +116,7 @@ const translations = {
                 color: "purple",
                 stat: "42%",
                 statLabel: "of potential clients call outside business hours",
+                source: "After-Hours Legal Lead Capture Statistics, Talk24 2026",
                 painPoint: "A prospective client calls at 7 PM about a car accident. They get voicemail. By morning, they've already retained another attorney. That case is gone.",
                 points: [
                     "24/7 confidential client intake on every call",
@@ -138,6 +140,7 @@ const translations = {
                 color: "amber",
                 stat: "78%",
                 statLabel: "of customers hire the first company to respond",
+                source: "Lead Response Time Statistics, Rapport Agent 2024",
                 painPoint: "A homeowner's AC breaks at 2 PM on a Saturday. They call three companies. The one that answers first gets the $8,000 replacement job. The average HVAC company takes 4+ hours to respond — by then, the job is gone.",
                 points: [
                     "Instant quote generation & service qualification",
@@ -161,6 +164,7 @@ const translations = {
                 color: "emerald",
                 stat: "78%",
                 statLabel: "of leads go to the agent who responds first",
+                source: "NAR Home Buyers & Sellers Generational Trends Report, 2025",
                 painPoint: "A buyer submits an inquiry on Zillow at 10 PM. If you respond in 5 minutes, you have a 78% chance of converting. Respond in 30 minutes, and that drops to 10%.",
                 points: [
                     "Instant lead response on every web inquiry",
@@ -336,6 +340,7 @@ const translations = {
                 color: "blue",
                 stat: "62%",
                 statLabel: "의 환자가 음성 사서함에 메시지를 남기지 않고 경쟁사에 전화합니다",
+                source: "Medical Practice Phone Statistics, AgentZap 2024",
                 painPoint: "프론트 데스크는 오후 5시에 문을 닫습니다. 환자는 그렇지 않습니다. 발신자가 음성 사서함에 도달하면 62%는 메시지를 남기지 않고 다음에 응답하는 곳에 예약합니다.",
                 points: [
                     "HIPAA 준수 통화 처리 및 데이터 저장",
@@ -359,6 +364,7 @@ const translations = {
                 color: "purple",
                 stat: "42%",
                 statLabel: "의 잠재 의뢰인이 업무 시간 외에 전화합니다",
+                source: "After-Hours Legal Lead Capture Statistics, Talk24 2026",
                 painPoint: "잠재 의뢰인이 오후 7시에 교통사고로 전화합니다. 음성 사서함이 응답합니다. 아침이 되면 이미 다른 변호사를 선임했습니다.",
                 points: [
                     "모든 전화에서 24/7 기밀 유지 의뢰인 접수",
@@ -382,6 +388,7 @@ const translations = {
                 color: "amber",
                 stat: "78%",
                 statLabel: "의 고객이 가장 먼저 응답하는 업체에 의뢰합니다",
+                source: "Lead Response Time Statistics, Rapport Agent 2024",
                 painPoint: "주택 소유자의 에어컨이 토요일 오후 2시에 고장납니다. 세 곳에 전화합니다. 먼저 응답한 곳이 $8,000 교체 작업을 따냅니다. 평균 HVAC 업체 응답 시간은 4시간 이상 — 그때쯤이면 일은 이미 사라졌습니다.",
                 points: [
                     "즉시 견적 생성 및 서비스 자격 확인",
@@ -405,6 +412,7 @@ const translations = {
                 color: "emerald",
                 stat: "78%",
                 statLabel: "의 리드가 가장 먼저 응답하는 에이전트에게 갑니다",
+                source: "NAR Home Buyers & Sellers Generational Trends Report, 2025",
                 painPoint: "매수자가 밤 10시에 Zillow에서 문의합니다. 5분 안에 응답하면 전환 확률 78%. 30분이면 10%로 떨어집니다.",
                 points: [
                     "모든 웹 문의에 즉시 리드 응답",
@@ -1315,8 +1323,11 @@ const SolutionsPage = ({ t }) => {
                         </div>
                         <div className="flex justify-center">
                             <div className="text-center">
-                                <div className={`text-7xl md:text-8xl font-black ${colors.text} tracking-tight`}>{content.stat}</div>
+                                <div className={`text-7xl md:text-8xl font-black ${colors.text} tracking-tight`}>{content.stat}*</div>
                                 <p className="text-slate-600 font-medium mt-2 text-sm max-w-xs mx-auto">{content.statLabel}</p>
+                                {content.source && (
+                                    <p className="text-slate-400 text-xs mt-3 italic">* {content.source}</p>
+                                )}
                             </div>
                         </div>
                     </div>
