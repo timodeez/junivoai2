@@ -67,12 +67,12 @@ const translations = {
       errorOccurred: "Something went wrong. Please try again.",
     },
     product: {
-        title: "Clinical-Grade Voice Intelligence",
-        subtitle: "Built on a proprietary orchestration engine designed for absolute reliability, empathy, and seamless patient conversion.",
+        title: "Every Conversation. Recorded. Analyzed. Optimized.",
+        subtitle: "Every call is automatically recorded, transcribed, and analyzed by AI. Know exactly what's being said, how your customers feel, and where revenue is being lost — in real time.",
         features: [
-            { title: "Sub-800ms Latency", desc: "Faster than human reaction time. Natural, flowing conversations with zero awkward pauses." },
-            { title: "Empathic Adaptation", desc: "Advanced sentiment analysis allows the AI to detect frustration and adapt its tone instantly." },
-            { title: "Infinite Patient Context", desc: "Securely recalls context from prior conversations to provide a highly personalized experience." }
+            { title: "Full Call Recording & Transcripts", desc: "Every conversation is recorded and transcribed with high accuracy. Review any call instantly — no detail is ever lost." },
+            { title: "AI-Powered Sentiment Analysis", desc: "Real-time sentiment scoring detects caller frustration, satisfaction, and intent. Know how every interaction lands — not just what was said, but how it felt." },
+            { title: "Post-Call AI Analysis", desc: "Automated summaries, outcome tagging, and conversion tracking on every call. Surface patterns across hundreds of conversations in seconds." }
         ]
     },
     solutions: {
@@ -232,12 +232,12 @@ const translations = {
       errorOccurred: "문제가 발생했습니다. 다시 시도해 주세요.",
     },
     product: {
-        title: "임상 수준의 음성 지능",
-        subtitle: "절대적인 신뢰성, 공감 능력, 원활한 환자 전환을 위해 설계된 독점 오케스트레이션 엔진을 기반으로 합니다.",
+        title: "모든 대화. 녹음. 분석. 최적화.",
+        subtitle: "모든 통화가 자동으로 녹음, 전사, AI 분석됩니다. 무슨 말이 오갔는지, 고객이 어떻게 느꼈는지, 어디서 매출이 빠지는지 — 실시간으로 파악하세요.",
         features: [
-            { title: "800ms 미만의 지연 시간", desc: "인간의 반응보다 빠릅니다. 어색한 침묵 없이 자연스럽고 매끄러운 대화를 제공합니다." },
-            { title: "공감적 적응", desc: "고급 감정 분석을 통해 AI가 고객의 불만을 감지하고 즉각적으로 어조를 조정합니다." },
-            { title: "무한한 환자 컨텍스트", desc: "이전 대화의 맥락을 안전하게 기억하여 고도로 개인화된 경험을 제공합니다." }
+            { title: "전체 통화 녹음 및 전사", desc: "모든 대화가 높은 정확도로 녹음 및 전사됩니다. 어떤 통화든 즉시 검토 — 단 하나의 디테일도 놓치지 않습니다." },
+            { title: "AI 기반 감정 분석", desc: "실시간 감정 점수가 발신자의 불만, 만족도, 의도를 감지합니다. 모든 상호작용이 어떻게 전달되었는지 파악하세요." },
+            { title: "통화 후 AI 분석", desc: "모든 통화에 대한 자동 요약, 결과 태깅, 전환 추적. 수백 건의 대화에서 패턴을 몇 초 만에 파악하세요." }
         ]
     },
     solutions: {
@@ -764,7 +764,7 @@ const ProductPage = ({ t }) => (
                 {t.product.features.map((feature, i) => (
                     <div key={i} className="bg-white border border-slate-200 p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
                         <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
-                           {i === 0 ? <Cpu size={28}/> : i === 1 ? <Activity size={28}/> : <Server size={28}/>}
+                           {i === 0 ? <Headphones size={28}/> : i === 1 ? <Activity size={28}/> : <BarChart3 size={28}/>}
                         </div>
                         <h3 className="text-xl font-bold mb-3 text-slate-900">{feature.title}</h3>
                         <p className="text-slate-600 leading-relaxed">{feature.desc}</p>
@@ -772,47 +772,56 @@ const ProductPage = ({ t }) => (
                 ))}
             </div>
 
-            {/* Technical Deep Dive UI Mockup - Light/Clinical Version */}
+            {/* Deep Dive - Conversation Intelligence */}
             <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
                 <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-blue-50/50 to-transparent pointer-events-none"></div>
                 <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
                     <div>
                         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-xs font-bold text-blue-700 mb-6 uppercase tracking-wider">
-                            <Lock size={12} /> HIPAA Compliant Architecture
+                            <Lock size={12} /> Conversation Intelligence
                         </div>
-                        <h2 className="text-3xl font-bold mb-6 text-slate-900">The "Human" Difference</h2>
+                        <h2 className="text-3xl font-bold mb-6 text-slate-900">Stop Guessing. Start Knowing.</h2>
                         <p className="text-slate-600 mb-8 leading-relaxed text-lg">
-                            Most AI sounds like a text-to-speech reader. JuniVo uses a sophisticated transformer model that understands 
-                            <strong> pitch, cadence, and breath</strong>. It knows when to pause, when to interrupt politely, and when to convey empathy to a concerned patient.
+                            Customers who wait more than <strong>1 second</strong> for a voice agent response hang up <strong>40% more often</strong>. JuniVo responds in under 800ms — and every word of every conversation is captured, transcribed, and scored so you never fly blind again.
                         </p>
                         <ul className="space-y-5">
                             <li className="flex items-center gap-4">
                                 <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600"><CheckCircle2 size={18} /></div>
-                                <span className="text-slate-700 font-medium">Contextual interruptions handling</span>
+                                <span className="text-slate-700 font-medium">100% call recording — every second captured</span>
                             </li>
-                             <li className="flex items-center gap-4">
+                            <li className="flex items-center gap-4">
                                 <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600"><CheckCircle2 size={18} /></div>
-                                <span className="text-slate-700 font-medium">Background noise cancellation for clinical clarity</span>
+                                <span className="text-slate-700 font-medium">Real-time sentiment alerts when callers are frustrated</span>
+                            </li>
+                            <li className="flex items-center gap-4">
+                                <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600"><CheckCircle2 size={18} /></div>
+                                <span className="text-slate-700 font-medium">AI summaries & outcome tags on every call — automatically</span>
                             </li>
                         </ul>
                     </div>
                     
-                    {/* Clean Dashboard UI mockup */}
+                    {/* Analytics Dashboard Mockup */}
                     <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-sm relative">
                         <div className="absolute top-4 right-4 flex gap-2">
                              <span className="w-3 h-3 rounded-full bg-slate-200"></span>
                              <span className="w-3 h-3 rounded-full bg-slate-200"></span>
                              <span className="w-3 h-3 rounded-full bg-slate-200"></span>
                         </div>
-                        <div className="text-slate-500 mb-6 font-semibold uppercase tracking-wider text-xs">Performance Telemetry</div>
-                        <div className="space-y-4 font-mono text-sm">
-                            <div className="flex justify-between items-center"><span className="text-slate-600">Patient_Voice_End</span> <span className="text-slate-400">00:01.240</span></div>
-                            <div className="flex justify-between items-center"><span className="text-blue-600 font-medium">Processing (STT)</span> <span className="px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">12ms</span></div>
-                            <div className="flex justify-between items-center"><span className="text-blue-600 font-medium">Clinical Inference</span> <span className="px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">145ms</span></div>
-                            <div className="flex justify-between items-center"><span className="text-blue-600 font-medium">TTS_Generation</span> <span className="px-2 py-1 bg-white border border-slate-200 rounded text-slate-700">80ms</span></div>
+                        <div className="text-slate-500 mb-6 font-semibold uppercase tracking-wider text-xs">Call Analytics Dashboard</div>
+                        <div className="space-y-4 text-sm">
+                            <div className="flex justify-between items-center"><span className="text-slate-600 font-medium">Calls Recorded Today</span> <span className="px-2 py-1 bg-white border border-slate-200 rounded text-slate-900 font-bold">147</span></div>
+                            <div className="flex justify-between items-center"><span className="text-slate-600 font-medium">Avg Response Latency</span> <span className="px-2 py-1 bg-emerald-50 border border-emerald-200 rounded text-emerald-700 font-bold">780ms</span></div>
+                            <div className="flex justify-between items-center"><span className="text-slate-600 font-medium">Positive Sentiment Rate</span> <span className="px-2 py-1 bg-blue-50 border border-blue-200 rounded text-blue-700 font-bold">94.2%</span></div>
+                            <div className="flex justify-between items-center"><span className="text-slate-600 font-medium">Calls Needing Review</span> <span className="px-2 py-1 bg-amber-50 border border-amber-200 rounded text-amber-700 font-bold">3</span></div>
                             <div className="flex justify-between items-center border-t border-slate-200 pt-4 mt-2">
-                                <span className="text-slate-900 font-bold uppercase tracking-wide">Total Response Time</span> 
-                                <span className="text-emerald-600 font-bold bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">237ms</span>
+                                <span className="text-slate-900 font-bold uppercase tracking-wide text-xs">Booking Conversion Rate</span> 
+                                <span className="text-emerald-600 font-bold bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">68.4%</span>
+                            </div>
+                        </div>
+                        <div className="mt-6 pt-4 border-t border-slate-200">
+                            <div className="text-slate-500 font-semibold uppercase tracking-wider text-[10px] mb-3">Latest AI Call Summary</div>
+                            <div className="bg-white rounded-lg p-3 border border-slate-100 text-xs text-slate-600 leading-relaxed">
+                                Caller inquired about availability for a consultation next week. <span className="text-emerald-600 font-semibold">Sentiment: Positive.</span> Appointment booked for Thursday at 2:00 PM. Insurance verified.
                             </div>
                         </div>
                     </div>
