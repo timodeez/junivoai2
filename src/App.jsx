@@ -617,18 +617,14 @@ const AudioWave = ({ active, className = '' }) => (
   </div>
 );
 
-const LiveCallCard = ({ t, lang, callStatus, agentTalking, transcript }) => {
+const LiveCallCard = ({ t, lang, callStatus, agentTalking }) => {
   const isActive = callStatus === 'active';
   const isConnecting = callStatus === 'connecting';
-  const transcriptEndRef = useRef(null);
-
-  useEffect(() => {
-    transcriptEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [transcript]);
 
   return (
     <div className="relative w-full max-w-md bg-white/60 backdrop-blur-2xl border border-slate-200/60 p-8 rounded-[2rem] shadow-[0_20px_60px_rgb(0,0,0,0.05)]">
-      <div className="flex justify-between items-center mb-6 border-b border-slate-100 pb-4">
+      {/* Header */}
+      <div className="flex justify-between items-center mb-8 border-b border-slate-100 pb-4">
         <div className="flex items-center gap-2">
           <span className={`w-2 h-2 rounded-full ${isActive ? 'bg-emerald-500 animate-pulse shadow-[0_0_8px_#10b981]' : isConnecting ? 'bg-amber-400 animate-pulse' : 'bg-slate-300'}`}></span>
           <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
@@ -640,70 +636,49 @@ const LiveCallCard = ({ t, lang, callStatus, agentTalking, transcript }) => {
         )}
       </div>
 
-      {/* Audio Visualization */}
-      <div className="mb-6 bg-slate-50 rounded-xl p-4 border border-slate-100">
-        <AudioWave active={isActive && agentTalking} />
-        {isActive && (
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-2 text-center">
-            {agentTalking ? t.hero.agentSpeaking : t.hero.listening}
-          </p>
-        )}
-        {!isActive && !isConnecting && (
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-2 text-center">
-            Secure Voice Channel
-          </p>
-        )}
-        {isConnecting && (
-          <p className="text-[10px] font-bold text-amber-500 uppercase tracking-widest mt-2 text-center animate-pulse">
-            {t.hero.connecting}
-          </p>
-        )}
+      {/* Central Mic Orb */}
+      <div className="flex flex-col items-center justify-center py-6">
+        <div className={`relative w-28 h-28 rounded-full flex items-center justify-center transition-all duration-500 ${
+          isActive
+            ? 'bg-gradient-to-br from-blue-600 to-teal-500 shadow-[0_0_40px_rgba(59,130,246,0.4)]'
+            : isConnecting
+              ? 'bg-gradient-to-br from-amber-400 to-orange-400 shadow-[0_0_30px_rgba(251,191,36,0.3)]'
+              : 'bg-gradient-to-br from-slate-200 to-slate-300'
+        }`}>
+          {isActive && (
+            <>
+              <div className="absolute inset-0 rounded-full bg-blue-400 animate-ping opacity-20"></div>
+              <div className="absolute -inset-3 rounded-full border-2 border-blue-300 opacity-30 animate-pulse"></div>
+            </>
+          )}
+          {isConnecting && (
+            <div className="absolute inset-0 rounded-full bg-amber-300 animate-ping opacity-20"></div>
+          )}
+          <Mic className={`w-10 h-10 relative z-10 ${isActive || isConnecting ? 'text-white' : 'text-slate-500'}`} />
+        </div>
+
+        {/* Status Text */}
+        <div className="mt-6 text-center">
+          {isActive && (
+            <p className={`text-sm font-semibold transition-all ${agentTalking ? 'text-blue-600' : 'text-slate-500'}`}>
+              {agentTalking ? t.hero.agentSpeaking : t.hero.listening}
+            </p>
+          )}
+          {isConnecting && (
+            <p className="text-sm font-semibold text-amber-600 animate-pulse">{t.hero.connecting}</p>
+          )}
+          {!isActive && !isConnecting && (
+            <p className="text-sm font-medium text-slate-400">{t.hero.tapToTry}</p>
+          )}
+        </div>
       </div>
 
-      {/* Transcript Area */}
-      <div className="space-y-3 max-h-48 overflow-y-auto scrollbar-thin">
-        {transcript.length === 0 && !isActive && !isConnecting && (
-          <>
-            <div className="flex gap-3">
-              <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-sm">AI</div>
-              <div className="bg-white border border-slate-100 p-4 rounded-2xl rounded-tl-sm text-sm text-slate-600 w-full shadow-sm leading-relaxed">
-                {lang === 'en'
-                  ? "Hello! I'm the JuniVo AI Assistant. How can I help your practice today?"
-                  : "안녕하세요! JuniVo AI 어시스턴트입니다. 오늘 귀하의 병원을 위해 무엇을 도와드릴까요?"}
-              </div>
-            </div>
-            <div className="flex gap-3 flex-row-reverse opacity-60">
-              <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 text-xs font-bold shrink-0">{lang === 'en' ? 'You' : '나'}</div>
-              <div className="bg-blue-50 border border-blue-100 p-4 rounded-2xl rounded-tr-sm text-sm text-slate-600 w-full text-right shadow-sm">
-                <div className="flex justify-end gap-1.5 items-center h-5">
-                  <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce"></span>
-                  <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce" style={{animationDelay: '0.15s'}}></span>
-                  <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce" style={{animationDelay: '0.3s'}}></span>
-                </div>
-              </div>
-            </div>
-          </>
-        )}
-        {transcript.map((entry, i) => {
-          const isAgent = entry.role === 'agent';
-          return (
-            <div key={i} className={`flex gap-3 ${isAgent ? '' : 'flex-row-reverse'}`}>
-              <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
-                isAgent ? 'bg-blue-600 text-white' : 'bg-slate-200 text-slate-600'
-              }`}>
-                {isAgent ? 'AI' : (lang === 'en' ? 'Y' : '나')}
-              </div>
-              <div className={`p-3 rounded-2xl text-sm leading-relaxed max-w-[85%] ${
-                isAgent
-                  ? 'bg-white border border-slate-100 rounded-tl-sm text-slate-700 shadow-sm'
-                  : 'bg-blue-600 text-white rounded-tr-sm'
-              }`}>
-                {entry.content}
-              </div>
-            </div>
-          );
-        })}
-        <div ref={transcriptEndRef} />
+      {/* Audio Waveform */}
+      <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
+        <AudioWave active={isActive && agentTalking} />
+        <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-2 text-center">
+          {isActive ? 'Secure Voice Active' : 'Secure Voice Channel'}
+        </p>
       </div>
     </div>
   );
@@ -1094,7 +1069,6 @@ const HeroSection = ({ t, lang }) => {
             lang={lang}
             callStatus={callStatus}
             agentTalking={agentTalking}
-            transcript={transcript}
           />
         </div>
       </div>
