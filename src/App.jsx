@@ -47,6 +47,94 @@ const translations = {
       bookDemo: "Book Consultation",
       getStarted: "Get Started"
     },
+    platformPages: {
+      receptionist: {
+        badge: "AI Voice Agent",
+        title: "The AI Receptionist",
+        lead: "Your 24/7 front desk that never calls in sick. Answers every call with a custom voice trained on your med spa — books consultations, handles treatment questions, and never puts a prospect on hold.",
+        cards: [
+          { title: "Every Call Answered", desc: "No more voicemail. No more missed consultations. Your AI receptionist picks up instantly — nights, weekends, and holidays." },
+          { title: "Books to Your Calendar", desc: "Qualifies callers by treatment interest, checks availability, and books consultations directly to your calendar in real time." },
+          { title: "20+ Languages", desc: "Serves every patient demographic fluently. Detects language automatically and switches mid-conversation without missing a beat." }
+        ],
+        sectionTitle: "Sounds Human. Thinks Like Your Best Employee.",
+        sectionBody: {
+          prefix: "Your AI receptionist is trained on your ",
+          strong: "treatment menu, pricing, pre/post-care instructions, and brand voice",
+          suffix: ". When a prospect calls asking about Botox pricing or filler packages, the AI responds with the same warmth and knowledge as your top front desk coordinator."
+        },
+        bullets: [
+          "Custom voice that matches your brand personality",
+          "Trained on your exact treatments, pricing & policies",
+          "Handles scheduling, rescheduling & cancellations",
+          "Warm handoff to your team for complex cases",
+          "Every call recorded, transcribed & analyzed by AI"
+        ],
+        previewTitle: "Live Call Preview",
+        preview: {
+          ai1: "Thank you for calling Glow Aesthetics! Are you looking to book a consultation, or do you have questions about a treatment?",
+          user: "I want to learn more about your lip filler options and pricing.",
+          ai2: "Great choice! Our lip filler treatments start at $650 per syringe. I'd love to book you a free consultation with one of our providers — they'll create a personalized treatment plan. I have availability this Thursday at 3 PM. Would that work?"
+        }
+      },
+      sales: {
+        badge: "AI Sales Agent",
+        title: "The Sales Director",
+        lead: "An AI closer that follows up on every single lead — web inquiries, missed calls, abandoned chats. It handles pricing objections, creates urgency, and converts hesitant prospects into committed consultations.",
+        cards: [
+          { title: "Instant Follow-up", desc: "Contacts every new lead within seconds — not hours. Speed-to-lead is the #1 predictor of med spa conversion rates." },
+          { title: "Qualifies Every Lead", desc: "Asks the right questions about treatment interest, budget, and timeline. Your team only talks to prospects ready to commit." },
+          { title: "Conversion Intelligence", desc: "Tracks every lead from first touch to booked consultation. Know your cost-per-consult, conversion rate, and top objections." }
+        ],
+        sectionTitle: "Turns \"I'll Think About It\" Into \"Book Me In.\"",
+        sectionBody: {
+          prefix: "Most med spas lose 60% of leads to slow follow-up. Your AI Sales Director ",
+          strong: "contacts every lead instantly",
+          suffix: ", handles the most common objections (pricing, timing, fear), and creates urgency around limited availability to drive consultation bookings."
+        },
+        bullets: [
+          "Follows up on every web form, missed call & chat lead",
+          "Overcomes pricing objections with trained scripts",
+          "Creates urgency around limited consultation slots",
+          "Re-engages no-shows and cancelled appointments",
+          "Sentiment analysis flags high-intent leads for your team"
+        ],
+        previewTitle: "Lead Follow-up Preview",
+        preview: {
+          ai1: "Hi Sarah! I noticed you were looking at our Botox packages on our website. I'd love to help answer any questions and get you booked for a free consultation. Do you have a few minutes?",
+          user: "I'm interested but the pricing seems high compared to other places.",
+          ai2: "I completely understand — that's a great question. Our pricing reflects the expertise of our board-certified providers and premium products. Many patients actually save money long-term with our approach. We have a special this month — would you like me to reserve a consultation spot this week? Availability is limited."
+        }
+      },
+      chatbot: {
+        badge: "AI Chat Assistant",
+        title: "The Human Chatbot",
+        lead: "A website chat assistant so natural, visitors think they're talking to your staff. Trained on your entire knowledge base — treatments, pricing, before/afters — it answers questions and books consultations 24/7.",
+        cards: [
+          { title: "Feels Human, Not Robotic", desc: "Natural conversation flow trained on real med spa interactions. No canned responses, no dead ends — just helpful, warm dialogue." },
+          { title: "Books Consultations 24/7", desc: "Captures lead information and books consultations directly from your website — even at 2 AM when your competitor's chat is offline." },
+          { title: "Trained on Your Knowledge", desc: "Upload your treatment menu, FAQs, pricing, and brand guidelines. The chatbot becomes an extension of your front desk team." }
+        ],
+        sectionTitle: "Your Website's Best Conversion Tool.",
+        sectionBody: {
+          strong: "68% of med spa website visitors leave without taking action.",
+          suffix: " The Human Chatbot engages visitors the moment they land, answers their treatment questions with expert knowledge, and guides them to a booked consultation — all while feeling like a real conversation with your staff."
+        },
+        bullets: [
+          "Engages visitors proactively based on page behavior",
+          "Answers treatment questions with trained expertise",
+          "Captures name, email, phone & treatment interest",
+          "Books consultations directly to your calendar",
+          "Syncs all context with your voice & sales agents"
+        ],
+        previewTitle: "Website Chat Preview",
+        preview: {
+          ai1: "Hi there! I see you're looking at our laser treatments. Would you like to know more about pricing, or are you ready to book a free consultation?",
+          user: "What's the difference between IPL and fractional laser? And how much downtime?",
+          ai2: "Great question! IPL targets pigmentation and redness with minimal downtime (1-2 days), while fractional laser goes deeper for texture and scarring with 3-5 days of recovery. Both get amazing results — a consultation with our provider will help determine which is best for your goals. Want me to book one for you?"
+        }
+      }
+    },
     hero: {
       status: "24/7 INTELLIGENT RECEPTION",
       headline: "Never miss a call, a sale, or a lead.",
@@ -346,6 +434,94 @@ const translations = {
       login: "고객 로그인",
       bookDemo: "상담 예약",
       getStarted: "시작하기"
+    },
+    platformPages: {
+      receptionist: {
+        badge: "AI 음성 에이전트",
+        title: "AI 리셉셔니스트",
+        lead: "병가 없는 24/7 프론트 데스크. 메디스파에 맞춰 학습된 커스텀 음성으로 모든 전화를 응대하고, 상담 예약과 시술 질문 응답까지 — 잠재 고객을 절대 대기시키지 않습니다.",
+        cards: [
+          { title: "모든 전화 즉시 응답", desc: "이제 음성사서함은 끝. 놓친 상담도 끝. AI 리셉셔니스트가 야간, 주말, 공휴일에도 즉시 응답합니다." },
+          { title: "캘린더에 바로 예약", desc: "관심 시술을 확인하고, 가능한 시간을 조회한 뒤, 실시간으로 캘린더에 상담 일정을 직접 예약합니다." },
+          { title: "20개+ 언어 지원", desc: "모든 고객층을 자연스럽게 응대합니다. 언어를 자동 감지해 대화 중에도 끊김 없이 전환합니다." }
+        ],
+        sectionTitle: "사람처럼 말하고, 최고의 직원처럼 생각합니다.",
+        sectionBody: {
+          prefix: "AI 리셉셔니스트는 귀사의 ",
+          strong: "시술 메뉴, 가격, 시술 전/후 안내, 브랜드 톤",
+          suffix: "을 학습합니다. 보톡스 가격이나 필러 패키지를 문의하면, 가장 뛰어난 프론트 코디네이터처럼 따뜻하고 정확하게 응답합니다."
+        },
+        bullets: [
+          "브랜드에 맞춘 커스텀 음성",
+          "정확한 시술/가격/정책 기반 학습",
+          "예약, 변경, 취소 처리",
+          "복잡한 케이스는 직원에게 자연스럽게 연결",
+          "모든 통화를 AI가 녹음, 전사, 분석"
+        ],
+        previewTitle: "실시간 통화 미리보기",
+        preview: {
+          ai1: "글로우 에스테틱에 전화해 주셔서 감사합니다! 상담 예약을 원하시나요, 아니면 시술에 대해 궁금한 점이 있으신가요?",
+          user: "입술 필러 옵션이랑 가격이 궁금해요.",
+          ai2: "좋은 선택이세요! 입술 필러는 1cc(1 시린지) 기준 $650부터 시작합니다. 전문의가 맞춤 계획을 세울 수 있도록 무료 상담을 예약해 드릴까요? 이번 주 목요일 오후 3시에 가능해요. 괜찮으실까요?"
+        }
+      },
+      sales: {
+        badge: "AI 세일즈 에이전트",
+        title: "세일즈 디렉터",
+        lead: "웹 문의, 부재중 전화, 중단된 채팅까지 — 모든 리드를 빠짐없이 팔로업하는 AI 클로저입니다. 가격 이의 제기를 처리하고, 긴급성을 만들며, 망설이는 잠재 고객을 ‘예약 확정’으로 전환합니다.",
+        cards: [
+          { title: "즉시 팔로업", desc: "신규 리드에 수초 내로 연락합니다 — 몇 시간이 아닙니다. ‘리드 대응 속도’는 메디스파 전환율의 1순위 변수입니다." },
+          { title: "모든 리드 자격 심사", desc: "관심 시술, 예산, 일정에 대한 핵심 질문을 진행합니다. 팀은 결심이 선 고객만 응대하면 됩니다." },
+          { title: "전환 인텔리전스", desc: "첫 접점부터 상담 예약까지 전 과정을 추적합니다. 상담당 비용, 전환율, 주요 이의 제기를 정확히 파악하세요." }
+        ],
+        sectionTitle: "“생각해볼게요”를 “예약해 주세요”로 바꿉니다.",
+        sectionBody: {
+          prefix: "대부분의 메디스파는 느린 팔로업 때문에 리드의 60%를 잃습니다. AI 세일즈 디렉터는 ",
+          strong: "모든 리드에 즉시 연락",
+          suffix: "하고, 가장 흔한 이의 제기(가격, 타이밍, 두려움)를 처리하며, 제한된 예약 가능 시간으로 긴급성을 만들어 상담 예약으로 이끕니다."
+        },
+        bullets: [
+          "웹폼, 부재중 통화, 채팅 리드 전부 팔로업",
+          "학습된 스크립트로 가격 이의 제기 대응",
+          "제한된 상담 슬롯을 기반으로 긴급성 조성",
+          "노쇼 및 취소 고객 재참여",
+          "감정 분석으로 고의도 리드를 팀에 알림"
+        ],
+        previewTitle: "리드 팔로업 미리보기",
+        preview: {
+          ai1: "안녕하세요, Sarah님! 웹사이트에서 보톡스 패키지를 보고 계신 것을 확인했어요. 궁금한 점을 도와드리고 무료 상담 예약도 잡아드릴 수 있어요. 잠시 시간 괜찮으실까요?",
+          user: "관심은 있는데 다른 곳보다 가격이 비싸 보이네요.",
+          ai2: "충분히 그렇게 느끼실 수 있어요 — 좋은 질문입니다. 저희 가격은 보드 인증 의료진의 전문성과 프리미엄 제품을 반영합니다. 많은 분들이 장기적으로는 더 만족스러운 결과로 비용을 절감한다고 말씀하세요. 이번 달 프로모션도 있는데요, 이번 주 무료 상담 시간을 미리 잡아드릴까요? 예약 가능 시간이 제한되어 있어요."
+        }
+      },
+      chatbot: {
+        badge: "AI 채팅 어시스턴트",
+        title: "휴먼 챗봇",
+        lead: "방문자가 직원과 대화하는 것처럼 자연스럽게 느끼는 웹사이트 채팅 어시스턴트. 시술, 가격, 전후 사진 등 귀사의 전체 지식 기반으로 학습되어 질문에 답하고 24/7 상담 예약까지 도와줍니다.",
+        cards: [
+          { title: "로봇 같지 않은 자연스러움", desc: "실제 메디스파 응대 데이터를 기반으로 자연스러운 대화 흐름을 제공합니다. 정형 답변, 막다른 대화 없이 따뜻하고 정확하게 안내합니다." },
+          { title: "24/7 상담 예약", desc: "리드 정보를 수집하고 웹사이트에서 바로 상담을 예약합니다 — 경쟁사의 채팅이 꺼져있는 새벽 2시에도요." },
+          { title: "귀사 지식 기반 학습", desc: "시술 메뉴, FAQ, 가격, 브랜드 가이드라인을 업로드하세요. 챗봇이 프론트 데스크 팀의 연장선이 됩니다." }
+        ],
+        sectionTitle: "웹사이트 최고의 전환 도구.",
+        sectionBody: {
+          strong: "메디스파 웹사이트 방문자의 68%는 아무 행동 없이 떠납니다.",
+          suffix: " 휴먼 챗봇은 방문 즉시 대화를 시작하고, 전문가 수준으로 시술 질문에 답하며, 자연스럽게 상담 예약까지 안내합니다 — 실제 직원과 대화하는 느낌 그대로요."
+        },
+        bullets: [
+          "페이지 행동에 따라 선제적으로 대화 시작",
+          "학습된 전문 지식으로 시술 질문 응답",
+          "이름, 이메일, 전화번호 및 관심 시술 수집",
+          "캘린더로 상담 예약을 직접 연결",
+          "음성/세일즈 에이전트와 모든 컨텍스트 동기화"
+        ],
+        previewTitle: "웹사이트 채팅 미리보기",
+        preview: {
+          ai1: "안녕하세요! 레이저 시술을 보고 계신 것 같아요. 가격이 궁금하신가요, 아니면 무료 상담 예약을 도와드릴까요?",
+          user: "IPL이랑 프락셔널 레이저는 뭐가 달라요? 다운타임은 얼마나 있나요?",
+          ai2: "좋은 질문이에요! IPL은 색소·홍조 개선에 효과적이고 다운타임이 거의 없거나 1-2일 정도입니다. 프락셔널 레이저는 더 깊게 작용해 피부결·흉터 개선에 좋고 회복은 보통 3-5일 정도예요. 목표에 따라 적합한 시술이 달라서, 의료진 상담을 통해 결정하시는 게 가장 좋아요. 상담 예약을 잡아드릴까요?"
+        }
+      }
     },
     hero: {
       status: "24/7 지능형 리셉션",
@@ -1081,206 +1257,232 @@ const ROICalculator = ({ t }) => {
 
 // --- Product Pages ---
 
-const ReceptionistPage = ({ t }) => (
-  <div className="pt-32 pb-20 px-6">
-    <div className="max-w-7xl mx-auto">
-      <div className="text-center mb-20">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-xs font-bold text-blue-700 mb-6 uppercase tracking-wider">
-          <Phone size={12} /> AI Voice Agent
+const ReceptionistPage = ({ t }) => {
+  const cards = t.platformPages.receptionist.cards || [];
+  const icons = [Phone, Calendar, Globe];
+
+  return (
+    <div className="pt-32 pb-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-xs font-bold text-blue-700 mb-6 uppercase tracking-wider">
+            <Phone size={12} /> {t.platformPages.receptionist.badge}
+          </div>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight">{t.platformPages.receptionist.title}</h1>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">{t.platformPages.receptionist.lead}</p>
         </div>
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight">The AI Receptionist</h1>
-        <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">Your 24/7 front desk that never calls in sick. Answers every call with a custom voice trained on your med spa — books consultations, handles treatment questions, and never puts a prospect on hold.</p>
-      </div>
 
-      <div className="grid md:grid-cols-3 gap-8 mb-20">
-        {[
-          { icon: Phone, title: "Every Call Answered", desc: "No more voicemail. No more missed consultations. Your AI receptionist picks up instantly — nights, weekends, and holidays." },
-          { icon: Calendar, title: "Books to Your Calendar", desc: "Qualifies callers by treatment interest, checks availability, and books consultations directly to your calendar in real time." },
-          { icon: Globe, title: "20+ Languages", desc: "Serves every patient demographic fluently. Detects language automatically and switches mid-conversation without missing a beat." }
-        ].map((feature, i) => (
-          <div key={i} className="bg-white border border-slate-200 p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
-              <feature.icon size={28} />
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
+          {icons.map((Icon, i) => (
+            <div key={i} className="bg-white border border-slate-200 p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
+                <Icon size={28} />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-slate-900">{cards[i]?.title}</h3>
+              <p className="text-slate-600 leading-relaxed">{cards[i]?.desc}</p>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">{feature.title}</h3>
-            <p className="text-slate-600 leading-relaxed">{feature.desc}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-blue-50/50 to-transparent pointer-events-none"></div>
-        <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
-          <div>
-            <h2 className="text-3xl font-bold mb-6 text-slate-900">Sounds Human. Thinks Like Your Best Employee.</h2>
-            <p className="text-slate-600 mb-8 leading-relaxed text-lg">
-              Your AI receptionist is trained on your <strong>treatment menu, pricing, pre/post-care instructions, and brand voice</strong>. When a prospect calls asking about Botox pricing or filler packages, the AI responds with the same warmth and knowledge as your top front desk coordinator.
-            </p>
-            <ul className="space-y-5">
-              {["Custom voice that matches your brand personality", "Trained on your exact treatments, pricing & policies", "Handles scheduling, rescheduling & cancellations", "Warm handoff to your team for complex cases", "Every call recorded, transcribed & analyzed by AI"].map((item, i) => (
-                <li key={i} className="flex items-center gap-4">
-                  <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600"><CheckCircle2 size={18} /></div>
-                  <span className="text-slate-700 font-medium">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-sm">
-            <div className="text-slate-500 mb-6 font-semibold uppercase tracking-wider text-xs">Live Call Preview</div>
-            <div className="space-y-4 text-sm">
-              <div className="flex gap-3">
-                <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
-                <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">Thank you for calling Glow Aesthetics! Are you looking to book a consultation, or do you have questions about a treatment?</div>
-              </div>
-              <div className="flex gap-3 flex-row-reverse">
-                <div className="w-7 h-7 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold shrink-0">P</div>
-                <div className="bg-blue-600 text-white p-3 rounded-2xl rounded-tr-sm">I want to learn more about your lip filler options and pricing.</div>
-              </div>
-              <div className="flex gap-3">
-                <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
-                <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">Great choice! Our lip filler treatments start at $650 per syringe. I'd love to book you a free consultation with one of our providers — they'll create a personalized treatment plan. I have availability this Thursday at 3 PM. Would that work?</div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-      </div>
-    </div>
-  </div>
-);
 
-const SalesAgentPage = ({ t }) => (
-  <div className="pt-32 pb-20 px-6">
-    <div className="max-w-7xl mx-auto">
-      <div className="text-center mb-20">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 border border-teal-100 text-xs font-bold text-teal-700 mb-6 uppercase tracking-wider">
-          <Zap size={12} /> AI Sales Agent
-        </div>
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight">The Sales Director</h1>
-        <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">An AI closer that follows up on every single lead — web inquiries, missed calls, abandoned chats. It handles pricing objections, creates urgency, and converts hesitant prospects into committed consultations.</p>
-      </div>
-
-      <div className="grid md:grid-cols-3 gap-8 mb-20">
-        {[
-          { icon: Zap, title: "Instant Follow-up", desc: "Contacts every new lead within seconds — not hours. Speed-to-lead is the #1 predictor of med spa conversion rates." },
-          { icon: UserCheck, title: "Qualifies Every Lead", desc: "Asks the right questions about treatment interest, budget, and timeline. Your team only talks to prospects ready to commit." },
-          { icon: BarChart3, title: "Conversion Intelligence", desc: "Tracks every lead from first touch to booked consultation. Know your cost-per-consult, conversion rate, and top objections." }
-        ].map((feature, i) => (
-          <div key={i} className="bg-white border border-slate-200 p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center mb-6 text-teal-600">
-              <feature.icon size={28} />
+        <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+          <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-blue-50/50 to-transparent pointer-events-none"></div>
+          <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-slate-900">{t.platformPages.receptionist.sectionTitle}</h2>
+              <p className="text-slate-600 mb-8 leading-relaxed text-lg">
+                {t.platformPages.receptionist.sectionBody.prefix}
+                <strong>{t.platformPages.receptionist.sectionBody.strong}</strong>
+                {t.platformPages.receptionist.sectionBody.suffix}
+              </p>
+              <ul className="space-y-5">
+                {t.platformPages.receptionist.bullets.map((item, i) => (
+                  <li key={i} className="flex items-center gap-4">
+                    <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+                      <CheckCircle2 size={18} />
+                    </div>
+                    <span className="text-slate-700 font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">{feature.title}</h3>
-            <p className="text-slate-600 leading-relaxed">{feature.desc}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-teal-50/50 to-transparent pointer-events-none"></div>
-        <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
-          <div>
-            <h2 className="text-3xl font-bold mb-6 text-slate-900">Turns "I'll Think About It" Into "Book Me In."</h2>
-            <p className="text-slate-600 mb-8 leading-relaxed text-lg">
-              Most med spas lose 60% of leads to slow follow-up. Your AI Sales Director <strong>contacts every lead instantly</strong>, handles the most common objections (pricing, timing, fear), and creates urgency around limited availability to drive consultation bookings.
-            </p>
-            <ul className="space-y-5">
-              {["Follows up on every web form, missed call & chat lead", "Overcomes pricing objections with trained scripts", "Creates urgency around limited consultation slots", "Re-engages no-shows and cancelled appointments", "Sentiment analysis flags high-intent leads for your team"].map((item, i) => (
-                <li key={i} className="flex items-center gap-4">
-                  <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600"><CheckCircle2 size={18} /></div>
-                  <span className="text-slate-700 font-medium">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-sm">
-            <div className="text-slate-500 mb-6 font-semibold uppercase tracking-wider text-xs">Lead Follow-up Preview</div>
-            <div className="space-y-4 text-sm">
-              <div className="flex gap-3">
-                <div className="w-7 h-7 rounded-full bg-teal-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
-                <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">Hi Sarah! I noticed you were looking at our Botox packages on our website. I'd love to help answer any questions and get you booked for a free consultation. Do you have a few minutes?</div>
-              </div>
-              <div className="flex gap-3 flex-row-reverse">
-                <div className="w-7 h-7 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold shrink-0">S</div>
-                <div className="bg-teal-600 text-white p-3 rounded-2xl rounded-tr-sm">I'm interested but the pricing seems high compared to other places.</div>
-              </div>
-              <div className="flex gap-3">
-                <div className="w-7 h-7 rounded-full bg-teal-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
-                <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">I completely understand — that's a great question. Our pricing reflects the expertise of our board-certified providers and premium products. Many patients actually save money long-term with our approach. We have a special this month — would you like me to reserve a consultation spot this week? Availability is limited.</div>
+            <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-sm">
+              <div className="text-slate-500 mb-6 font-semibold uppercase tracking-wider text-xs">{t.platformPages.receptionist.previewTitle}</div>
+              <div className="space-y-4 text-sm">
+                <div className="flex gap-3">
+                  <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
+                  <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">
+                    {t.platformPages.receptionist.preview.ai1}
+                  </div>
+                </div>
+                <div className="flex gap-3 flex-row-reverse">
+                  <div className="w-7 h-7 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold shrink-0">P</div>
+                  <div className="bg-blue-600 text-white p-3 rounded-2xl rounded-tr-sm">{t.platformPages.receptionist.preview.user}</div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
+                  <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">
+                    {t.platformPages.receptionist.preview.ai2}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
-const ChatbotPage = ({ t }) => (
-  <div className="pt-32 pb-20 px-6">
-    <div className="max-w-7xl mx-auto">
-      <div className="text-center mb-20">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-xs font-bold text-indigo-700 mb-6 uppercase tracking-wider">
-          <MessageSquare size={12} /> AI Chat Assistant
+const SalesAgentPage = ({ t }) => {
+  const cards = t.platformPages.sales.cards || [];
+  const icons = [Zap, UserCheck, BarChart3];
+
+  return (
+    <div className="pt-32 pb-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 border border-teal-100 text-xs font-bold text-teal-700 mb-6 uppercase tracking-wider">
+            <Zap size={12} /> {t.platformPages.sales.badge}
+          </div>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight">{t.platformPages.sales.title}</h1>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">{t.platformPages.sales.lead}</p>
         </div>
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight">The Human Chatbot</h1>
-        <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">A website chat assistant so natural, visitors think they're talking to your staff. Trained on your entire knowledge base — treatments, pricing, before/afters — it answers questions and books consultations 24/7.</p>
-      </div>
 
-      <div className="grid md:grid-cols-3 gap-8 mb-20">
-        {[
-          { icon: MessageSquare, title: "Feels Human, Not Robotic", desc: "Natural conversation flow trained on real med spa interactions. No canned responses, no dead ends — just helpful, warm dialogue." },
-          { icon: Calendar, title: "Books Consultations 24/7", desc: "Captures lead information and books consultations directly from your website — even at 2 AM when your competitor's chat is offline." },
-          { icon: Cpu, title: "Trained on Your Knowledge", desc: "Upload your treatment menu, FAQs, pricing, and brand guidelines. The chatbot becomes an extension of your front desk team." }
-        ].map((feature, i) => (
-          <div key={i} className="bg-white border border-slate-200 p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 text-indigo-600">
-              <feature.icon size={28} />
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
+          {icons.map((Icon, i) => (
+            <div key={i} className="bg-white border border-slate-200 p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center mb-6 text-teal-600">
+                <Icon size={28} />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-slate-900">{cards[i]?.title}</h3>
+              <p className="text-slate-600 leading-relaxed">{cards[i]?.desc}</p>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">{feature.title}</h3>
-            <p className="text-slate-600 leading-relaxed">{feature.desc}</p>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-indigo-50/50 to-transparent pointer-events-none"></div>
-        <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
-          <div>
-            <h2 className="text-3xl font-bold mb-6 text-slate-900">Your Website's Best Conversion Tool.</h2>
-            <p className="text-slate-600 mb-8 leading-relaxed text-lg">
-              <strong>68% of med spa website visitors leave without taking action.</strong> The Human Chatbot engages visitors the moment they land, answers their treatment questions with expert knowledge, and guides them to a booked consultation — all while feeling like a real conversation with your staff.
-            </p>
-            <ul className="space-y-5">
-              {["Engages visitors proactively based on page behavior", "Answers treatment questions with trained expertise", "Captures name, email, phone & treatment interest", "Books consultations directly to your calendar", "Syncs all context with your voice & sales agents"].map((item, i) => (
-                <li key={i} className="flex items-center gap-4">
-                  <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600"><CheckCircle2 size={18} /></div>
-                  <span className="text-slate-700 font-medium">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-sm">
-            <div className="text-slate-500 mb-6 font-semibold uppercase tracking-wider text-xs">Website Chat Preview</div>
-            <div className="space-y-4 text-sm">
-              <div className="flex gap-3">
-                <div className="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
-                <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">Hi there! I see you're looking at our laser treatments. Would you like to know more about pricing, or are you ready to book a free consultation?</div>
-              </div>
-              <div className="flex gap-3 flex-row-reverse">
-                <div className="w-7 h-7 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold shrink-0">V</div>
-                <div className="bg-indigo-600 text-white p-3 rounded-2xl rounded-tr-sm">What's the difference between IPL and fractional laser? And how much downtime?</div>
-              </div>
-              <div className="flex gap-3">
-                <div className="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
-                <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">Great question! IPL targets pigmentation and redness with minimal downtime (1-2 days), while fractional laser goes deeper for texture and scarring with 3-5 days of recovery. Both get amazing results — a consultation with our provider will help determine which is best for your goals. Want me to book one for you?</div>
+        <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+          <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-teal-50/50 to-transparent pointer-events-none"></div>
+          <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-slate-900">{t.platformPages.sales.sectionTitle}</h2>
+              <p className="text-slate-600 mb-8 leading-relaxed text-lg">
+                {t.platformPages.sales.sectionBody.prefix}
+                <strong>{t.platformPages.sales.sectionBody.strong}</strong>
+                {t.platformPages.sales.sectionBody.suffix}
+              </p>
+              <ul className="space-y-5">
+                {t.platformPages.sales.bullets.map((item, i) => (
+                  <li key={i} className="flex items-center gap-4">
+                    <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+                      <CheckCircle2 size={18} />
+                    </div>
+                    <span className="text-slate-700 font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-sm">
+              <div className="text-slate-500 mb-6 font-semibold uppercase tracking-wider text-xs">{t.platformPages.sales.previewTitle}</div>
+              <div className="space-y-4 text-sm">
+                <div className="flex gap-3">
+                  <div className="w-7 h-7 rounded-full bg-teal-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
+                  <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">
+                    {t.platformPages.sales.preview.ai1}
+                  </div>
+                </div>
+                <div className="flex gap-3 flex-row-reverse">
+                  <div className="w-7 h-7 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold shrink-0">S</div>
+                  <div className="bg-teal-600 text-white p-3 rounded-2xl rounded-tr-sm">{t.platformPages.sales.preview.user}</div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="w-7 h-7 rounded-full bg-teal-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
+                  <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">
+                    {t.platformPages.sales.preview.ai2}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
+
+const ChatbotPage = ({ t }) => {
+  const cards = t.platformPages.chatbot.cards || [];
+  const icons = [MessageSquare, Calendar, Cpu];
+
+  return (
+    <div className="pt-32 pb-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-xs font-bold text-indigo-700 mb-6 uppercase tracking-wider">
+            <MessageSquare size={12} /> {t.platformPages.chatbot.badge}
+          </div>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight">{t.platformPages.chatbot.title}</h1>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">{t.platformPages.chatbot.lead}</p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
+          {icons.map((Icon, i) => (
+            <div key={i} className="bg-white border border-slate-200 p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 text-indigo-600">
+                <Icon size={28} />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-slate-900">{cards[i]?.title}</h3>
+              <p className="text-slate-600 leading-relaxed">{cards[i]?.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+          <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-indigo-50/50 to-transparent pointer-events-none"></div>
+          <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-slate-900">{t.platformPages.chatbot.sectionTitle}</h2>
+              <p className="text-slate-600 mb-8 leading-relaxed text-lg">
+                <strong>{t.platformPages.chatbot.sectionBody.strong}</strong>
+                {t.platformPages.chatbot.sectionBody.suffix}
+              </p>
+              <ul className="space-y-5">
+                {t.platformPages.chatbot.bullets.map((item, i) => (
+                  <li key={i} className="flex items-center gap-4">
+                    <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+                      <CheckCircle2 size={18} />
+                    </div>
+                    <span className="text-slate-700 font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-sm">
+              <div className="text-slate-500 mb-6 font-semibold uppercase tracking-wider text-xs">{t.platformPages.chatbot.previewTitle}</div>
+              <div className="space-y-4 text-sm">
+                <div className="flex gap-3">
+                  <div className="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
+                  <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">
+                    {t.platformPages.chatbot.preview.ai1}
+                  </div>
+                </div>
+                <div className="flex gap-3 flex-row-reverse">
+                  <div className="w-7 h-7 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold shrink-0">V</div>
+                  <div className="bg-indigo-600 text-white p-3 rounded-2xl rounded-tr-sm">{t.platformPages.chatbot.preview.user}</div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
+                  <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">
+                    {t.platformPages.chatbot.preview.ai2}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 // --- Page Components ---
 
