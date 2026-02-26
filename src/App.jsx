@@ -84,10 +84,15 @@ const translations = {
         title: "Built for Your Industry",
         subtitle: "JuniVo isn't a one-size-fits-all tool. Each AI agent is pre-trained on the specific workflows, compliance requirements, and customer journeys of your industry.",
         tabs: ["Medical & Med Spa", "Legal", "Home Services", "Real Estate"],
+        cta: "See how JuniVo works for your business",
         content: {
             Medical: {
                 title: "The AI Patient Coordinator",
                 desc: "Purpose-built for clinics, med spas, dental offices, and specialty practices. Handles the entire patient journey from first inquiry to booked appointment.",
+                color: "blue",
+                stat: "67%",
+                statLabel: "of patient calls go to voicemail after hours",
+                painPoint: "Your front desk closes at 5 PM. Your patients don't. Every missed call is a consultation that books with your competitor instead.",
                 points: [
                     "HIPAA-compliant call handling & data storage",
                     "Books consultations & appointments to your calendar",
@@ -97,11 +102,20 @@ const translations = {
                     "EMR/EHR integration (DrChrono, Athena, & more)",
                     "Insurance verification & eligibility questions",
                     "Automated appointment reminders & no-show follow-up"
-                ]
+                ],
+                conversation: {
+                    ai1: "Thank you for calling Glow Aesthetics! Are you looking to schedule a consultation, or do you have questions about a specific treatment?",
+                    user: "I'm interested in Botox but not sure about pricing or downtime.",
+                    ai2: "Great question! Botox starts at $12/unit, and most patients see no downtime — just avoid heavy exercise for 24 hours. I'd love to book you a free consultation so our provider can create a personalized plan. I have Thursday at 3 PM open — would that work?"
+                }
             },
             Legal: {
                 title: "The Virtual Intake Specialist",
                 desc: "Built for law firms, solo attorneys, and legal practices. Captures every potential client, qualifies cases, and keeps your calendar full — without adding headcount.",
+                color: "purple",
+                stat: "42%",
+                statLabel: "of potential clients call outside business hours",
+                painPoint: "A prospective client calls at 7 PM about a car accident. They get voicemail. By morning, they've already retained another attorney. That case is gone.",
                 points: [
                     "24/7 confidential client intake on every call",
                     "Case type qualification & conflict of interest screening",
@@ -111,11 +125,20 @@ const translations = {
                     "Routes high-priority cases to attorneys immediately",
                     "Follows up on web inquiries & consultation no-shows",
                     "Multilingual intake for diverse client demographics"
-                ]
+                ],
+                conversation: {
+                    ai1: "Thank you for calling Mitchell & Associates. I can help you get started. Can you briefly tell me what type of legal matter you need assistance with?",
+                    user: "I was in a car accident last week and the other driver's insurance is lowballing me.",
+                    ai2: "I'm sorry to hear about your accident. That sounds like a personal injury case, and our firm handles those. Let me get some quick details and schedule a free consultation with one of our attorneys. What day works best for you this week?"
+                }
             },
             HomeServices: {
                 title: "The AI Dispatcher",
                 desc: "Designed for HVAC, plumbing, electrical, cleaning, and general contracting businesses. Never lose a job to a missed call or slow quote again.",
+                color: "amber",
+                stat: "85%",
+                statLabel: "of homeowners hire the first company that answers",
+                painPoint: "A homeowner's AC breaks at 2 PM on a Saturday. They call three companies. The one that answers first gets the $8,000 replacement job. The other two never knew.",
                 points: [
                     "Instant quote generation & service qualification",
                     "Intelligent technician dispatching & scheduling",
@@ -125,11 +148,20 @@ const translations = {
                     "Post-service review & feedback collection",
                     "Seasonal campaign support (AC tune-ups, winterization)",
                     "Handles warranty questions & repeat service booking"
-                ]
+                ],
+                conversation: {
+                    ai1: "Thanks for calling Comfort Pro HVAC! Are you calling about a repair, maintenance, or a new installation?",
+                    user: "My AC just stopped working and it's 95 degrees. I need someone out here today if possible.",
+                    ai2: "I completely understand the urgency. Let me get you on our emergency schedule. I have a technician available between 2-4 PM today. Can I get your address and the make/model of your unit so our tech arrives prepared?"
+                }
             },
             RealEstate: {
                 title: "The AI Inside Sales Agent",
                 desc: "Built for brokerages, teams, and solo agents. Responds to every lead instantly, qualifies buyers and sellers, and keeps your pipeline full 24/7.",
+                color: "emerald",
+                stat: "78%",
+                statLabel: "of leads go to the agent who responds first",
+                painPoint: "A buyer submits an inquiry on Zillow at 10 PM. If you respond in 5 minutes, you have a 78% chance of converting. Respond in 30 minutes, and that drops to 10%.",
                 points: [
                     "Instant lead response on every web inquiry",
                     "Buyer & seller prequalification (budget, timeline, motivation)",
@@ -139,7 +171,12 @@ const translations = {
                     "Neighborhood & property FAQ handling",
                     "Re-engages cold leads with personalized outreach",
                     "CRM sync (Follow Up Boss, KvCORE, Salesforce)"
-                ]
+                ],
+                conversation: {
+                    ai1: "Hi! Thanks for your interest in the listing on 425 Oak Street. I'm the AI assistant for the Sarah Chen Team. Are you currently working with an agent, or can I help you learn more?",
+                    user: "I'm not working with anyone yet. What's the HOA fee and is the seller flexible on price?",
+                    ai2: "Great questions! The HOA is $285/month and covers water, trash, and pool access. The seller is motivated — they've had two price reductions. I can get you scheduled for a private showing this weekend. Are you pre-approved for a mortgage, or would you like a referral to our lending partner?"
+                }
             }
         }
     },
@@ -291,10 +328,15 @@ const translations = {
         title: "귀하의 업계를 위해 설계",
         subtitle: "JuniVo는 범용 도구가 아닙니다. 각 AI 에이전트는 귀하의 업계 고유 워크플로우, 규정 준수 요구 사항, 고객 여정에 맞춰 사전 학습됩니다.",
         tabs: ["의료 & 메디스파", "법률", "홈 서비스", "부동산"],
+        cta: "JuniVo가 귀하의 비즈니스에서 어떻게 작동하는지 확인하세요",
         content: {
             Medical: {
                 title: "AI 환자 코디네이터",
                 desc: "클리닉, 메디스파, 치과, 전문 진료소를 위해 설계. 첫 문의부터 예약까지 전체 환자 여정을 처리합니다.",
+                color: "blue",
+                stat: "67%",
+                statLabel: "의 환자 전화가 업무 시간 외에 음성 사서함으로 전환됩니다",
+                painPoint: "프론트 데스크는 오후 5시에 문을 닫습니다. 환자는 그렇지 않습니다. 놓친 전화 한 통은 경쟁사에 예약되는 상담입니다.",
                 points: [
                     "HIPAA 준수 통화 처리 및 데이터 저장",
                     "캘린더에 상담 및 예약 직접 등록",
@@ -304,11 +346,20 @@ const translations = {
                     "EMR/EHR 통합 (DrChrono, Athena 등)",
                     "보험 확인 및 자격 질문 처리",
                     "자동 예약 알림 및 노쇼 팔로업"
-                ]
+                ],
+                conversation: {
+                    ai1: "글로우 에스테틱에 전화해 주셔서 감사합니다! 상담 예약에 관심이 있으신가요, 아니면 특정 시술에 대해 궁금한 점이 있으신가요?",
+                    user: "보톡스에 관심이 있는데 가격과 회복 기간이 어떻게 되나요?",
+                    ai2: "좋은 질문이세요! 보톡스는 유닛당 $12부터 시작하며 대부분의 환자분들은 회복 기간이 없습니다 — 24시간 동안 격한 운동만 피하시면 됩니다. 전문의가 맞춤 계획을 세울 수 있도록 무료 상담을 예약해 드릴까요? 목요일 오후 3시에 가능합니다 — 괜찮으신가요?"
+                }
             },
             Legal: {
                 title: "가상 인테이크 전문가",
-                desc: "법률 사무소, 개인 변호사, 법률 사무소를 위해 설계. 모든 잠재 의뢰인을 확보하고, 사건을 자격 심사하며, 인원 추가 없이 캘린더를 채웁니다.",
+                desc: "법률 사무소, 개인 변호사를 위해 설계. 모든 잠재 의뢰인을 확보하고, 사건을 자격 심사하며, 인원 추가 없이 캘린더를 채웁니다.",
+                color: "purple",
+                stat: "42%",
+                statLabel: "의 잠재 의뢰인이 업무 시간 외에 전화합니다",
+                painPoint: "잠재 의뢰인이 오후 7시에 교통사고로 전화합니다. 음성 사서함이 응답합니다. 아침이 되면 이미 다른 변호사를 선임했습니다.",
                 points: [
                     "모든 전화에서 24/7 기밀 유지 의뢰인 접수",
                     "사건 유형 자격 심사 및 이해 상충 스크리닝",
@@ -318,11 +369,20 @@ const translations = {
                     "고우선 사건을 변호사에게 즉시 라우팅",
                     "웹 문의 및 상담 노쇼 팔로업",
                     "다양한 의뢰인을 위한 다국어 접수"
-                ]
+                ],
+                conversation: {
+                    ai1: "Mitchell & Associates에 전화해 주셔서 감사합니다. 시작을 도와드릴 수 있습니다. 어떤 유형의 법률 문제에 대해 도움이 필요하신지 간단히 말씀해 주시겠어요?",
+                    user: "지난주에 교통사고가 났는데 상대방 보험사가 보상을 너무 적게 제안하고 있어요.",
+                    ai2: "사고 소식을 듣게 되어 유감입니다. 인신 상해 사건으로 보이며, 저희 사무소에서 전문적으로 다루고 있습니다. 간단한 정보를 받고 변호사와의 무료 상담을 잡아드리겠습니다. 이번 주에 어떤 날이 좋으신가요?"
+                }
             },
             HomeServices: {
                 title: "AI 배차 관리자",
                 desc: "HVAC, 배관, 전기, 청소, 종합 건설 비즈니스를 위해 설계. 부재중 전화나 늦은 견적으로 더 이상 일을 놓치지 마세요.",
+                color: "amber",
+                stat: "85%",
+                statLabel: "의 주택 소유자가 먼저 전화를 받는 업체에 의뢰합니다",
+                painPoint: "주택 소유자의 에어컨이 토요일 오후 2시에 고장납니다. 세 곳에 전화합니다. 먼저 응답한 곳이 $8,000 교체 작업을 따냅니다.",
                 points: [
                     "즉시 견적 생성 및 서비스 자격 확인",
                     "지능형 기술자 배차 및 일정 관리",
@@ -332,11 +392,20 @@ const translations = {
                     "서비스 후 리뷰 및 피드백 수집",
                     "시즌 캠페인 지원 (에어컨 점검, 겨울 준비)",
                     "보증 질문 및 재방문 예약 처리"
-                ]
+                ],
+                conversation: {
+                    ai1: "Comfort Pro HVAC에 전화해 주셔서 감사합니다! 수리, 유지보수, 또는 새 설치에 대해 문의하시나요?",
+                    user: "에어컨이 방금 꺼졌는데 기온이 35도예요. 오늘 가능하면 누군가 와주셨으면 해요.",
+                    ai2: "긴급한 상황이시군요. 응급 일정에 바로 넣어드리겠습니다. 오늘 오후 2-4시 사이에 기술자가 가능합니다. 주소와 에어컨 제조사/모델을 알려주시면 기술자가 준비해서 방문하겠습니다."
+                }
             },
             RealEstate: {
                 title: "AI 내부 영업 에이전트",
                 desc: "중개업체, 팀, 개인 에이전트를 위해 설계. 모든 리드에 즉시 응답하고, 매수자와 매도자를 자격 심사하며, 24/7 파이프라인을 채웁니다.",
+                color: "emerald",
+                stat: "78%",
+                statLabel: "의 리드가 가장 먼저 응답하는 에이전트에게 갑니다",
+                painPoint: "매수자가 밤 10시에 Zillow에서 문의합니다. 5분 안에 응답하면 전환 확률 78%. 30분이면 10%로 떨어집니다.",
                 points: [
                     "모든 웹 문의에 즉시 리드 응답",
                     "매수자 & 매도자 사전 자격 심사 (예산, 일정, 동기)",
@@ -346,7 +415,12 @@ const translations = {
                     "지역 및 매물 FAQ 처리",
                     "개인화된 아웃리치로 냉각된 리드 재참여",
                     "CRM 동기화 (Follow Up Boss, KvCORE, Salesforce)"
-                ]
+                ],
+                conversation: {
+                    ai1: "안녕하세요! 425 Oak Street 매물에 관심을 가져주셔서 감사합니다. Sarah Chen 팀의 AI 어시스턴트입니다. 현재 에이전트와 함께 하고 계신가요, 아니면 더 알아보시는 걸 도와드릴까요?",
+                    user: "아직 에이전트 없이 알아보고 있어요. HOA 비용이 얼마인지, 매도자가 가격 협상이 가능한지 궁금합니다.",
+                    ai2: "좋은 질문입니다! HOA는 월 $285이며 수도, 쓰레기, 수영장 이용이 포함됩니다. 매도자는 적극적입니다 — 이미 두 번 가격을 인하했습니다. 이번 주말에 프라이빗 쇼잉을 잡아드릴까요? 모기지 사전 승인을 받으셨나요, 아니면 저희 대출 파트너를 소개해 드릴까요?"
+                }
             }
         }
     },
@@ -1186,47 +1260,84 @@ const SolutionsPage = ({ t }) => {
         'Real Estate': { icon: Building, key: 'RealEstate' }
     };
 
+    const colorMap = {
+        blue: { bg: 'bg-blue-50', border: 'border-blue-100', text: 'text-blue-700', accent: 'bg-blue-600', light: 'bg-blue-100', dot: 'bg-blue-500', statBg: 'bg-blue-600' },
+        purple: { bg: 'bg-purple-50', border: 'border-purple-100', text: 'text-purple-700', accent: 'bg-purple-600', light: 'bg-purple-100', dot: 'bg-purple-500', statBg: 'bg-purple-600' },
+        amber: { bg: 'bg-amber-50', border: 'border-amber-100', text: 'text-amber-700', accent: 'bg-amber-600', light: 'bg-amber-100', dot: 'bg-amber-500', statBg: 'bg-amber-600' },
+        emerald: { bg: 'bg-emerald-50', border: 'border-emerald-100', text: 'text-emerald-700', accent: 'bg-emerald-600', light: 'bg-emerald-100', dot: 'bg-emerald-500', statBg: 'bg-emerald-600' },
+    };
+
+    const content = t.solutions.content[activeTab];
+    const colors = colorMap[content.color] || colorMap.blue;
+    const ActiveIcon = Object.values(tabs).find(t => t.key === activeTab) ? Object.entries(tabs).find(([,v]) => v.key === activeTab)?.[1]?.icon : Stethoscope;
+
     return (
         <div className="pt-32 pb-20 px-6">
             <div className="max-w-7xl mx-auto">
-                 <div className="text-center mb-16">
-                    <h1 className="text-5xl font-bold mb-6 text-slate-900 tracking-tight">{t.solutions.title}</h1>
-                    <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">{t.solutions.subtitle}</p>
+                <div className="text-center mb-16">
+                    <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight">{t.solutions.title}</h1>
+                    <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">{t.solutions.subtitle}</p>
                 </div>
 
                 {/* Industry Tabs */}
-                <div className="flex flex-wrap justify-center gap-3 mb-16">
+                <div className="flex flex-wrap justify-center gap-3 mb-12">
                     {Object.entries(tabs).map(([label, config]) => {
                          const Icon = config.icon;
+                         const tabColor = colorMap[t.solutions.content[config.key]?.color] || colorMap.blue;
                          return (
                             <button
                                 key={label}
                                 onClick={() => setActiveTab(config.key)}
-                                className={`flex items-center gap-2 px-6 py-3.5 rounded-full text-sm font-semibold transition-all border ${
+                                className={`flex items-center gap-2.5 px-6 py-4 rounded-2xl text-sm font-semibold transition-all border ${
                                     activeTab === config.key 
-                                    ? 'bg-blue-600 text-white border-blue-600 shadow-md' 
-                                    : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50 hover:text-slate-900'
+                                    ? `${tabColor.accent} text-white border-transparent shadow-lg` 
+                                    : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50 hover:text-slate-900 hover:shadow-md'
                                 }`}
                             >
-                                <Icon size={18} />
+                                <Icon size={20} />
                                 {t.solutions.tabs[Object.keys(tabs).indexOf(label)]}
                             </button>
                         );
                     })}
                 </div>
 
-                {/* Tab Content */}
-                <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 shadow-sm animate-fade-in">
-                    <div className="mb-10">
-                        <h2 className="text-3xl font-bold mb-4 text-slate-900">{t.solutions.content[activeTab].title}</h2>
-                        {t.solutions.content[activeTab].desc && (
-                            <p className="text-lg text-slate-600 leading-relaxed max-w-3xl">{t.solutions.content[activeTab].desc}</p>
-                        )}
+                {/* Stat + Pain Point Hero */}
+                <div className={`${colors.bg} ${colors.border} border rounded-3xl p-8 md:p-12 mb-8`}>
+                    <div className="grid md:grid-cols-2 gap-10 items-center">
+                        <div>
+                            <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full ${colors.bg} ${colors.border} border text-xs font-bold ${colors.text} mb-4 uppercase tracking-wider`}>
+                                <span className={`w-2 h-2 rounded-full ${colors.dot}`}></span>
+                                Industry Insight
+                            </div>
+                            <p className="text-slate-800 text-lg md:text-xl leading-relaxed font-medium">
+                                {content.painPoint}
+                            </p>
+                        </div>
+                        <div className="flex justify-center">
+                            <div className="text-center">
+                                <div className={`text-7xl md:text-8xl font-black ${colors.text} tracking-tight`}>{content.stat}</div>
+                                <p className="text-slate-600 font-medium mt-2 text-sm max-w-xs mx-auto">{content.statLabel}</p>
+                            </div>
+                        </div>
                     </div>
+                </div>
+
+                {/* Title + Description + Capabilities */}
+                <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 shadow-sm mb-8">
+                    <div className="flex items-start gap-5 mb-10">
+                        <div className={`w-16 h-16 rounded-2xl ${colors.light} ${colors.text} flex items-center justify-center shrink-0`}>
+                            <ActiveIcon size={32} />
+                        </div>
+                        <div>
+                            <h2 className="text-3xl font-bold text-slate-900 mb-2">{content.title}</h2>
+                            <p className="text-lg text-slate-600 leading-relaxed">{content.desc}</p>
+                        </div>
+                    </div>
+
                     <div className="grid md:grid-cols-2 gap-4">
-                        {t.solutions.content[activeTab].points.map((point, i) => (
-                            <div key={i} className="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100">
-                                <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 shrink-0 mt-0.5">
+                        {content.points.map((point, i) => (
+                            <div key={i} className="flex items-start gap-4 p-5 rounded-2xl bg-slate-50 border border-slate-100 hover:shadow-sm transition-shadow">
+                                <div className={`w-8 h-8 rounded-full ${colors.light} ${colors.text} flex items-center justify-center shrink-0 mt-0.5`}>
                                     <CheckCircle2 size={16} />
                                 </div>
                                 <span className="text-slate-700 font-medium">{point}</span>
@@ -1234,6 +1345,33 @@ const SolutionsPage = ({ t }) => {
                         ))}
                     </div>
                 </div>
+
+                {/* Sample Conversation */}
+                {content.conversation && (
+                    <div className="bg-white border border-slate-200 rounded-3xl p-8 md:p-12 shadow-sm">
+                        <div className="mb-8">
+                            <div className="flex items-center gap-2 mb-2">
+                                <span className={`w-2 h-2 rounded-full ${colors.dot} animate-pulse`}></span>
+                                <span className={`text-xs font-bold ${colors.text} uppercase tracking-widest`}>Sample Conversation</span>
+                            </div>
+                            <h3 className="text-2xl font-bold text-slate-900">See how JuniVo handles a real call</h3>
+                        </div>
+                        <div className="max-w-2xl space-y-5">
+                            <div className="flex gap-4">
+                                <div className={`w-9 h-9 rounded-full ${colors.accent} flex items-center justify-center text-white text-xs font-bold shrink-0`}>AI</div>
+                                <div className="bg-slate-50 border border-slate-100 p-4 rounded-2xl rounded-tl-sm text-[15px] text-slate-700 leading-relaxed">{content.conversation.ai1}</div>
+                            </div>
+                            <div className="flex gap-4 flex-row-reverse">
+                                <div className="w-9 h-9 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold shrink-0">C</div>
+                                <div className={`${colors.accent} text-white p-4 rounded-2xl rounded-tr-sm text-[15px] leading-relaxed`}>{content.conversation.user}</div>
+                            </div>
+                            <div className="flex gap-4">
+                                <div className={`w-9 h-9 rounded-full ${colors.accent} flex items-center justify-center text-white text-xs font-bold shrink-0`}>AI</div>
+                                <div className="bg-slate-50 border border-slate-100 p-4 rounded-2xl rounded-tl-sm text-[15px] text-slate-700 leading-relaxed">{content.conversation.ai2}</div>
+                            </div>
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );
