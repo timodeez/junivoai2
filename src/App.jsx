@@ -217,8 +217,7 @@ const translations = {
     cta: {
         title: "Ready to elevate your practice?",
         subtitle: "Join the industry leaders saving 20+ administrative hours a week while significantly increasing their booking rates.",
-        btnStrategy: "Schedule a Consultation",
-        btnPricing: "Review Pricing Options"
+        btnStrategy: "Schedule a Consultation"
     },
     trust: {
       trustedBy: "TRUSTED BY PREMIUM PRACTICES & FIRMS IN",
@@ -227,19 +226,17 @@ const translations = {
     footer: {
         desc: "The premier autonomous front office for high-end service businesses. Capture, qualify, and close with elegance.",
         product: "Platform",
-        company: "Company",
+        legal: "Legal",
         links: {
             receptionist: "AI Receptionist",
             sales: "Sales Director",
             chat: "Human Chatbot",
-            integrations: "Integrations",
-            about: "Our Story",
-            careers: "Careers",
-            privacy: "Privacy & HIPAA Policy",
+            analytics: "Conversation Intelligence",
+            privacy: "Privacy Policy",
             terms: "Terms of Service"
         },
         rights: "© 2026 JuniVo Ai. All rights reserved.",
-        compliance: ["SOC2 Type II Certified", "HIPAA Compliant", "GDPR Compliant"]
+        compliance: ["HIPAA Compliant", "GDPR Compliant"]
     }
   },
   ko: {
@@ -430,25 +427,22 @@ const translations = {
     cta: {
         title: "비즈니스를 한 단계 격상시킬 준비가 되셨나요?",
         subtitle: "예약률을 크게 높이면서 주당 20시간 이상의 관리 시간을 절약하고 있는 업계 리더들과 함께하세요.",
-        btnStrategy: "상담 예약하기",
-        btnPricing: "요금 옵션 검토"
+        btnStrategy: "상담 예약하기"
     },
     footer: {
         desc: "하이엔드 서비스 비즈니스를 위한 최고의 자율 프론트 오피스. 우아하게 리드를 포착, 자격 심사, 마감하세요.",
         product: "플랫폼",
-        company: "회사",
+        legal: "법적 고지",
         links: {
             receptionist: "AI 리셉셔니스트",
             sales: "세일즈 디렉터",
             chat: "휴먼 챗봇",
-            integrations: "통합",
-            about: "우리의 이야기",
-            careers: "채용",
-            privacy: "개인정보 보호 및 HIPAA 정책",
+            analytics: "대화 인텔리전스",
+            privacy: "개인정보 처리방침",
             terms: "이용 약관"
         },
         rights: "© 2026 JuniVo Ai. All rights reserved.",
-        compliance: ["SOC2 Type II 인증", "HIPAA 준수", "GDPR 준수"]
+        compliance: ["HIPAA 준수", "GDPR 준수"]
     }
   }
 };
@@ -1310,6 +1304,100 @@ const PricingPage = ({ t }) => (
     </div>
 );
 
+const PrivacyPage = () => (
+  <div className="pt-32 pb-20 px-6">
+    <div className="max-w-4xl mx-auto">
+      <h1 className="text-4xl font-extrabold mb-4 text-slate-900">Privacy Policy</h1>
+      <p className="text-slate-500 mb-10 text-sm">Last updated: February 2026</p>
+      <div className="prose prose-slate max-w-none space-y-8 text-slate-700 leading-relaxed">
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">1. Information We Collect</h2>
+          <p>We collect information you provide directly, including name, email, phone number, and business details when you sign up, request a demo, or contact us. We also collect call recordings, transcripts, and analytics data generated through the use of our AI agents on your behalf.</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">2. How We Use Your Information</h2>
+          <p>We use your information to provide and improve our services, process transactions, communicate with you, and generate AI-powered call analytics. Call data is processed to deliver transcripts, sentiment analysis, and conversation summaries to your dashboard.</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">3. Data Storage & Security</h2>
+          <p>All data is encrypted in transit (TLS 1.2+) and at rest (AES-256). Call recordings and transcripts are stored on secure, access-controlled infrastructure. We implement industry-standard security practices including regular audits, role-based access controls, and intrusion detection.</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">4. HIPAA Compliance</h2>
+          <p>For healthcare and med spa clients, JuniVo operates as a HIPAA-compliant Business Associate. We execute Business Associate Agreements (BAAs) and maintain administrative, physical, and technical safeguards required under HIPAA regulations.</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">5. Data Sharing</h2>
+          <p>We do not sell your data. We share information only with service providers necessary to deliver our platform (cloud hosting, telephony providers) under strict data processing agreements. We may disclose data if required by law or to protect our legal rights.</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">6. Data Retention</h2>
+          <p>Call recordings and transcripts are retained for the duration of your subscription plus 30 days. You may request deletion of your data at any time by contacting us. Upon account termination, all data is permanently deleted within 90 days.</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">7. Your Rights</h2>
+          <p>You have the right to access, correct, or delete your personal data. For GDPR-covered individuals, you may also exercise rights to data portability and restriction of processing. Contact us at privacy@junivoai.com to exercise any of these rights.</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">8. Contact</h2>
+          <p>For privacy-related inquiries, contact us at <a href="mailto:privacy@junivoai.com" className="text-blue-600 hover:underline">privacy@junivoai.com</a>.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+);
+
+const TermsPage = () => (
+  <div className="pt-32 pb-20 px-6">
+    <div className="max-w-4xl mx-auto">
+      <h1 className="text-4xl font-extrabold mb-4 text-slate-900">Terms of Service</h1>
+      <p className="text-slate-500 mb-10 text-sm">Last updated: February 2026</p>
+      <div className="prose prose-slate max-w-none space-y-8 text-slate-700 leading-relaxed">
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">1. Acceptance of Terms</h2>
+          <p>By accessing or using JuniVo Ai's services, you agree to be bound by these Terms of Service. If you do not agree, you may not use the platform. These terms apply to all users, including businesses and their authorized representatives.</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">2. Description of Service</h2>
+          <p>JuniVo Ai provides AI-powered voice agents, chat agents, and conversation analytics tools designed for business use. Our platform handles inbound/outbound calls, website chat, appointment scheduling, lead qualification, and call analysis on behalf of subscribing businesses.</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">3. Account Responsibilities</h2>
+          <p>You are responsible for maintaining the security of your account credentials and for all activities under your account. You agree to provide accurate business and contact information and to update it as needed. You must be at least 18 years old to use our services.</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">4. Acceptable Use</h2>
+          <p>You may not use JuniVo for any unlawful purpose, to harass or deceive individuals, to make unsolicited robocalls in violation of TCPA or equivalent regulations, or to process data in violation of applicable privacy laws. We reserve the right to suspend accounts that violate these terms.</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">5. Billing & Subscriptions</h2>
+          <p>Subscriptions are billed monthly. You authorize us to charge your payment method on file for all applicable fees. Subscriptions renew automatically unless cancelled before the next billing cycle. Refunds are handled on a case-by-case basis at our discretion.</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">6. Intellectual Property</h2>
+          <p>All platform technology, AI models, branding, and content are the property of JuniVo Ai. You retain ownership of your business data, call recordings, and transcripts. You grant us a limited license to process this data solely to provide and improve our services.</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">7. Limitation of Liability</h2>
+          <p>JuniVo Ai is provided "as is." We are not liable for indirect, incidental, or consequential damages arising from your use of the platform, including but not limited to lost revenue, missed calls due to service interruptions, or AI agent errors. Our total liability shall not exceed the fees paid by you in the 12 months preceding the claim.</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">8. Termination</h2>
+          <p>Either party may terminate at any time. Upon termination, your access to the platform will cease and your data will be deleted within 90 days, unless retention is required by law. We may immediately terminate accounts that violate these terms.</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">9. Governing Law</h2>
+          <p>These terms are governed by the laws of the State of California, United States. Any disputes shall be resolved through binding arbitration in Los Angeles County, California.</p>
+        </section>
+        <section>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">10. Contact</h2>
+          <p>For questions about these terms, contact us at <a href="mailto:legal@junivoai.com" className="text-blue-600 hover:underline">legal@junivoai.com</a>.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+);
+
 // --- Main App ---
 
 const HeroSection = ({ t, lang }) => {
@@ -1438,6 +1526,8 @@ const App = () => {
           case 'chatbot': return <ChatbotPage t={t} />;
           case 'solutions': return <SolutionsPage t={t} />;
           case 'pricing': return <PricingPage t={t} />;
+          case 'privacy': return <PrivacyPage />;
+          case 'terms': return <TermsPage />;
           default: return (
             <>
                 <HeroSection t={t} lang={lang} />
@@ -1586,13 +1676,10 @@ const App = () => {
                     <p className="text-slate-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto relative z-10 break-keep leading-relaxed">
                       {t.cta.subtitle}
                     </p>
-                    <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
-                      <a href={CALENDAR_URL} target="_blank" rel="noopener noreferrer" className="bg-white text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-slate-50 transition-all shadow-lg transform hover:-translate-y-1 text-center">
+                    <div className="flex justify-center relative z-10">
+                      <a href={CALENDAR_URL} target="_blank" rel="noopener noreferrer" className="bg-white text-slate-900 px-10 py-4 rounded-full font-bold hover:bg-slate-50 transition-all shadow-lg transform hover:-translate-y-1 text-center">
                         {t.cta.btnStrategy}
                       </a>
-                      <button onClick={() => setCurrentPage('pricing')} className="bg-transparent border border-slate-600 text-white px-8 py-4 rounded-full font-bold hover:bg-white/5 transition-all">
-                        {t.cta.btnPricing}
-                      </button>
                     </div>
                   </div>
                 </section>
@@ -1610,7 +1697,7 @@ const App = () => {
         {renderPage()}
       </main>
 
-      {/* FOOTER - Deep Navy Premium Feel */}
+      {/* FOOTER */}
       <footer className="py-16 px-6 bg-slate-950 border-t border-slate-900">
         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
@@ -1628,20 +1715,18 @@ const App = () => {
           <div>
             <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">{t.footer.product}</h4>
             <ul className="space-y-3 text-sm text-slate-400 font-medium">
-              <li><button onClick={() => setCurrentPage('product')} className="hover:text-blue-400 transition-colors">{t.footer.links.receptionist}</button></li>
-              <li><button onClick={() => setCurrentPage('product')} className="hover:text-blue-400 transition-colors">{t.footer.links.sales}</button></li>
-              <li><button onClick={() => setCurrentPage('product')} className="hover:text-blue-400 transition-colors">{t.footer.links.chat}</button></li>
-              <li><button onClick={() => setCurrentPage('product')} className="hover:text-blue-400 transition-colors">{t.footer.links.integrations}</button></li>
+              <li><button onClick={() => setCurrentPage('receptionist')} className="hover:text-blue-400 transition-colors">{t.footer.links.receptionist}</button></li>
+              <li><button onClick={() => setCurrentPage('sales-agent')} className="hover:text-blue-400 transition-colors">{t.footer.links.sales}</button></li>
+              <li><button onClick={() => setCurrentPage('chatbot')} className="hover:text-blue-400 transition-colors">{t.footer.links.chat}</button></li>
+              <li><button onClick={() => setCurrentPage('product')} className="hover:text-blue-400 transition-colors">{t.footer.links.analytics}</button></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">{t.footer.company}</h4>
+            <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">{t.footer.legal}</h4>
             <ul className="space-y-3 text-sm text-slate-400 font-medium">
-              <li><a href="#" className="hover:text-blue-400 transition-colors">{t.footer.links.about}</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">{t.footer.links.careers}</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">{t.footer.links.privacy}</a></li>
-              <li><a href="#" className="hover:text-blue-400 transition-colors">{t.footer.links.terms}</a></li>
+              <li><button onClick={() => setCurrentPage('privacy')} className="hover:text-blue-400 transition-colors">{t.footer.links.privacy}</button></li>
+              <li><button onClick={() => setCurrentPage('terms')} className="hover:text-blue-400 transition-colors">{t.footer.links.terms}</button></li>
             </ul>
           </div>
         </div>
