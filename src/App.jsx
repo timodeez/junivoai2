@@ -100,11 +100,11 @@ const translations = {
     },
     pricing: {
         title: "Simple, ROI-Positive Pricing",
-        subtitle: "Most practices recover their monthly investment within the first three days of deployment.",
+        subtitle: "Most businesses recover their monthly investment within the first week of deployment.",
         tiers: [
-            { name: "Professional", price: "$297", period: "/mo", desc: "Perfect for independent practitioners.", features: ["1 AI Receptionist", "500 Minutes/mo", "Basic EMR/CRM Sync", "Standard Support"] },
-            { name: "Practice Growth", price: "$497", period: "/mo", desc: "For growing clinics and teams.", features: ["3 AI Agents", "1,500 Minutes/mo", "Full EMR/CRM Integration", "Priority Support", "Dedicated Sales Qualifier"] },
-            { name: "Enterprise", price: "Custom", period: "", desc: "For medical groups & high volume.", features: ["Unlimited Agents", "Volume Discounts", "White Labeling", "Dedicated Success Manager", "Custom Model Training"] }
+            { name: "Receptionist", price: "$500", period: "/mo", desc: "Your 24/7 AI receptionist that never misses a call.", features: ["AI Receptionist (Voice)", "Unlimited Inbound Calls", "Call Recording & Transcripts", "Appointment Scheduling", "Business Knowledge Training", "Standard Support"] },
+            { name: "Receptionist + Chat", price: "$750", period: "/mo", desc: "Voice + website chat for total coverage.", features: ["Everything in Receptionist", "AI Website Chatbot", "Chat Trained on Your Knowledge Base", "Lead Capture & Qualification", "Multilingual Support (20+ Languages)", "Priority Support"] },
+            { name: "Full Suite", price: "$1,000", period: "/mo", desc: "Add an AI sales agent to close more deals.", features: ["Everything in Receptionist + Chat", "AI Sales Director Agent", "Outbound Lead Follow-up", "AI Sentiment & Conversion Analytics", "Dedicated Account Manager", "Custom Voice & Persona"] }
         ]
     },
     features: {
@@ -112,33 +112,33 @@ const translations = {
       subtitle: "Every business gets a custom AI that actually knows your services, your pricing, and your brand — deployed across voice and chat so you never miss a lead.",
       cards: [
         {
-          title: "Custom AI Voice Agent",
-          description: "A voice agent built for YOUR business. Custom voice, your knowledge base, your brand personality — answering every call like your best employee.",
+          title: "The Receptionist",
+          description: "Your 24/7 AI front desk. Answers every call with a custom voice trained on your business — books appointments, handles FAQs, and never puts anyone on hold.",
           features: [
             "Custom voice tailored to your brand",
             "Trained on your services, pricing & FAQs",
-            "Handles calls 24/7 with sub-800ms response",
+            "Books directly to your calendar",
             "Seamless handoff to live staff when needed"
           ]
         },
         {
-          title: "AI Website Chat",
-          description: "A smart chat widget on your website that knows your business inside out. Converts visitors into booked appointments around the clock.",
+          title: "The Sales Director",
+          description: "An AI sales agent that follows up on every lead, qualifies prospects, and closes bookings — so your team only talks to people ready to buy.",
           features: [
-            "Embedded chat trained on your knowledge base",
-            "Books appointments & captures lead info",
-            "Multilingual — 20+ languages supported",
-            "Syncs with your voice agent for full context"
+            "Outbound follow-up on every lead",
+            "Qualifies prospects by intent & budget",
+            "Handles objections with trained responses",
+            "Conversion tracking & sentiment analysis"
           ]
         },
         {
-          title: "Trained on YOUR Business",
-          description: "This isn't a generic chatbot. Every AI agent is trained on your specific knowledge base — so every answer, every recommendation, is uniquely yours.",
+          title: "The Human Chatbot",
+          description: "A website chat assistant that feels human. Trained on your entire knowledge base, it answers questions, captures leads, and books appointments 24/7.",
           features: [
-            "Upload docs, FAQs, service menus & scripts",
-            "AI learns your procedures & compliance rules",
-            "Answers are always accurate to your practice",
-            "Continuously improves from every conversation"
+            "Trained on your docs, FAQs & service menus",
+            "Natural, human-like conversation flow",
+            "Captures lead info & books appointments",
+            "Multilingual — 20+ languages supported"
           ]
         }
       ]
@@ -265,11 +265,11 @@ const translations = {
     },
     pricing: {
         title: "단순하고 ROI가 확실한 요금제",
-        subtitle: "대부분의 병원 및 기업은 도입 후 첫 3일 이내에 월 투자 비용을 회수합니다.",
+        subtitle: "대부분의 비즈니스가 도입 첫 주 안에 월 투자 비용을 회수합니다.",
         tiers: [
-            { name: "프로페셔널", price: "₩350,000", period: "/월", desc: "독립 개업의에게 적합합니다.", features: ["1 AI 리셉셔니스트", "500분/월", "기본 EMR/CRM 동기화", "표준 지원"] },
-            { name: "프랙티스 그로스", price: "₩600,000", period: "/월", desc: "성장하는 클리닉 및 팀을 위해.", features: ["3 AI 에이전트", "1,500분/월", "전체 EMR/CRM 통합", "우선 지원", "전담 영업 자격 심사"] },
-            { name: "엔터프라이즈", price: "문의", period: "", desc: "의료 그룹 및 대량 볼륨.", features: ["무제한 에이전트", "대량 할인", "화이트 라벨링", "전담 성공 관리자", "맞춤형 모델 훈련"] }
+            { name: "리셉셔니스트", price: "$500", period: "/월", desc: "전화를 놓치지 않는 24/7 AI 리셉셔니스트.", features: ["AI 리셉셔니스트 (음성)", "무제한 수신 통화", "통화 녹음 및 전사", "예약 일정 관리", "비즈니스 지식 학습", "표준 지원"] },
+            { name: "리셉셔니스트 + 채팅", price: "$750", period: "/월", desc: "음성 + 웹사이트 채팅으로 완벽한 커버리지.", features: ["리셉셔니스트 포함 전체", "AI 웹사이트 챗봇", "지식 기반 학습 채팅", "리드 캡처 및 자격 심사", "다국어 지원 (20개 이상)", "우선 지원"] },
+            { name: "풀 스위트", price: "$1,000", period: "/월", desc: "AI 세일즈 에이전트로 더 많은 거래를 성사시키세요.", features: ["리셉셔니스트 + 채팅 포함 전체", "AI 세일즈 디렉터 에이전트", "아웃바운드 리드 팔로업", "AI 감정 및 전환 분석", "전담 계정 관리자", "커스텀 음성 및 페르소나"] }
         ]
     },
      trust: {
@@ -281,33 +281,33 @@ const translations = {
       subtitle: "모든 비즈니스가 자사의 서비스, 가격, 브랜드를 정확히 아는 맞춤형 AI를 제공받습니다 — 음성과 채팅으로 배포되어 단 하나의 리드도 놓치지 않습니다.",
       cards: [
         {
-          title: "맞춤형 AI 음성 에이전트",
-          description: "귀사만을 위한 음성 에이전트. 맞춤 음성, 귀사의 지식 기반, 브랜드 개성 — 최고의 직원처럼 모든 전화를 응대합니다.",
+          title: "리셉셔니스트",
+          description: "24/7 AI 프론트 데스크. 귀사의 비즈니스에 학습된 맞춤 음성으로 모든 전화에 응답 — 예약, FAQ 처리, 대기 시간 제로.",
           features: [
             "브랜드에 맞춘 커스텀 음성",
             "서비스, 가격, FAQ 기반 학습",
-            "800ms 미만의 응답으로 24/7 통화 처리",
+            "캘린더에 직접 예약",
             "필요 시 실시간 직원 연결"
           ]
         },
         {
-          title: "AI 웹사이트 채팅",
-          description: "귀사의 비즈니스를 속속들이 아는 스마트 채팅 위젯. 방문자를 24시간 예약 고객으로 전환합니다.",
+          title: "세일즈 디렉터",
+          description: "모든 리드를 팔로업하고, 잠재 고객을 자격 심사하며, 예약을 성사시키는 AI 세일즈 에이전트 — 팀은 구매 준비가 된 고객만 상대합니다.",
           features: [
-            "지식 기반으로 학습된 임베디드 채팅",
-            "예약 접수 및 리드 정보 확보",
-            "다국어 지원 — 20개 이상 언어",
-            "음성 에이전트와 전체 맥락 동기화"
+            "모든 리드에 대한 아웃바운드 팔로업",
+            "의도 및 예산별 잠재 고객 자격 심사",
+            "학습된 응대로 이의 처리",
+            "전환 추적 및 감정 분석"
           ]
         },
         {
-          title: "귀사의 비즈니스에 맞춘 학습",
-          description: "일반 챗봇이 아닙니다. 모든 AI 에이전트가 귀사의 고유한 지식 기반으로 학습됩니다 — 모든 답변이 정확하고 귀사만의 것입니다.",
+          title: "휴먼 챗봇",
+          description: "사람처럼 느껴지는 웹사이트 채팅 어시스턴트. 귀사의 전체 지식 기반으로 학습되어 질문 답변, 리드 확보, 24/7 예약을 처리합니다.",
           features: [
-            "문서, FAQ, 서비스 메뉴, 스크립트 업로드",
-            "절차 및 규정 준수 규칙 학습",
-            "항상 귀사에 정확한 답변 제공",
-            "모든 대화에서 지속적으로 개선"
+            "문서, FAQ, 서비스 메뉴 기반 학습",
+            "자연스럽고 사람 같은 대화 흐름",
+            "리드 정보 확보 및 예약 접수",
+            "다국어 지원 — 20개 이상 언어"
           ]
         }
       ]
@@ -400,7 +400,6 @@ const Navbar = ({ lang, setLang, t, currentPage, setCurrentPage }) => {
         <div className="hidden md:flex items-center gap-8">
           <button onClick={() => setCurrentPage('product')} className={navLinkClass('product')}>{t.nav.product}</button>
           <button onClick={() => setCurrentPage('solutions')} className={navLinkClass('solutions')}>{t.nav.solutions}</button>
-          <button onClick={() => setCurrentPage('pricing')} className={navLinkClass('pricing')}>{t.nav.pricing}</button>
         </div>
 
         <div className="hidden md:flex items-center gap-5">
@@ -416,9 +415,9 @@ const Navbar = ({ lang, setLang, t, currentPage, setCurrentPage }) => {
            <button className="text-slate-600 text-sm font-medium hover:text-blue-600 transition-colors">
             {t.nav.login}
           </button>
-          <button className="bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-slate-800 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+          <a href={CALENDAR_URL} target="_blank" rel="noopener noreferrer" className="bg-slate-900 text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-slate-800 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
             {t.nav.bookDemo}
-          </button>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -440,7 +439,6 @@ const Navbar = ({ lang, setLang, t, currentPage, setCurrentPage }) => {
         <div className="md:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 p-6 flex flex-col gap-4 shadow-xl">
           <button onClick={() => { setCurrentPage('product'); setMobileMenuOpen(false); }} className="text-slate-600 hover:text-slate-900 text-left font-medium">{t.nav.product}</button>
           <button onClick={() => { setCurrentPage('solutions'); setMobileMenuOpen(false); }} className="text-slate-600 hover:text-slate-900 text-left font-medium">{t.nav.solutions}</button>
-          <button onClick={() => { setCurrentPage('pricing'); setMobileMenuOpen(false); }} className="text-slate-600 hover:text-slate-900 text-left font-medium">{t.nav.pricing}</button>
           <button className="bg-blue-600 text-white w-full py-3 rounded-xl font-medium shadow-md">{t.nav.getStarted}</button>
         </div>
       )}
@@ -521,6 +519,8 @@ const CallVisualizer = () => (
     </div>
 );
 
+const CALENDAR_URL = 'https://cal.com/junivoai/consultation';
+
 const AGENTS = [
   { id: 'agent_b102f121a6b37b2e6a4b4a1f79', name: 'EN', label: '🇺🇸 English' },
   { id: 'agent_05f11e21300b9eed83d7b4a89e', name: 'KR', label: '🇰🇷 한국어' },
@@ -597,23 +597,40 @@ const useRetellCall = () => {
   return { callStatus, agentTalking, transcript, startCall, endCall, reset };
 };
 
-const AudioWave = ({ active, className = '' }) => (
-  <div className={`flex items-end gap-1 h-8 ${className}`}>
-    {Array.from({ length: 16 }).map((_, i) => (
+const AudioWave = ({ active, speaking, className = '' }) => (
+  <div className={`flex items-end justify-center gap-[3px] h-10 ${className}`}>
+    {Array.from({ length: 28 }).map((_, i) => (
       <div
         key={i}
-        className={`flex-1 max-w-[3px] rounded-full transition-all duration-300 ${
+        className={`w-[3px] rounded-full transition-colors duration-300 ${
           active
-            ? 'bg-gradient-to-t from-blue-600 to-teal-400'
+            ? speaking
+              ? 'bg-gradient-to-t from-blue-600 to-teal-400'
+              : 'bg-gradient-to-t from-blue-400 to-blue-300'
             : 'bg-slate-200'
         }`}
         style={{
-          animation: active ? 'wave 1.2s ease-in-out infinite' : 'none',
-          animationDelay: `${i * 0.08}s`,
-          height: active ? '100%' : '30%',
+          animation: active
+            ? speaking
+              ? `waveActive 0.8s ease-in-out infinite`
+              : `waveIdle 1.8s ease-in-out infinite`
+            : 'none',
+          animationDelay: `${i * 0.05}s`,
+          height: active ? '100%' : '20%',
+          transformOrigin: 'bottom',
         }}
       />
     ))}
+    <style>{`
+      @keyframes waveActive {
+        0%, 100% { transform: scaleY(0.25); }
+        50% { transform: scaleY(1); }
+      }
+      @keyframes waveIdle {
+        0%, 100% { transform: scaleY(0.15); }
+        50% { transform: scaleY(0.4); }
+      }
+    `}</style>
   </div>
 );
 
@@ -675,7 +692,7 @@ const LiveCallCard = ({ t, lang, callStatus, agentTalking }) => {
 
       {/* Audio Waveform */}
       <div className="bg-slate-50 rounded-xl p-4 border border-slate-100">
-        <AudioWave active={isActive && agentTalking} />
+        <AudioWave active={isActive} speaking={agentTalking} />
         <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-2 text-center">
           {isActive ? 'Secure Voice Active' : 'Secure Voice Channel'}
         </p>
@@ -1128,7 +1145,7 @@ const App = () => {
                       {t.features.cards.map((card, index) => (
                           <FeatureCard 
                           key={index}
-                          icon={[Phone, MessageSquare, Cpu][index]}
+                          icon={[Phone, Zap, MessageSquare][index]}
                           title={card.title}
                           description={card.description}
                           colorClass={["from-blue-600 to-blue-400", "from-purple-600 to-pink-400", "from-green-500 to-emerald-400"][index]}
@@ -1245,10 +1262,10 @@ const App = () => {
                       {t.cta.subtitle}
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
-                      <button className="bg-white text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-slate-50 transition-all shadow-lg transform hover:-translate-y-1">
+                      <a href={CALENDAR_URL} target="_blank" rel="noopener noreferrer" className="bg-white text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-slate-50 transition-all shadow-lg transform hover:-translate-y-1 text-center">
                         {t.cta.btnStrategy}
-                      </button>
-                      <button className="bg-transparent border border-slate-600 text-white px-8 py-4 rounded-full font-bold hover:bg-white/5 transition-all">
+                      </a>
+                      <button onClick={() => setCurrentPage('pricing')} className="bg-transparent border border-slate-600 text-white px-8 py-4 rounded-full font-bold hover:bg-white/5 transition-all">
                         {t.cta.btnPricing}
                       </button>
                     </div>
