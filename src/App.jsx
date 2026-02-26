@@ -646,7 +646,7 @@ const CallVisualizer = () => (
     </div>
 );
 
-const CALENDAR_URL = 'https://cal.com/junivoai/consultation';
+const CALENDAR_URL = 'https://cal.com/junivoai/30min';
 
 const AGENTS = [
   { id: 'agent_b102f121a6b37b2e6a4b4a1f79', name: 'EN', label: '🇺🇸 English' },
