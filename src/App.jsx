@@ -36,6 +36,7 @@ const translations = {
   en: {
     nav: {
       platform: "Our Platform",
+      product: "Product",
       receptionist: "AI Receptionist",
       salesAgent: "Sales Agent",
       chatbot: "Human Chatbot",
@@ -242,6 +243,7 @@ const translations = {
   ko: {
     nav: {
       platform: "플랫폼",
+      product: "제품",
       receptionist: "AI 리셉셔니스트",
       salesAgent: "세일즈 에이전트",
       chatbot: "휴먼 챗봇",
@@ -469,7 +471,7 @@ const Navbar = ({ lang, setLang, t, currentPage, setCurrentPage }) => {
     `cursor-pointer transition-colors font-medium text-sm ${currentPage === page ? 'text-slate-900 font-semibold' : 'text-slate-500 hover:text-slate-900'}`;
 
   const platformPages = ['receptionist', 'sales-agent', 'chatbot'];
-  const isPlatformActive = platformPages.includes(currentPage) || currentPage === 'product';
+  const isPlatformActive = platformPages.includes(currentPage);
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md border-b border-slate-200 py-4 shadow-sm' : 'bg-transparent py-6'}`}>
@@ -507,15 +509,12 @@ const Navbar = ({ lang, setLang, t, currentPage, setCurrentPage }) => {
                   <button onClick={() => { setCurrentPage('chatbot'); setPlatformOpen(false); }} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium text-slate-600 hover:bg-indigo-50 hover:text-indigo-700 transition-colors text-left">
                     <MessageSquare size={16} /> {t.nav.chatbot}
                   </button>
-                  <div className="border-t border-slate-100 my-1"></div>
-                  <button onClick={() => { setCurrentPage('product'); setPlatformOpen(false); }} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium text-slate-600 hover:bg-amber-50 hover:text-amber-700 transition-colors text-left">
-                    <BarChart3 size={16} /> {t.nav.analytics}
-                  </button>
                 </div>
               </div>
             )}
           </div>
           <button onClick={() => setCurrentPage('solutions')} className={navLinkClass('solutions')}>{t.nav.solutions}</button>
+          <button onClick={() => setCurrentPage('product')} className={navLinkClass('product')}>{t.nav.product}</button>
         </div>
 
         <div className="hidden md:flex items-center gap-5">
@@ -561,10 +560,10 @@ const Navbar = ({ lang, setLang, t, currentPage, setCurrentPage }) => {
               <button onClick={() => { setCurrentPage('receptionist'); setMobileMenuOpen(false); }} className="text-slate-600 hover:text-slate-900 text-left font-medium flex items-center gap-2"><Phone size={14} /> {t.nav.receptionist}</button>
               <button onClick={() => { setCurrentPage('sales-agent'); setMobileMenuOpen(false); }} className="text-slate-600 hover:text-slate-900 text-left font-medium flex items-center gap-2"><Zap size={14} /> {t.nav.salesAgent}</button>
               <button onClick={() => { setCurrentPage('chatbot'); setMobileMenuOpen(false); }} className="text-slate-600 hover:text-slate-900 text-left font-medium flex items-center gap-2"><MessageSquare size={14} /> {t.nav.chatbot}</button>
-              <button onClick={() => { setCurrentPage('product'); setMobileMenuOpen(false); }} className="text-slate-600 hover:text-slate-900 text-left font-medium flex items-center gap-2"><BarChart3 size={14} /> {t.nav.analytics}</button>
             </div>
           )}
           <button onClick={() => { setCurrentPage('solutions'); setMobileMenuOpen(false); }} className="text-slate-600 hover:text-slate-900 text-left font-medium">{t.nav.solutions}</button>
+          <button onClick={() => { setCurrentPage('product'); setMobileMenuOpen(false); }} className="text-slate-600 hover:text-slate-900 text-left font-medium">{t.nav.product}</button>
           <a href="https://dashboard.junivoai.com/login" target="_blank" rel="noopener noreferrer" className="text-slate-600 hover:text-slate-900 text-left font-medium">{t.nav.login}</a>
           <a href={CALENDAR_URL} target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white w-full py-3 rounded-xl font-medium shadow-md text-center">{t.nav.getStarted}</a>
         </div>
@@ -1512,10 +1511,44 @@ const HeroSection = ({ t, lang }) => {
   );
 };
 
+const PAGE_ROUTES = {
+  home: '/',
+  product: '/product',
+  receptionist: '/receptionist',
+  'sales-agent': '/sales-agent',
+  chatbot: '/chatbot',
+  solutions: '/solutions',
+  pricing: '/pricing',
+  privacy: '/privacy',
+  terms: '/terms',
+};
+
+const getPageFromPath = (path) => {
+  const entry = Object.entries(PAGE_ROUTES).find(([, route]) => route === path);
+  return entry ? entry[0] : 'home';
+};
+
 const App = () => {
   const [lang, setLang] = useState('en');
-  const [currentPage, setCurrentPage] = useState('home');
+  const [currentPage, setCurrentPage] = useState(() => getPageFromPath(window.location.pathname));
   const t = translations[lang];
+
+  const setPage = useCallback((page) => {
+    setCurrentPage(page);
+    const path = PAGE_ROUTES[page] || '/';
+    window.history.pushState({ page }, '', path);
+    window.scrollTo(0, 0);
+  }, []);
+
+  useEffect(() => {
+    const handlePopState = (e) => {
+      const page = e.state?.page || getPageFromPath(window.location.pathname);
+      setCurrentPage(page);
+      window.scrollTo(0, 0);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   // Component to render based on current page state
   const renderPage = () => {
@@ -1690,7 +1723,7 @@ const App = () => {
 
   return (
     <div className={`min-h-screen bg-slate-50 font-sans overflow-x-hidden ${lang === 'ko' ? 'font-sans-kr' : ''}`}>
-      <Navbar lang={lang} setLang={setLang} t={t} currentPage={currentPage} setCurrentPage={setCurrentPage} />
+      <Navbar lang={lang} setLang={setLang} t={t} currentPage={currentPage} setCurrentPage={setPage} />
 
       {/* Render Active Page Content */}
       <main className="bg-white">
@@ -1701,7 +1734,7 @@ const App = () => {
       <footer className="py-16 px-6 bg-slate-950 border-t border-slate-900">
         <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-2 mb-6 cursor-pointer" onClick={() => setCurrentPage('home')}>
+            <div className="flex items-center gap-2 mb-6 cursor-pointer" onClick={() => setPage('home')}>
               <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center">
                 <Zap className="text-white w-4 h-4 fill-current" />
               </div>
@@ -1715,18 +1748,18 @@ const App = () => {
           <div>
             <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">{t.footer.product}</h4>
             <ul className="space-y-3 text-sm text-slate-400 font-medium">
-              <li><button onClick={() => setCurrentPage('receptionist')} className="hover:text-blue-400 transition-colors">{t.footer.links.receptionist}</button></li>
-              <li><button onClick={() => setCurrentPage('sales-agent')} className="hover:text-blue-400 transition-colors">{t.footer.links.sales}</button></li>
-              <li><button onClick={() => setCurrentPage('chatbot')} className="hover:text-blue-400 transition-colors">{t.footer.links.chat}</button></li>
-              <li><button onClick={() => setCurrentPage('product')} className="hover:text-blue-400 transition-colors">{t.footer.links.analytics}</button></li>
+              <li><button onClick={() => setPage('receptionist')} className="hover:text-blue-400 transition-colors">{t.footer.links.receptionist}</button></li>
+              <li><button onClick={() => setPage('sales-agent')} className="hover:text-blue-400 transition-colors">{t.footer.links.sales}</button></li>
+              <li><button onClick={() => setPage('chatbot')} className="hover:text-blue-400 transition-colors">{t.footer.links.chat}</button></li>
+              <li><button onClick={() => setPage('product')} className="hover:text-blue-400 transition-colors">{t.footer.links.analytics}</button></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">{t.footer.legal}</h4>
             <ul className="space-y-3 text-sm text-slate-400 font-medium">
-              <li><button onClick={() => setCurrentPage('privacy')} className="hover:text-blue-400 transition-colors">{t.footer.links.privacy}</button></li>
-              <li><button onClick={() => setCurrentPage('terms')} className="hover:text-blue-400 transition-colors">{t.footer.links.terms}</button></li>
+              <li><button onClick={() => setPage('privacy')} className="hover:text-blue-400 transition-colors">{t.footer.links.privacy}</button></li>
+              <li><button onClick={() => setPage('terms')} className="hover:text-blue-400 transition-colors">{t.footer.links.terms}</button></li>
             </ul>
           </div>
         </div>
