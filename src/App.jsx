@@ -108,37 +108,37 @@ const translations = {
         ]
     },
     features: {
-      title: "Your Autonomous Front Office",
-      subtitle: "Consolidate fragmented communications into a single, intelligent system that represents your brand flawlessly.",
+      title: "Voice. Chat. Trained on Your Business.",
+      subtitle: "Every business gets a custom AI that actually knows your services, your pricing, and your brand — deployed across voice and chat so you never miss a lead.",
       cards: [
         {
-          title: "The Receptionist",
-          description: "Manages inbound calls 24/7. No hold times, no missed calls, just perfectly handled patient inquiries.",
+          title: "Custom AI Voice Agent",
+          description: "A voice agent built for YOUR business. Custom voice, your knowledge base, your brand personality — answering every call like your best employee.",
           features: [
-            "Instantly answers & routes calls",
-            "Books directly to your calendar",
-            "Handles rescheduling & FAQs",
-            "Seamless live human handoff"
+            "Custom voice tailored to your brand",
+            "Trained on your services, pricing & FAQs",
+            "Handles calls 24/7 with sub-800ms response",
+            "Seamless handoff to live staff when needed"
           ]
         },
         {
-          title: "The Intake Coordinator",
-          description: "Eliminate lead decay. Our AI calls web inquiries within 10 seconds to qualify and secure the booking.",
+          title: "AI Website Chat",
+          description: "A smart chat widget on your website that knows your business inside out. Converts visitors into booked appointments around the clock.",
           features: [
-            "Sub-30 second speed-to-lead",
-            "Filters based on criteria & intent",
-            "Nurtures via secure SMS if no answer",
-            "Updates your CRM instantly"
+            "Embedded chat trained on your knowledge base",
+            "Books appointments & captures lead info",
+            "Multilingual — 20+ languages supported",
+            "Syncs with your voice agent for full context"
           ]
         },
         {
-          title: "The Digital Concierge",
-          description: "A secure website assistant that knows your practice inside out and converts site traffic into appointments.",
+          title: "Trained on YOUR Business",
+          description: "This isn't a generic chatbot. Every AI agent is trained on your specific knowledge base — so every answer, every recommendation, is uniquely yours.",
           features: [
-            "Trained on your specific knowledge base",
-            "Multilingual support (20+ languages)",
-            "Proactively captures patient info",
-            "Syncs context with Voice agents"
+            "Upload docs, FAQs, service menus & scripts",
+            "AI learns your procedures & compliance rules",
+            "Answers are always accurate to your practice",
+            "Continuously improves from every conversation"
           ]
         }
       ]
@@ -277,37 +277,37 @@ const translations = {
       niches: ['의료 미용', '법률 서비스', '전문 클리닉', '고급 부동산']
     },
     features: {
-      title: "자율 프론트 오피스",
-      subtitle: "파편화된 커뮤니케이션을 귀하의 브랜드를 완벽하게 대변하는 단일 지능형 시스템으로 통합하세요.",
+      title: "음성. 채팅. 귀사의 비즈니스에 맞춘 AI.",
+      subtitle: "모든 비즈니스가 자사의 서비스, 가격, 브랜드를 정확히 아는 맞춤형 AI를 제공받습니다 — 음성과 채팅으로 배포되어 단 하나의 리드도 놓치지 않습니다.",
       cards: [
         {
-          title: "리셉셔니스트",
-          description: "24/7 수신 전화를 관리합니다. 대기 시간도, 부재중 전화도 없이 완벽하게 환자 문의를 처리합니다.",
+          title: "맞춤형 AI 음성 에이전트",
+          description: "귀사만을 위한 음성 에이전트. 맞춤 음성, 귀사의 지식 기반, 브랜드 개성 — 최고의 직원처럼 모든 전화를 응대합니다.",
           features: [
-            "즉시 전화 응답 및 라우팅",
-            "캘린더에 직접 예약",
-            "일정 변경 및 자주 묻는 질문 처리",
-            "상담원으로의 원활한 실시간 인계"
-          ]
-        },
-         {
-          title: "인테이크 코디네이터",
-          description: "리드 이탈을 방지하세요. AI가 웹 문의 발생 10초 내에 전화를 걸어 자격을 확인하고 예약을 확정합니다.",
-          features: [
-            "30초 이내의 빠른 리드 응답",
-            "기준 및 의도에 따른 필터링",
-            "부재 시 보안 SMS를 통한 육성",
-            "CRM 즉시 업데이트"
+            "브랜드에 맞춘 커스텀 음성",
+            "서비스, 가격, FAQ 기반 학습",
+            "800ms 미만의 응답으로 24/7 통화 처리",
+            "필요 시 실시간 직원 연결"
           ]
         },
         {
-          title: "디지털 컨시어지",
-          description: "귀하의 병원/기업을 완벽히 파악하고 웹사이트 트래픽을 예약으로 전환하는 보안 웹사이트 어시스턴트입니다.",
+          title: "AI 웹사이트 채팅",
+          description: "귀사의 비즈니스를 속속들이 아는 스마트 채팅 위젯. 방문자를 24시간 예약 고객으로 전환합니다.",
           features: [
-            "특정 지식 기반(Knowledge base) 학습",
-            "다국어 지원 (20개 언어 이상)",
-            "선제적 환자 정보 확보",
-            "음성 에이전트와 맥락 동기화"
+            "지식 기반으로 학습된 임베디드 채팅",
+            "예약 접수 및 리드 정보 확보",
+            "다국어 지원 — 20개 이상 언어",
+            "음성 에이전트와 전체 맥락 동기화"
+          ]
+        },
+        {
+          title: "귀사의 비즈니스에 맞춘 학습",
+          description: "일반 챗봇이 아닙니다. 모든 AI 에이전트가 귀사의 고유한 지식 기반으로 학습됩니다 — 모든 답변이 정확하고 귀사만의 것입니다.",
+          features: [
+            "문서, FAQ, 서비스 메뉴, 스크립트 업로드",
+            "절차 및 규정 준수 규칙 학습",
+            "항상 귀사에 정확한 답변 제공",
+            "모든 대화에서 지속적으로 개선"
           ]
         }
       ]
@@ -1128,7 +1128,7 @@ const App = () => {
                       {t.features.cards.map((card, index) => (
                           <FeatureCard 
                           key={index}
-                          icon={[Phone, Zap, MessageSquare][index]}
+                          icon={[Phone, MessageSquare, Cpu][index]}
                           title={card.title}
                           description={card.description}
                           colorClass={["from-blue-600 to-blue-400", "from-purple-600 to-pink-400", "from-green-500 to-emerald-400"][index]}
