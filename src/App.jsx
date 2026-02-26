@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
+import { RetellWebClient } from 'retell-client-js-sdk';
 import { 
   Phone, 
+  PhoneOff,
+  Mic,
+  MicOff,
   MessageSquare, 
   UserCheck, 
   Calendar, 
@@ -48,7 +52,19 @@ const translations = {
       dialing: "Connecting...",
       connected: "Connected",
       tryDemo: "Enter your number for a live demonstration.",
-      agentCalling: "Our AI Coordinator is calling you now..."
+      agentCalling: "Our AI Coordinator is calling you now...",
+      selectAgent: "Choose an agent to experience live",
+      startCall: "Start Live Demo",
+      endCall: "End Conversation",
+      connecting: "Connecting...",
+      liveCall: "Live Conversation",
+      callEnded: "Conversation Ended",
+      tapToTry: "Talk to our AI — live, right here in your browser.",
+      tryAgain: "Try Again",
+      agentSpeaking: "Agent is speaking...",
+      listening: "Listening...",
+      micRequired: "Microphone access is required for the live demo.",
+      errorOccurred: "Something went wrong. Please try again.",
     },
     product: {
         title: "Clinical-Grade Voice Intelligence",
@@ -201,7 +217,19 @@ const translations = {
       dialing: "연결 중...",
       connected: "연결됨",
       tryDemo: "라이브 데모를 위해 전화번호를 입력하세요.",
-      agentCalling: "AI 코디네이터가 지금 전화를 걸고 있습니다..."
+      agentCalling: "AI 코디네이터가 지금 전화를 걸고 있습니다...",
+      selectAgent: "체험할 에이전트를 선택하세요",
+      startCall: "라이브 데모 시작",
+      endCall: "대화 종료",
+      connecting: "연결 중...",
+      liveCall: "라이브 대화",
+      callEnded: "대화 종료됨",
+      tapToTry: "브라우저에서 바로 AI와 대화해 보세요.",
+      tryAgain: "다시 시도",
+      agentSpeaking: "에이전트가 말하고 있습니다...",
+      listening: "듣고 있습니다...",
+      micRequired: "라이브 데모를 위해 마이크 액세스가 필요합니다.",
+      errorOccurred: "문제가 발생했습니다. 다시 시도해 주세요.",
     },
     product: {
         title: "임상 수준의 음성 지능",
@@ -493,44 +521,185 @@ const CallVisualizer = () => (
     </div>
 );
 
-const DemoInput = ({ t }) => {
-  const [phone, setPhone] = useState('');
-  const [status, setStatus] = useState('idle');
+const AGENTS = [
+  { id: import.meta.env.VITE_AGENT_1_ID || '', name: import.meta.env.VITE_AGENT_1_NAME || 'Agent 1' },
+  { id: import.meta.env.VITE_AGENT_2_ID || '', name: import.meta.env.VITE_AGENT_2_NAME || 'Agent 2' },
+].filter(a => a.id);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (phone.length < 10) return;
-    setStatus('calling');
-    setTimeout(() => setStatus('connected'), 2000);
-  };
+const useRetellCall = () => {
+  const clientRef = useRef(null);
+  const [callStatus, setCallStatus] = useState('idle');
+  const [agentTalking, setAgentTalking] = useState(false);
+  const [transcript, setTranscript] = useState([]);
+
+  useEffect(() => {
+    const client = new RetellWebClient();
+    clientRef.current = client;
+
+    client.on('call_started', () => setCallStatus('active'));
+    client.on('call_ended', () => { setCallStatus('ended'); setAgentTalking(false); });
+    client.on('agent_start_talking', () => setAgentTalking(true));
+    client.on('agent_stop_talking', () => setAgentTalking(false));
+    client.on('error', (error) => {
+      console.error('Retell error:', error);
+      setCallStatus('error');
+      setAgentTalking(false);
+    });
+    client.on('update', (update) => {
+      if (update.transcript) {
+        setTranscript(update.transcript);
+      }
+    });
+
+    return () => { client.stopCall(); };
+  }, []);
+
+  const startCall = useCallback(async (agentId) => {
+    if (!clientRef.current) return;
+    setCallStatus('connecting');
+    setTranscript([]);
+    setAgentTalking(false);
+
+    try {
+      const res = await fetch('/api/create-web-call', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ agent_id: agentId }),
+      });
+      if (!res.ok) throw new Error('Failed to create web call');
+      const { access_token } = await res.json();
+      await clientRef.current.startCall({ accessToken: access_token, sampleRate: 24000 });
+    } catch (err) {
+      console.error('Call failed:', err);
+      setCallStatus('error');
+    }
+  }, []);
+
+  const endCall = useCallback(() => {
+    if (clientRef.current) {
+      clientRef.current.stopCall();
+    }
+    setCallStatus('idle');
+    setAgentTalking(false);
+  }, []);
+
+  const reset = useCallback(() => {
+    setCallStatus('idle');
+    setTranscript([]);
+    setAgentTalking(false);
+  }, []);
+
+  return { callStatus, agentTalking, transcript, startCall, endCall, reset };
+};
+
+const AudioWave = ({ active, className = '' }) => (
+  <div className={`flex items-end gap-1 h-8 ${className}`}>
+    {Array.from({ length: 16 }).map((_, i) => (
+      <div
+        key={i}
+        className={`flex-1 max-w-[3px] rounded-full transition-all duration-300 ${
+          active
+            ? 'bg-gradient-to-t from-blue-600 to-teal-400'
+            : 'bg-slate-200'
+        }`}
+        style={{
+          animation: active ? 'wave 1.2s ease-in-out infinite' : 'none',
+          animationDelay: `${i * 0.08}s`,
+          height: active ? '100%' : '30%',
+        }}
+      />
+    ))}
+  </div>
+);
+
+const LiveCallCard = ({ t, lang, callStatus, agentTalking, transcript }) => {
+  const isActive = callStatus === 'active';
+  const isConnecting = callStatus === 'connecting';
+  const transcriptEndRef = useRef(null);
+
+  useEffect(() => {
+    transcriptEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [transcript]);
 
   return (
-    <div className="w-full max-w-md mx-auto lg:mx-0 relative">
-      <form onSubmit={handleSubmit} className="relative group">
-        <div className="absolute -inset-1 bg-gradient-to-r from-blue-100 to-teal-100 rounded-full blur opacity-50 group-hover:opacity-100 transition duration-1000"></div>
-        <div className="relative flex items-center bg-white rounded-full border border-slate-300 p-1.5 pl-6 shadow-sm">
-          <Phone className="w-5 h-5 text-slate-400 mr-3" />
-          <input 
-            type="tel" 
-            placeholder={t.hero.demoInputPlaceholder}
-            className="w-full bg-transparent text-slate-900 placeholder-slate-400 focus:outline-none font-medium"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          />
-          <button 
-            type="submit"
-            className="bg-blue-600 text-white px-6 py-3 rounded-full font-medium text-sm hover:bg-blue-700 transition-colors shrink-0 whitespace-nowrap shadow-md"
-          >
-            {status === 'idle' ? t.hero.callMe : status === 'calling' ? t.hero.dialing : t.hero.connected}
-          </button>
+    <div className="relative w-full max-w-md bg-white/60 backdrop-blur-2xl border border-slate-200/60 p-8 rounded-[2rem] shadow-[0_20px_60px_rgb(0,0,0,0.05)]">
+      <div className="flex justify-between items-center mb-6 border-b border-slate-100 pb-4">
+        <div className="flex items-center gap-2">
+          <span className={`w-2 h-2 rounded-full ${isActive ? 'bg-emerald-500 animate-pulse shadow-[0_0_8px_#10b981]' : isConnecting ? 'bg-amber-400 animate-pulse' : 'bg-slate-300'}`}></span>
+          <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">
+            {isActive ? t.hero.liveCall : isConnecting ? t.hero.connecting : 'Live Agent Demo'}
+          </span>
         </div>
-      </form>
-      {status === 'connected' && (
-        <div className="absolute top-full mt-4 left-0 w-full text-center text-emerald-600 text-sm font-medium animate-fade-in">
-          <span className="inline-block w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-ping"></span>
-          {t.hero.agentCalling}
-        </div>
-      )}
+        {isActive && (
+          <span className="text-xs font-mono text-emerald-600 bg-emerald-50 px-2 py-1 rounded-md border border-emerald-100">LIVE</span>
+        )}
+      </div>
+
+      {/* Audio Visualization */}
+      <div className="mb-6 bg-slate-50 rounded-xl p-4 border border-slate-100">
+        <AudioWave active={isActive && agentTalking} />
+        {isActive && (
+          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-2 text-center">
+            {agentTalking ? t.hero.agentSpeaking : t.hero.listening}
+          </p>
+        )}
+        {!isActive && !isConnecting && (
+          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-2 text-center">
+            Secure Voice Channel
+          </p>
+        )}
+        {isConnecting && (
+          <p className="text-[10px] font-bold text-amber-500 uppercase tracking-widest mt-2 text-center animate-pulse">
+            {t.hero.connecting}
+          </p>
+        )}
+      </div>
+
+      {/* Transcript Area */}
+      <div className="space-y-3 max-h-48 overflow-y-auto scrollbar-thin">
+        {transcript.length === 0 && !isActive && !isConnecting && (
+          <>
+            <div className="flex gap-3">
+              <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-sm">AI</div>
+              <div className="bg-white border border-slate-100 p-4 rounded-2xl rounded-tl-sm text-sm text-slate-600 w-full shadow-sm leading-relaxed">
+                {lang === 'en'
+                  ? "Hello! I'm the JuniVo AI Assistant. How can I help your practice today?"
+                  : "안녕하세요! JuniVo AI 어시스턴트입니다. 오늘 귀하의 병원을 위해 무엇을 도와드릴까요?"}
+              </div>
+            </div>
+            <div className="flex gap-3 flex-row-reverse opacity-60">
+              <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 text-xs font-bold shrink-0">{lang === 'en' ? 'You' : '나'}</div>
+              <div className="bg-blue-50 border border-blue-100 p-4 rounded-2xl rounded-tr-sm text-sm text-slate-600 w-full text-right shadow-sm">
+                <div className="flex justify-end gap-1.5 items-center h-5">
+                  <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce"></span>
+                  <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce" style={{animationDelay: '0.15s'}}></span>
+                  <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce" style={{animationDelay: '0.3s'}}></span>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+        {transcript.map((entry, i) => {
+          const isAgent = entry.role === 'agent';
+          return (
+            <div key={i} className={`flex gap-3 ${isAgent ? '' : 'flex-row-reverse'}`}>
+              <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold shrink-0 ${
+                isAgent ? 'bg-blue-600 text-white' : 'bg-slate-200 text-slate-600'
+              }`}>
+                {isAgent ? 'AI' : (lang === 'en' ? 'Y' : '나')}
+              </div>
+              <div className={`p-3 rounded-2xl text-sm leading-relaxed max-w-[85%] ${
+                isAgent
+                  ? 'bg-white border border-slate-100 rounded-tl-sm text-slate-700 shadow-sm'
+                  : 'bg-blue-600 text-white rounded-tr-sm'
+              }`}>
+                {entry.content}
+              </div>
+            </div>
+          );
+        })}
+        <div ref={transcriptEndRef} />
+      </div>
     </div>
   );
 };
@@ -815,6 +984,119 @@ const PricingPage = ({ t }) => (
 
 // --- Main App ---
 
+const HeroSection = ({ t, lang }) => {
+  const [selectedAgent, setSelectedAgent] = useState(AGENTS[0]?.id || '');
+  const { callStatus, agentTalking, transcript, startCall, endCall, reset } = useRetellCall();
+  const isActive = callStatus === 'active';
+  const isConnecting = callStatus === 'connecting';
+  const isEnded = callStatus === 'ended';
+  const isError = callStatus === 'error';
+  const isIdle = callStatus === 'idle';
+
+  return (
+    <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 px-6 overflow-hidden">
+      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-blue-50 to-transparent -z-10"></div>
+      <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-teal-50/50 rounded-full blur-3xl -z-10"></div>
+
+      <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+        <div className="text-center lg:text-left">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 text-xs font-bold text-slate-600 mb-8 shadow-sm animate-fade-in-up uppercase tracking-widest">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            {t.hero.status}
+          </div>
+
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-[1.15] text-slate-900 break-keep">
+            {t.hero.headline} <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-teal-500">
+              {t.hero.headlineHighlight}
+            </span>
+          </h1>
+
+          <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed break-keep">
+            {t.hero.subheadline}
+          </p>
+
+          <div className="flex flex-col items-center lg:items-start gap-4">
+            {/* Agent Selector */}
+            {AGENTS.length > 1 && (isIdle || isEnded || isError) && (
+              <div className="mb-1 w-full max-w-md lg:mx-0 mx-auto">
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">{t.hero.selectAgent}</p>
+                <div className="flex gap-2 flex-wrap justify-center lg:justify-start">
+                  {AGENTS.map((agent) => (
+                    <button
+                      key={agent.id}
+                      onClick={() => setSelectedAgent(agent.id)}
+                      className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all border ${
+                        selectedAgent === agent.id
+                          ? 'bg-blue-600 text-white border-blue-600 shadow-md'
+                          : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50 hover:text-slate-900'
+                      }`}
+                    >
+                      {agent.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {/* Call Controls */}
+            {(isIdle || isEnded || isError) && (
+              <div className="flex flex-col items-center lg:items-start gap-3">
+                <button
+                  onClick={() => startCall(selectedAgent)}
+                  disabled={!selectedAgent}
+                  className="group relative inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-full font-bold text-base hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  <div className="absolute -inset-1 bg-blue-400 rounded-full blur opacity-30 group-hover:opacity-50 transition"></div>
+                  <Mic className="w-5 h-5 relative z-10" />
+                  <span className="relative z-10">{isEnded ? t.hero.tryAgain : t.hero.startCall}</span>
+                </button>
+                {isError && <p className="text-red-500 text-sm font-medium">{t.hero.errorOccurred}</p>}
+                {isIdle && <p className="text-sm text-slate-500 font-medium">{t.hero.tapToTry}</p>}
+              </div>
+            )}
+
+            {isConnecting && (
+              <div className="flex items-center gap-3 text-blue-600 font-semibold animate-pulse">
+                <div className="w-3 h-3 bg-blue-600 rounded-full animate-ping"></div>
+                {t.hero.connecting}
+              </div>
+            )}
+
+            {isActive && (
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={endCall}
+                  className="inline-flex items-center gap-2 bg-red-500 text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-red-600 transition-all shadow-md"
+                >
+                  <PhoneOff className="w-4 h-4" />
+                  {t.hero.endCall}
+                </button>
+                <span className="text-sm font-medium text-emerald-600 flex items-center gap-2">
+                  <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                  {agentTalking ? t.hero.agentSpeaking : t.hero.listening}
+                </span>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Right Visualizer / Live Call Card */}
+        <div className="relative flex justify-center lg:justify-end animate-fade-in-up delay-200 mt-8 lg:mt-0">
+          <div className="absolute inset-0 bg-blue-100/60 blur-[100px] rounded-full"></div>
+          <LiveCallCard
+            t={t}
+            lang={lang}
+            callStatus={callStatus}
+            agentTalking={agentTalking}
+            transcript={transcript}
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const App = () => {
   const [lang, setLang] = useState('en');
   const [currentPage, setCurrentPage] = useState('home');
@@ -828,84 +1110,7 @@ const App = () => {
           case 'pricing': return <PricingPage t={t} />;
           default: return (
             <>
-                {/* HERO SECTION - SIDE BY SIDE LAYOUT */}
-                <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 px-6 overflow-hidden">
-                    {/* Light/Clinical Background Elements */}
-                    <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-blue-50 to-transparent -z-10"></div>
-                    <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-teal-50/50 rounded-full blur-3xl -z-10"></div>
-
-                    <div className="max-w-7xl mx-auto relative z-10 grid lg:grid-cols-2 gap-16 items-center">
-                        
-                        {/* Left Copy Container */}
-                        <div className="text-center lg:text-left">
-                            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-slate-200 text-xs font-bold text-slate-600 mb-8 shadow-sm animate-fade-in-up uppercase tracking-widest">
-                                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                                {t.hero.status}
-                            </div>
-                            
-                            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-[1.15] text-slate-900 break-keep">
-                                {t.hero.headline} <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-teal-500">
-                                {t.hero.headlineHighlight}
-                                </span>
-                            </h1>
-                            
-                            <p className="text-xl text-slate-600 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed break-keep">
-                                {t.hero.subheadline}
-                            </p>
-
-                            <div className="flex flex-col items-center lg:items-start gap-4">
-                                <DemoInput t={t} />
-                                <p className="text-sm text-slate-500 font-medium lg:ml-2">
-                                {t.hero.tryDemo}
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Right Visualizer Simulation Pane */}
-                        <div className="relative flex justify-center lg:justify-end animate-fade-in-up delay-200 mt-8 lg:mt-0">
-                            {/* Decorative background glow */}
-                            <div className="absolute inset-0 bg-blue-100/60 blur-[100px] rounded-full"></div>
-                            
-                            {/* Premium Interactive Card */}
-                            <div className="relative w-full max-w-md bg-white/60 backdrop-blur-2xl border border-slate-200/60 p-8 rounded-[2rem] shadow-[0_20px_60px_rgb(0,0,0,0.05)]">
-                                <div className="flex justify-between items-center mb-8 border-b border-slate-100 pb-4">
-                                    <div className="flex items-center gap-2">
-                                        <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-                                        <span className="text-xs font-bold text-slate-500 uppercase tracking-wider">Live Agent Simulation</span>
-                                    </div>
-                                    <span className="text-xs font-mono text-slate-400">00:14</span>
-                                </div>
-
-                                <div className="mb-8">
-                                    <CallVisualizer />
-                                </div>
-
-                                {/* Mock transcript lines to anchor the visualizer */}
-                                <div className="space-y-4">
-                                    <div className="flex gap-3">
-                                        <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold shrink-0 shadow-sm">AI</div>
-                                        <div className="bg-white border border-slate-100 p-4 rounded-2xl rounded-tl-sm text-sm text-slate-600 w-full shadow-sm leading-relaxed">
-                                            {lang === 'en' 
-                                                ? "Hello! I'm the JuniVo AI Assistant. How can I help your practice today?" 
-                                                : "안녕하세요! JuniVo AI 어시스턴트입니다. 오늘 귀하의 병원을 위해 무엇을 도와드릴까요?"}
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-3 flex-row-reverse opacity-60">
-                                        <div className="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 text-xs font-bold shrink-0">{lang === 'en' ? 'P' : '환자'}</div>
-                                        <div className="bg-blue-50 border border-blue-100 p-4 rounded-2xl rounded-tr-sm text-sm text-slate-600 w-full text-right shadow-sm">
-                                            <div className="flex justify-end gap-1.5 items-center h-5">
-                                                <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce"></span>
-                                                <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce" style={{animationDelay: '0.15s'}}></span>
-                                                <span className="w-1.5 h-1.5 bg-blue-400 rounded-full animate-bounce" style={{animationDelay: '0.3s'}}></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <HeroSection t={t} lang={lang} />
 
                 {/* TRUST LOGOS */}
                 <section className="py-12 border-y border-slate-200 bg-slate-50">
