@@ -522,9 +522,9 @@ const CallVisualizer = () => (
 );
 
 const AGENTS = [
-  { id: import.meta.env.VITE_AGENT_1_ID || '', name: import.meta.env.VITE_AGENT_1_NAME || 'Agent 1' },
-  { id: import.meta.env.VITE_AGENT_2_ID || '', name: import.meta.env.VITE_AGENT_2_NAME || 'Agent 2' },
-].filter(a => a.id);
+  { id: 'agent_b102f121a6b37b2e6a4b4a1f79', name: 'EN', label: '🇺🇸 English' },
+  { id: 'agent_05f11e21300b9eed83d7b4a89e', name: 'KR', label: '🇰🇷 한국어' },
+];
 
 const useRetellCall = () => {
   const clientRef = useRef(null);
@@ -1032,7 +1032,7 @@ const HeroSection = ({ t, lang }) => {
                           : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50 hover:text-slate-900'
                       }`}
                     >
-                      {agent.name}
+                      {agent.label}
                     </button>
                   ))}
                 </div>

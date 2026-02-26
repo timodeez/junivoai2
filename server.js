@@ -12,12 +12,18 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-const retellClient = new Retell({ apiKey: process.env.RETELL_API_KEY });
+if (!process.env.SECRET_API_KEY_RETELL) {
+  console.error('ERROR: SECRET_API_KEY_RETELL environment variable is not set.');
+  console.error('Add it to your Cursor Dashboard > Cloud Agents > Secrets, or set it locally in a .env file.');
+  process.exit(1);
+}
+
+const retellClient = new Retell({ apiKey: process.env.SECRET_API_KEY_RETELL });
 
 const ALLOWED_AGENTS = [
-  process.env.RETELL_AGENT_ID_1,
-  process.env.RETELL_AGENT_ID_2,
-].filter(Boolean);
+  'agent_b102f121a6b37b2e6a4b4a1f79',
+  'agent_05f11e21300b9eed83d7b4a89e',
+];
 
 app.post('/api/create-web-call', async (req, res) => {
   const { agent_id } = req.body;
