@@ -47,6 +47,94 @@ const translations = {
       bookDemo: "Book Consultation",
       getStarted: "Get Started"
     },
+    platformPages: {
+      receptionist: {
+        badge: "AI Voice Agent",
+        title: "The AI Receptionist",
+        lead: "Your 24/7 front desk that never calls in sick. Answers every call with a custom voice trained on your med spa — books consultations, handles treatment questions, and never puts a prospect on hold.",
+        cards: [
+          { title: "Every Call Answered", desc: "No more voicemail. No more missed consultations. Your AI receptionist picks up instantly — nights, weekends, and holidays." },
+          { title: "Books to Your Calendar", desc: "Qualifies callers by treatment interest, checks availability, and books consultations directly to your calendar in real time." },
+          { title: "20+ Languages", desc: "Serves every patient demographic fluently. Detects language automatically and switches mid-conversation without missing a beat." }
+        ],
+        sectionTitle: "Sounds Human. Thinks Like Your Best Employee.",
+        sectionBody: {
+          prefix: "Your AI receptionist is trained on your ",
+          strong: "treatment menu, pricing, pre/post-care instructions, and brand voice",
+          suffix: ". When a prospect calls asking about Botox pricing or filler packages, the AI responds with the same warmth and knowledge as your top front desk coordinator."
+        },
+        bullets: [
+          "Custom voice that matches your brand personality",
+          "Trained on your exact treatments, pricing & policies",
+          "Handles scheduling, rescheduling & cancellations",
+          "Warm handoff to your team for complex cases",
+          "Every call recorded, transcribed & analyzed by AI"
+        ],
+        previewTitle: "Live Call Preview",
+        preview: {
+          ai1: "Thank you for calling Glow Aesthetics! Are you looking to book a consultation, or do you have questions about a treatment?",
+          user: "I want to learn more about your lip filler options and pricing.",
+          ai2: "Great choice! Our lip filler treatments start at $650 per syringe. I'd love to book you a free consultation with one of our providers — they'll create a personalized treatment plan. I have availability this Thursday at 3 PM. Would that work?"
+        }
+      },
+      sales: {
+        badge: "AI Sales Agent",
+        title: "The Sales Director",
+        lead: "An AI closer that follows up on every single lead — web inquiries, missed calls, abandoned chats. It handles pricing objections, creates urgency, and converts hesitant prospects into committed consultations.",
+        cards: [
+          { title: "Instant Follow-up", desc: "Contacts every new lead within seconds — not hours. Speed-to-lead is the #1 predictor of med spa conversion rates." },
+          { title: "Qualifies Every Lead", desc: "Asks the right questions about treatment interest, budget, and timeline. Your team only talks to prospects ready to commit." },
+          { title: "Conversion Intelligence", desc: "Tracks every lead from first touch to booked consultation. Know your cost-per-consult, conversion rate, and top objections." }
+        ],
+        sectionTitle: "Turns \"I'll Think About It\" Into \"Book Me In.\"",
+        sectionBody: {
+          prefix: "Most med spas lose 60% of leads to slow follow-up. Your AI Sales Director ",
+          strong: "contacts every lead instantly",
+          suffix: ", handles the most common objections (pricing, timing, fear), and creates urgency around limited availability to drive consultation bookings."
+        },
+        bullets: [
+          "Follows up on every web form, missed call & chat lead",
+          "Overcomes pricing objections with trained scripts",
+          "Creates urgency around limited consultation slots",
+          "Re-engages no-shows and cancelled appointments",
+          "Sentiment analysis flags high-intent leads for your team"
+        ],
+        previewTitle: "Lead Follow-up Preview",
+        preview: {
+          ai1: "Hi Sarah! I noticed you were looking at our Botox packages on our website. I'd love to help answer any questions and get you booked for a free consultation. Do you have a few minutes?",
+          user: "I'm interested but the pricing seems high compared to other places.",
+          ai2: "I completely understand — that's a great question. Our pricing reflects the expertise of our board-certified providers and premium products. Many patients actually save money long-term with our approach. We have a special this month — would you like me to reserve a consultation spot this week? Availability is limited."
+        }
+      },
+      chatbot: {
+        badge: "AI Chat Assistant",
+        title: "The Human Chatbot",
+        lead: "A website chat assistant so natural, visitors think they're talking to your staff. Trained on your entire knowledge base — treatments, pricing, before/afters — it answers questions and books consultations 24/7.",
+        cards: [
+          { title: "Feels Human, Not Robotic", desc: "Natural conversation flow trained on real med spa interactions. No canned responses, no dead ends — just helpful, warm dialogue." },
+          { title: "Books Consultations 24/7", desc: "Captures lead information and books consultations directly from your website — even at 2 AM when your competitor's chat is offline." },
+          { title: "Trained on Your Knowledge", desc: "Upload your treatment menu, FAQs, pricing, and brand guidelines. The chatbot becomes an extension of your front desk team." }
+        ],
+        sectionTitle: "Your Website's Best Conversion Tool.",
+        sectionBody: {
+          strong: "68% of med spa website visitors leave without taking action.",
+          suffix: " The Human Chatbot engages visitors the moment they land, answers their treatment questions with expert knowledge, and guides them to a booked consultation — all while feeling like a real conversation with your staff."
+        },
+        bullets: [
+          "Engages visitors proactively based on page behavior",
+          "Answers treatment questions with trained expertise",
+          "Captures name, email, phone & treatment interest",
+          "Books consultations directly to your calendar",
+          "Syncs all context with your voice & sales agents"
+        ],
+        previewTitle: "Website Chat Preview",
+        preview: {
+          ai1: "Hi there! I see you're looking at our laser treatments. Would you like to know more about pricing, or are you ready to book a free consultation?",
+          user: "What's the difference between IPL and fractional laser? And how much downtime?",
+          ai2: "Great question! IPL targets pigmentation and redness with minimal downtime (1-2 days), while fractional laser goes deeper for texture and scarring with 3-5 days of recovery. Both get amazing results — a consultation with our provider will help determine which is best for your goals. Want me to book one for you?"
+        }
+      }
+    },
     hero: {
       status: "24/7 INTELLIGENT RECEPTION",
       headline: "Never miss a call, a sale, or a lead.",
@@ -187,6 +275,11 @@ const translations = {
     pricing: {
         title: "Simple, ROI-Positive Pricing",
         subtitle: "Most businesses recover their monthly investment within the first week of deployment.",
+        mostPopular: "Most Popular",
+        chooseCta: "Choose {plan}",
+        enterpriseTitle: "Need a Custom Enterprise Build?",
+        enterpriseDesc: "We architect custom AI models and integrations for high-compliance medical groups, legal networks, and large franchises.",
+        enterpriseCta: "Contact Enterprise Sales",
         tiers: [
             { name: "Receptionist", price: "$500", period: "/mo", desc: "Your 24/7 AI receptionist that never misses a call.", features: ["AI Receptionist (Voice)", "Unlimited Inbound Calls", "Call Recording & Transcripts", "Appointment Scheduling", "Business Knowledge Training", "Standard Support"] },
             { name: "Receptionist + Chat", price: "$750", period: "/mo", desc: "Voice + website chat for total coverage.", features: ["Everything in Receptionist", "AI Website Chatbot", "Chat Trained on Your Knowledge Base", "Lead Capture & Qualification", "Multilingual Support (20+ Languages)", "Priority Support"] },
@@ -265,6 +358,53 @@ const translations = {
       trustedBy: "TRUSTED BY PREMIUM PRACTICES & FIRMS IN",
       niches: ['Medical Aesthetics', 'Legal Services', 'Specialty Clinics', 'Luxury Real Estate']
     },
+    legal: {
+      lastUpdated: "Last updated: February 2026",
+      privacy: {
+        title: "Privacy Policy",
+        s1Title: "1. Information We Collect",
+        s1Body: "We collect information you provide directly, including name, email, phone number, and business details when you sign up, request a demo, or contact us. We also collect call recordings, transcripts, and analytics data generated through the use of our AI agents on your behalf.",
+        s2Title: "2. How We Use Your Information",
+        s2Body: "We use your information to provide and improve our services, process transactions, communicate with you, and generate AI-powered call analytics. Call data is processed to deliver transcripts, sentiment analysis, and conversation summaries to your dashboard.",
+        s3Title: "3. Data Storage & Security",
+        s3Body: "All data is encrypted in transit (TLS 1.2+) and at rest (AES-256). Call recordings and transcripts are stored on secure, access-controlled infrastructure. We implement industry-standard security practices including regular audits, role-based access controls, and intrusion detection.",
+        s4Title: "4. HIPAA Compliance",
+        s4Body: "For healthcare and med spa clients, JuniVo operates as a HIPAA-compliant Business Associate. We execute Business Associate Agreements (BAAs) and maintain administrative, physical, and technical safeguards required under HIPAA regulations.",
+        s5Title: "5. Data Sharing",
+        s5Body: "We do not sell your data. We share information only with service providers necessary to deliver our platform (cloud hosting, telephony providers) under strict data processing agreements. We may disclose data if required by law or to protect our legal rights.",
+        s6Title: "6. Data Retention",
+        s6Body: "Call recordings and transcripts are retained for the duration of your subscription plus 30 days. You may request deletion of your data at any time by contacting us. Upon account termination, all data is permanently deleted within 90 days.",
+        s7Title: "7. Your Rights",
+        s7Body: "You have the right to access, correct, or delete your personal data. For GDPR-covered individuals, you may also exercise rights to data portability and restriction of processing. Contact us at privacy@junivoai.com to exercise any of these rights.",
+        s8Title: "8. Contact",
+        s8BodyPrefix: "For privacy-related inquiries, contact us at",
+        s8Email: "privacy@junivoai.com"
+      },
+      terms: {
+        title: "Terms of Service",
+        s1Title: "1. Acceptance of Terms",
+        s1Body: "By accessing or using JuniVo Ai's services, you agree to be bound by these Terms of Service. If you do not agree, you may not use the platform. These terms apply to all users, including businesses and their authorized representatives.",
+        s2Title: "2. Description of Service",
+        s2Body: "JuniVo Ai provides AI-powered voice agents, chat agents, and conversation analytics tools designed for business use. Our platform handles inbound/outbound calls, website chat, appointment scheduling, lead qualification, and call analysis on behalf of subscribing businesses.",
+        s3Title: "3. Account Responsibilities",
+        s3Body: "You are responsible for maintaining the security of your account credentials and for all activities under your account. You agree to provide accurate business and contact information and to update it as needed. You must be at least 18 years old to use our services.",
+        s4Title: "4. Acceptable Use",
+        s4Body: "You may not use JuniVo for any unlawful purpose, to harass or deceive individuals, to make unsolicited robocalls in violation of TCPA or equivalent regulations, or to process data in violation of applicable privacy laws. We reserve the right to suspend accounts that violate these terms.",
+        s5Title: "5. Billing & Subscriptions",
+        s5Body: "Subscriptions are billed monthly. You authorize us to charge your payment method on file for all applicable fees. Subscriptions renew automatically unless cancelled before the next billing cycle. Refunds are handled on a case-by-case basis at our discretion.",
+        s6Title: "6. Intellectual Property",
+        s6Body: "All platform technology, AI models, branding, and content are the property of JuniVo Ai. You retain ownership of your business data, call recordings, and transcripts. You grant us a limited license to process this data solely to provide and improve our services.",
+        s7Title: "7. Limitation of Liability",
+        s7Body: "JuniVo Ai is provided \"as is.\" We are not liable for indirect, incidental, or consequential damages arising from your use of the platform, including but not limited to lost revenue, missed calls due to service interruptions, or AI agent errors. Our total liability shall not exceed the fees paid by you in the 12 months preceding the claim.",
+        s8Title: "8. Termination",
+        s8Body: "Either party may terminate at any time. Upon termination, your access to the platform will cease and your data will be deleted within 90 days, unless retention is required by law. We may immediately terminate accounts that violate these terms.",
+        s9Title: "9. Governing Law",
+        s9Body: "These terms are governed by the laws of the State of California, United States. Any disputes shall be resolved through binding arbitration in Los Angeles County, California.",
+        s10Title: "10. Contact",
+        s10BodyPrefix: "For questions about these terms, contact us at",
+        s10Email: "legal@junivoai.com"
+      }
+    },
     footer: {
         desc: "The premier autonomous front office for high-end service businesses. Capture, qualify, and close with elegance.",
         product: "Platform",
@@ -294,6 +434,94 @@ const translations = {
       login: "고객 로그인",
       bookDemo: "상담 예약",
       getStarted: "시작하기"
+    },
+    platformPages: {
+      receptionist: {
+        badge: "AI 음성 에이전트",
+        title: "AI 리셉셔니스트",
+        lead: "병가 없는 24/7 프론트 데스크. 메디스파에 맞춰 학습된 커스텀 음성으로 모든 전화를 응대하고, 상담 예약과 시술 질문 응답까지 — 잠재 고객을 절대 대기시키지 않습니다.",
+        cards: [
+          { title: "모든 전화 즉시 응답", desc: "이제 음성사서함은 끝. 놓친 상담도 끝. AI 리셉셔니스트가 야간, 주말, 공휴일에도 즉시 응답합니다." },
+          { title: "캘린더에 바로 예약", desc: "관심 시술을 확인하고, 가능한 시간을 조회한 뒤, 실시간으로 캘린더에 상담 일정을 직접 예약합니다." },
+          { title: "20개+ 언어 지원", desc: "모든 고객층을 자연스럽게 응대합니다. 언어를 자동 감지해 대화 중에도 끊김 없이 전환합니다." }
+        ],
+        sectionTitle: "사람처럼 말하고, 최고의 직원처럼 생각합니다.",
+        sectionBody: {
+          prefix: "AI 리셉셔니스트는 귀사의 ",
+          strong: "시술 메뉴, 가격, 시술 전/후 안내, 브랜드 톤",
+          suffix: "을 학습합니다. 보톡스 가격이나 필러 패키지를 문의하면, 가장 뛰어난 프론트 코디네이터처럼 따뜻하고 정확하게 응답합니다."
+        },
+        bullets: [
+          "브랜드에 맞춘 커스텀 음성",
+          "정확한 시술/가격/정책 기반 학습",
+          "예약, 변경, 취소 처리",
+          "복잡한 케이스는 직원에게 자연스럽게 연결",
+          "모든 통화를 AI가 녹음, 전사, 분석"
+        ],
+        previewTitle: "실시간 통화 미리보기",
+        preview: {
+          ai1: "글로우 에스테틱에 전화해 주셔서 감사합니다! 상담 예약을 원하시나요, 아니면 시술에 대해 궁금한 점이 있으신가요?",
+          user: "입술 필러 옵션이랑 가격이 궁금해요.",
+          ai2: "좋은 선택이세요! 입술 필러는 1cc(1 시린지) 기준 $650부터 시작합니다. 전문의가 맞춤 계획을 세울 수 있도록 무료 상담을 예약해 드릴까요? 이번 주 목요일 오후 3시에 가능해요. 괜찮으실까요?"
+        }
+      },
+      sales: {
+        badge: "AI 세일즈 에이전트",
+        title: "세일즈 디렉터",
+        lead: "웹 문의, 부재중 전화, 중단된 채팅까지 — 모든 리드를 빠짐없이 팔로업하는 AI 클로저입니다. 가격 이의 제기를 처리하고, 긴급성을 만들며, 망설이는 잠재 고객을 ‘예약 확정’으로 전환합니다.",
+        cards: [
+          { title: "즉시 팔로업", desc: "신규 리드에 수초 내로 연락합니다 — 몇 시간이 아닙니다. ‘리드 대응 속도’는 메디스파 전환율의 1순위 변수입니다." },
+          { title: "모든 리드 자격 심사", desc: "관심 시술, 예산, 일정에 대한 핵심 질문을 진행합니다. 팀은 결심이 선 고객만 응대하면 됩니다." },
+          { title: "전환 인텔리전스", desc: "첫 접점부터 상담 예약까지 전 과정을 추적합니다. 상담당 비용, 전환율, 주요 이의 제기를 정확히 파악하세요." }
+        ],
+        sectionTitle: "“생각해볼게요”를 “예약해 주세요”로 바꿉니다.",
+        sectionBody: {
+          prefix: "대부분의 메디스파는 느린 팔로업 때문에 리드의 60%를 잃습니다. AI 세일즈 디렉터는 ",
+          strong: "모든 리드에 즉시 연락",
+          suffix: "하고, 가장 흔한 이의 제기(가격, 타이밍, 두려움)를 처리하며, 제한된 예약 가능 시간으로 긴급성을 만들어 상담 예약으로 이끕니다."
+        },
+        bullets: [
+          "웹폼, 부재중 통화, 채팅 리드 전부 팔로업",
+          "학습된 스크립트로 가격 이의 제기 대응",
+          "제한된 상담 슬롯을 기반으로 긴급성 조성",
+          "노쇼 및 취소 고객 재참여",
+          "감정 분석으로 고의도 리드를 팀에 알림"
+        ],
+        previewTitle: "리드 팔로업 미리보기",
+        preview: {
+          ai1: "안녕하세요, Sarah님! 웹사이트에서 보톡스 패키지를 보고 계신 것을 확인했어요. 궁금한 점을 도와드리고 무료 상담 예약도 잡아드릴 수 있어요. 잠시 시간 괜찮으실까요?",
+          user: "관심은 있는데 다른 곳보다 가격이 비싸 보이네요.",
+          ai2: "충분히 그렇게 느끼실 수 있어요 — 좋은 질문입니다. 저희 가격은 보드 인증 의료진의 전문성과 프리미엄 제품을 반영합니다. 많은 분들이 장기적으로는 더 만족스러운 결과로 비용을 절감한다고 말씀하세요. 이번 달 프로모션도 있는데요, 이번 주 무료 상담 시간을 미리 잡아드릴까요? 예약 가능 시간이 제한되어 있어요."
+        }
+      },
+      chatbot: {
+        badge: "AI 채팅 어시스턴트",
+        title: "휴먼 챗봇",
+        lead: "방문자가 직원과 대화하는 것처럼 자연스럽게 느끼는 웹사이트 채팅 어시스턴트. 시술, 가격, 전후 사진 등 귀사의 전체 지식 기반으로 학습되어 질문에 답하고 24/7 상담 예약까지 도와줍니다.",
+        cards: [
+          { title: "로봇 같지 않은 자연스러움", desc: "실제 메디스파 응대 데이터를 기반으로 자연스러운 대화 흐름을 제공합니다. 정형 답변, 막다른 대화 없이 따뜻하고 정확하게 안내합니다." },
+          { title: "24/7 상담 예약", desc: "리드 정보를 수집하고 웹사이트에서 바로 상담을 예약합니다 — 경쟁사의 채팅이 꺼져있는 새벽 2시에도요." },
+          { title: "귀사 지식 기반 학습", desc: "시술 메뉴, FAQ, 가격, 브랜드 가이드라인을 업로드하세요. 챗봇이 프론트 데스크 팀의 연장선이 됩니다." }
+        ],
+        sectionTitle: "웹사이트 최고의 전환 도구.",
+        sectionBody: {
+          strong: "메디스파 웹사이트 방문자의 68%는 아무 행동 없이 떠납니다.",
+          suffix: " 휴먼 챗봇은 방문 즉시 대화를 시작하고, 전문가 수준으로 시술 질문에 답하며, 자연스럽게 상담 예약까지 안내합니다 — 실제 직원과 대화하는 느낌 그대로요."
+        },
+        bullets: [
+          "페이지 행동에 따라 선제적으로 대화 시작",
+          "학습된 전문 지식으로 시술 질문 응답",
+          "이름, 이메일, 전화번호 및 관심 시술 수집",
+          "캘린더로 상담 예약을 직접 연결",
+          "음성/세일즈 에이전트와 모든 컨텍스트 동기화"
+        ],
+        previewTitle: "웹사이트 채팅 미리보기",
+        preview: {
+          ai1: "안녕하세요! 레이저 시술을 보고 계신 것 같아요. 가격이 궁금하신가요, 아니면 무료 상담 예약을 도와드릴까요?",
+          user: "IPL이랑 프락셔널 레이저는 뭐가 달라요? 다운타임은 얼마나 있나요?",
+          ai2: "좋은 질문이에요! IPL은 색소·홍조 개선에 효과적이고 다운타임이 거의 없거나 1-2일 정도입니다. 프락셔널 레이저는 더 깊게 작용해 피부결·흉터 개선에 좋고 회복은 보통 3-5일 정도예요. 목표에 따라 적합한 시술이 달라서, 의료진 상담을 통해 결정하시는 게 가장 좋아요. 상담 예약을 잡아드릴까요?"
+        }
+      }
     },
     hero: {
       status: "24/7 지능형 리셉션",
@@ -435,6 +663,11 @@ const translations = {
     pricing: {
         title: "단순하고 ROI가 확실한 요금제",
         subtitle: "대부분의 비즈니스가 도입 첫 주 안에 월 투자 비용을 회수합니다.",
+        mostPopular: "가장 인기",
+        chooseCta: "{plan} 선택",
+        enterpriseTitle: "엔터프라이즈 맞춤 구축이 필요하신가요?",
+        enterpriseDesc: "엄격한 규정 준수가 필요한 의료 그룹, 법률 네트워크, 대형 프랜차이즈를 위해 맞춤 AI 모델과 통합을 설계합니다.",
+        enterpriseCta: "엔터프라이즈 세일즈 문의",
         tiers: [
             { name: "리셉셔니스트", price: "$500", period: "/월", desc: "전화를 놓치지 않는 24/7 AI 리셉셔니스트.", features: ["AI 리셉셔니스트 (음성)", "무제한 수신 통화", "통화 녹음 및 전사", "예약 일정 관리", "비즈니스 지식 학습", "표준 지원"] },
             { name: "리셉셔니스트 + 채팅", price: "$750", period: "/월", desc: "음성 + 웹사이트 채팅으로 완벽한 커버리지.", features: ["리셉셔니스트 포함 전체", "AI 웹사이트 챗봇", "지식 기반 학습 채팅", "리드 캡처 및 자격 심사", "다국어 지원 (20개 이상)", "우선 지원"] },
@@ -512,6 +745,53 @@ const translations = {
         title: "비즈니스를 한 단계 격상시킬 준비가 되셨나요?",
         subtitle: "예약률을 크게 높이면서 주당 20시간 이상의 관리 시간을 절약하고 있는 업계 리더들과 함께하세요.",
         btnStrategy: "상담 예약하기"
+    },
+    legal: {
+      lastUpdated: "최종 업데이트: 2026년 2월",
+      privacy: {
+        title: "개인정보 처리방침",
+        s1Title: "1. 수집하는 정보",
+        s1Body: "회원가입, 데모 요청 또는 문의 시 귀하가 직접 제공하는 이름, 이메일, 전화번호, 사업 관련 정보 등을 수집합니다. 또한 귀사를 대신하여 AI 에이전트를 사용하는 과정에서 생성되는 통화 녹음, 전사(대화 기록), 분석 데이터도 수집합니다.",
+        s2Title: "2. 정보의 이용 목적",
+        s2Body: "수집한 정보는 서비스 제공 및 개선, 결제 처리, 커뮤니케이션, AI 기반 통화 분석 제공을 위해 사용됩니다. 통화 데이터는 대시보드에서 전사, 감정 분석, 대화 요약을 제공하기 위해 처리됩니다.",
+        s3Title: "3. 데이터 저장 및 보안",
+        s3Body: "모든 데이터는 전송 중(TLS 1.2+) 및 저장 시(AES-256) 암호화됩니다. 통화 녹음과 전사는 접근이 통제된 안전한 인프라에 저장됩니다. 정기 감사, 역할 기반 접근 제어, 침입 탐지 등 업계 표준 보안 관행을 적용합니다.",
+        s4Title: "4. HIPAA 준수",
+        s4Body: "헬스케어 및 메디스파 고객의 경우, JuniVo는 HIPAA 준수 비즈니스 어소시에이트(BA)로 운영됩니다. 비즈니스 어소시에이트 계약(BAA)을 체결하고 HIPAA 규정에서 요구하는 관리적·물리적·기술적 보호조치를 유지합니다.",
+        s5Title: "5. 데이터 공유",
+        s5Body: "당사는 귀하의 데이터를 판매하지 않습니다. 플랫폼 제공에 필요한 서비스 제공업체(클라우드 호스팅, 통신 사업자 등)와는 엄격한 데이터 처리 계약 하에 필요한 범위에서만 정보를 공유합니다. 법령상 요구되거나 법적 권리 보호를 위해 필요한 경우 데이터를 공개할 수 있습니다.",
+        s6Title: "6. 데이터 보관",
+        s6Body: "통화 녹음 및 전사는 구독 기간 동안 및 종료 후 30일 동안 보관됩니다. 귀하는 언제든지 당사에 연락하여 데이터 삭제를 요청할 수 있습니다. 계정 종료 시 모든 데이터는 90일 이내에 영구 삭제됩니다.",
+        s7Title: "7. 귀하의 권리",
+        s7Body: "귀하는 개인정보에 대한 열람, 정정 또는 삭제를 요청할 권리가 있습니다. GDPR 적용 대상자의 경우 데이터 이동권 및 처리 제한 등 추가 권리를 행사할 수 있습니다. 권리 행사를 위해 privacy@junivoai.com 으로 연락해 주세요.",
+        s8Title: "8. 문의",
+        s8BodyPrefix: "개인정보 관련 문의는 다음으로 연락해 주세요:",
+        s8Email: "privacy@junivoai.com"
+      },
+      terms: {
+        title: "이용 약관",
+        s1Title: "1. 약관의 동의",
+        s1Body: "JuniVo Ai 서비스를 이용하거나 접근함으로써 귀하는 본 이용 약관에 동의하고 이에 구속됩니다. 동의하지 않는 경우 플랫폼을 이용할 수 없습니다. 본 약관은 기업 및 그 권한 있는 대표자를 포함한 모든 사용자에게 적용됩니다.",
+        s2Title: "2. 서비스의 내용",
+        s2Body: "JuniVo Ai는 비즈니스 사용을 위해 설계된 AI 기반 음성 에이전트, 채팅 에이전트 및 대화 분석 도구를 제공합니다. 당사 플랫폼은 구독 기업을 대신하여 수신/발신 통화, 웹사이트 채팅, 일정 예약, 리드 자격 심사 및 통화 분석을 수행합니다.",
+        s3Title: "3. 계정 책임",
+        s3Body: "귀하는 계정 자격 증명의 보안을 유지하고 귀하의 계정에서 발생하는 모든 활동에 대해 책임을 집니다. 정확한 사업 및 연락처 정보를 제공하고 필요 시 업데이트하는 데 동의합니다. 서비스 이용을 위해서는 만 18세 이상이어야 합니다.",
+        s4Title: "4. 허용되는 사용",
+        s4Body: "불법 목적, 개인에 대한 괴롭힘 또는 기만, TCPA 또는 이에 준하는 규정을 위반하는 무단 로보콜, 관련 개인정보 보호법을 위반하는 데이터 처리 등에는 JuniVo를 사용할 수 없습니다. 당사는 본 약관을 위반하는 계정을 정지할 권리를 보유합니다.",
+        s5Title: "5. 결제 및 구독",
+        s5Body: "구독은 월 단위로 청구됩니다. 귀하는 등록된 결제 수단으로 모든 해당 요금을 청구하는 것에 동의합니다. 구독은 다음 결제 주기 이전에 취소하지 않는 한 자동 갱신됩니다. 환불은 당사의 재량에 따라 개별 사안별로 처리됩니다.",
+        s6Title: "6. 지식재산권",
+        s6Body: "플랫폼 기술, AI 모델, 브랜드, 콘텐츠 등은 JuniVo Ai의 재산입니다. 귀하는 귀사의 비즈니스 데이터, 통화 녹음 및 전사에 대한 소유권을 유지합니다. 귀하는 당사가 서비스 제공 및 개선을 위해서만 해당 데이터를 처리할 수 있도록 제한적 라이선스를 부여합니다.",
+        s7Title: "7. 책임의 제한",
+        s7Body: "JuniVo Ai는 \"있는 그대로\" 제공됩니다. 서비스 중단으로 인한 매출 손실, 부재중 통화, AI 에이전트 오류 등을 포함하여 플랫폼 사용으로 발생하는 간접적·부수적·결과적 손해에 대해 당사는 책임을 지지 않습니다. 당사의 총 책임은 청구 발생 전 12개월 동안 귀하가 지불한 수수료를 초과하지 않습니다.",
+        s8Title: "8. 해지",
+        s8Body: "어느 당사자든 언제든지 해지할 수 있습니다. 해지 시 플랫폼 접근 권한은 종료되며, 법령상 보관 의무가 없는 한 데이터는 90일 이내에 삭제됩니다. 당사는 본 약관을 위반하는 계정을 즉시 해지할 수 있습니다.",
+        s9Title: "9. 준거법",
+        s9Body: "본 약관은 미국 캘리포니아주 법률의 적용을 받습니다. 모든 분쟁은 캘리포니아주 로스앤젤레스 카운티에서 구속력 있는 중재를 통해 해결됩니다.",
+        s10Title: "10. 문의",
+        s10BodyPrefix: "본 약관에 대한 문의는 다음으로 연락해 주세요:",
+        s10Email: "legal@junivoai.com"
+      }
     },
     footer: {
         desc: "하이엔드 서비스 비즈니스를 위한 최고의 자율 프론트 오피스. 우아하게 리드를 포착, 자격 심사, 마감하세요.",
@@ -977,206 +1257,232 @@ const ROICalculator = ({ t }) => {
 
 // --- Product Pages ---
 
-const ReceptionistPage = ({ t }) => (
-  <div className="pt-32 pb-20 px-6">
-    <div className="max-w-7xl mx-auto">
-      <div className="text-center mb-20">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-xs font-bold text-blue-700 mb-6 uppercase tracking-wider">
-          <Phone size={12} /> AI Voice Agent
+const ReceptionistPage = ({ t }) => {
+  const cards = t.platformPages.receptionist.cards || [];
+  const icons = [Phone, Calendar, Globe];
+
+  return (
+    <div className="pt-32 pb-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-xs font-bold text-blue-700 mb-6 uppercase tracking-wider">
+            <Phone size={12} /> {t.platformPages.receptionist.badge}
+          </div>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight">{t.platformPages.receptionist.title}</h1>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">{t.platformPages.receptionist.lead}</p>
         </div>
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight">The AI Receptionist</h1>
-        <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">Your 24/7 front desk that never calls in sick. Answers every call with a custom voice trained on your med spa — books consultations, handles treatment questions, and never puts a prospect on hold.</p>
-      </div>
 
-      <div className="grid md:grid-cols-3 gap-8 mb-20">
-        {[
-          { icon: Phone, title: "Every Call Answered", desc: "No more voicemail. No more missed consultations. Your AI receptionist picks up instantly — nights, weekends, and holidays." },
-          { icon: Calendar, title: "Books to Your Calendar", desc: "Qualifies callers by treatment interest, checks availability, and books consultations directly to your calendar in real time." },
-          { icon: Globe, title: "20+ Languages", desc: "Serves every patient demographic fluently. Detects language automatically and switches mid-conversation without missing a beat." }
-        ].map((feature, i) => (
-          <div key={i} className="bg-white border border-slate-200 p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
-              <feature.icon size={28} />
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
+          {icons.map((Icon, i) => (
+            <div key={i} className="bg-white border border-slate-200 p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
+                <Icon size={28} />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-slate-900">{cards[i]?.title}</h3>
+              <p className="text-slate-600 leading-relaxed">{cards[i]?.desc}</p>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">{feature.title}</h3>
-            <p className="text-slate-600 leading-relaxed">{feature.desc}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-blue-50/50 to-transparent pointer-events-none"></div>
-        <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
-          <div>
-            <h2 className="text-3xl font-bold mb-6 text-slate-900">Sounds Human. Thinks Like Your Best Employee.</h2>
-            <p className="text-slate-600 mb-8 leading-relaxed text-lg">
-              Your AI receptionist is trained on your <strong>treatment menu, pricing, pre/post-care instructions, and brand voice</strong>. When a prospect calls asking about Botox pricing or filler packages, the AI responds with the same warmth and knowledge as your top front desk coordinator.
-            </p>
-            <ul className="space-y-5">
-              {["Custom voice that matches your brand personality", "Trained on your exact treatments, pricing & policies", "Handles scheduling, rescheduling & cancellations", "Warm handoff to your team for complex cases", "Every call recorded, transcribed & analyzed by AI"].map((item, i) => (
-                <li key={i} className="flex items-center gap-4">
-                  <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600"><CheckCircle2 size={18} /></div>
-                  <span className="text-slate-700 font-medium">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-sm">
-            <div className="text-slate-500 mb-6 font-semibold uppercase tracking-wider text-xs">Live Call Preview</div>
-            <div className="space-y-4 text-sm">
-              <div className="flex gap-3">
-                <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
-                <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">Thank you for calling Glow Aesthetics! Are you looking to book a consultation, or do you have questions about a treatment?</div>
-              </div>
-              <div className="flex gap-3 flex-row-reverse">
-                <div className="w-7 h-7 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold shrink-0">P</div>
-                <div className="bg-blue-600 text-white p-3 rounded-2xl rounded-tr-sm">I want to learn more about your lip filler options and pricing.</div>
-              </div>
-              <div className="flex gap-3">
-                <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
-                <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">Great choice! Our lip filler treatments start at $650 per syringe. I'd love to book you a free consultation with one of our providers — they'll create a personalized treatment plan. I have availability this Thursday at 3 PM. Would that work?</div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
-      </div>
-    </div>
-  </div>
-);
 
-const SalesAgentPage = ({ t }) => (
-  <div className="pt-32 pb-20 px-6">
-    <div className="max-w-7xl mx-auto">
-      <div className="text-center mb-20">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 border border-teal-100 text-xs font-bold text-teal-700 mb-6 uppercase tracking-wider">
-          <Zap size={12} /> AI Sales Agent
-        </div>
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight">The Sales Director</h1>
-        <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">An AI closer that follows up on every single lead — web inquiries, missed calls, abandoned chats. It handles pricing objections, creates urgency, and converts hesitant prospects into committed consultations.</p>
-      </div>
-
-      <div className="grid md:grid-cols-3 gap-8 mb-20">
-        {[
-          { icon: Zap, title: "Instant Follow-up", desc: "Contacts every new lead within seconds — not hours. Speed-to-lead is the #1 predictor of med spa conversion rates." },
-          { icon: UserCheck, title: "Qualifies Every Lead", desc: "Asks the right questions about treatment interest, budget, and timeline. Your team only talks to prospects ready to commit." },
-          { icon: BarChart3, title: "Conversion Intelligence", desc: "Tracks every lead from first touch to booked consultation. Know your cost-per-consult, conversion rate, and top objections." }
-        ].map((feature, i) => (
-          <div key={i} className="bg-white border border-slate-200 p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center mb-6 text-teal-600">
-              <feature.icon size={28} />
+        <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+          <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-blue-50/50 to-transparent pointer-events-none"></div>
+          <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-slate-900">{t.platformPages.receptionist.sectionTitle}</h2>
+              <p className="text-slate-600 mb-8 leading-relaxed text-lg">
+                {t.platformPages.receptionist.sectionBody.prefix}
+                <strong>{t.platformPages.receptionist.sectionBody.strong}</strong>
+                {t.platformPages.receptionist.sectionBody.suffix}
+              </p>
+              <ul className="space-y-5">
+                {t.platformPages.receptionist.bullets.map((item, i) => (
+                  <li key={i} className="flex items-center gap-4">
+                    <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+                      <CheckCircle2 size={18} />
+                    </div>
+                    <span className="text-slate-700 font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">{feature.title}</h3>
-            <p className="text-slate-600 leading-relaxed">{feature.desc}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-teal-50/50 to-transparent pointer-events-none"></div>
-        <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
-          <div>
-            <h2 className="text-3xl font-bold mb-6 text-slate-900">Turns "I'll Think About It" Into "Book Me In."</h2>
-            <p className="text-slate-600 mb-8 leading-relaxed text-lg">
-              Most med spas lose 60% of leads to slow follow-up. Your AI Sales Director <strong>contacts every lead instantly</strong>, handles the most common objections (pricing, timing, fear), and creates urgency around limited availability to drive consultation bookings.
-            </p>
-            <ul className="space-y-5">
-              {["Follows up on every web form, missed call & chat lead", "Overcomes pricing objections with trained scripts", "Creates urgency around limited consultation slots", "Re-engages no-shows and cancelled appointments", "Sentiment analysis flags high-intent leads for your team"].map((item, i) => (
-                <li key={i} className="flex items-center gap-4">
-                  <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600"><CheckCircle2 size={18} /></div>
-                  <span className="text-slate-700 font-medium">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-sm">
-            <div className="text-slate-500 mb-6 font-semibold uppercase tracking-wider text-xs">Lead Follow-up Preview</div>
-            <div className="space-y-4 text-sm">
-              <div className="flex gap-3">
-                <div className="w-7 h-7 rounded-full bg-teal-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
-                <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">Hi Sarah! I noticed you were looking at our Botox packages on our website. I'd love to help answer any questions and get you booked for a free consultation. Do you have a few minutes?</div>
-              </div>
-              <div className="flex gap-3 flex-row-reverse">
-                <div className="w-7 h-7 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold shrink-0">S</div>
-                <div className="bg-teal-600 text-white p-3 rounded-2xl rounded-tr-sm">I'm interested but the pricing seems high compared to other places.</div>
-              </div>
-              <div className="flex gap-3">
-                <div className="w-7 h-7 rounded-full bg-teal-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
-                <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">I completely understand — that's a great question. Our pricing reflects the expertise of our board-certified providers and premium products. Many patients actually save money long-term with our approach. We have a special this month — would you like me to reserve a consultation spot this week? Availability is limited.</div>
+            <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-sm">
+              <div className="text-slate-500 mb-6 font-semibold uppercase tracking-wider text-xs">{t.platformPages.receptionist.previewTitle}</div>
+              <div className="space-y-4 text-sm">
+                <div className="flex gap-3">
+                  <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
+                  <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">
+                    {t.platformPages.receptionist.preview.ai1}
+                  </div>
+                </div>
+                <div className="flex gap-3 flex-row-reverse">
+                  <div className="w-7 h-7 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold shrink-0">P</div>
+                  <div className="bg-blue-600 text-white p-3 rounded-2xl rounded-tr-sm">{t.platformPages.receptionist.preview.user}</div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
+                  <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">
+                    {t.platformPages.receptionist.preview.ai2}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
-const ChatbotPage = ({ t }) => (
-  <div className="pt-32 pb-20 px-6">
-    <div className="max-w-7xl mx-auto">
-      <div className="text-center mb-20">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-xs font-bold text-indigo-700 mb-6 uppercase tracking-wider">
-          <MessageSquare size={12} /> AI Chat Assistant
+const SalesAgentPage = ({ t }) => {
+  const cards = t.platformPages.sales.cards || [];
+  const icons = [Zap, UserCheck, BarChart3];
+
+  return (
+    <div className="pt-32 pb-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-50 border border-teal-100 text-xs font-bold text-teal-700 mb-6 uppercase tracking-wider">
+            <Zap size={12} /> {t.platformPages.sales.badge}
+          </div>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight">{t.platformPages.sales.title}</h1>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">{t.platformPages.sales.lead}</p>
         </div>
-        <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight">The Human Chatbot</h1>
-        <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">A website chat assistant so natural, visitors think they're talking to your staff. Trained on your entire knowledge base — treatments, pricing, before/afters — it answers questions and books consultations 24/7.</p>
-      </div>
 
-      <div className="grid md:grid-cols-3 gap-8 mb-20">
-        {[
-          { icon: MessageSquare, title: "Feels Human, Not Robotic", desc: "Natural conversation flow trained on real med spa interactions. No canned responses, no dead ends — just helpful, warm dialogue." },
-          { icon: Calendar, title: "Books Consultations 24/7", desc: "Captures lead information and books consultations directly from your website — even at 2 AM when your competitor's chat is offline." },
-          { icon: Cpu, title: "Trained on Your Knowledge", desc: "Upload your treatment menu, FAQs, pricing, and brand guidelines. The chatbot becomes an extension of your front desk team." }
-        ].map((feature, i) => (
-          <div key={i} className="bg-white border border-slate-200 p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 text-indigo-600">
-              <feature.icon size={28} />
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
+          {icons.map((Icon, i) => (
+            <div key={i} className="bg-white border border-slate-200 p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center mb-6 text-teal-600">
+                <Icon size={28} />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-slate-900">{cards[i]?.title}</h3>
+              <p className="text-slate-600 leading-relaxed">{cards[i]?.desc}</p>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-slate-900">{feature.title}</h3>
-            <p className="text-slate-600 leading-relaxed">{feature.desc}</p>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
-        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-indigo-50/50 to-transparent pointer-events-none"></div>
-        <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
-          <div>
-            <h2 className="text-3xl font-bold mb-6 text-slate-900">Your Website's Best Conversion Tool.</h2>
-            <p className="text-slate-600 mb-8 leading-relaxed text-lg">
-              <strong>68% of med spa website visitors leave without taking action.</strong> The Human Chatbot engages visitors the moment they land, answers their treatment questions with expert knowledge, and guides them to a booked consultation — all while feeling like a real conversation with your staff.
-            </p>
-            <ul className="space-y-5">
-              {["Engages visitors proactively based on page behavior", "Answers treatment questions with trained expertise", "Captures name, email, phone & treatment interest", "Books consultations directly to your calendar", "Syncs all context with your voice & sales agents"].map((item, i) => (
-                <li key={i} className="flex items-center gap-4">
-                  <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600"><CheckCircle2 size={18} /></div>
-                  <span className="text-slate-700 font-medium">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-sm">
-            <div className="text-slate-500 mb-6 font-semibold uppercase tracking-wider text-xs">Website Chat Preview</div>
-            <div className="space-y-4 text-sm">
-              <div className="flex gap-3">
-                <div className="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
-                <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">Hi there! I see you're looking at our laser treatments. Would you like to know more about pricing, or are you ready to book a free consultation?</div>
-              </div>
-              <div className="flex gap-3 flex-row-reverse">
-                <div className="w-7 h-7 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold shrink-0">V</div>
-                <div className="bg-indigo-600 text-white p-3 rounded-2xl rounded-tr-sm">What's the difference between IPL and fractional laser? And how much downtime?</div>
-              </div>
-              <div className="flex gap-3">
-                <div className="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
-                <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">Great question! IPL targets pigmentation and redness with minimal downtime (1-2 days), while fractional laser goes deeper for texture and scarring with 3-5 days of recovery. Both get amazing results — a consultation with our provider will help determine which is best for your goals. Want me to book one for you?</div>
+        <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+          <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-teal-50/50 to-transparent pointer-events-none"></div>
+          <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-slate-900">{t.platformPages.sales.sectionTitle}</h2>
+              <p className="text-slate-600 mb-8 leading-relaxed text-lg">
+                {t.platformPages.sales.sectionBody.prefix}
+                <strong>{t.platformPages.sales.sectionBody.strong}</strong>
+                {t.platformPages.sales.sectionBody.suffix}
+              </p>
+              <ul className="space-y-5">
+                {t.platformPages.sales.bullets.map((item, i) => (
+                  <li key={i} className="flex items-center gap-4">
+                    <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+                      <CheckCircle2 size={18} />
+                    </div>
+                    <span className="text-slate-700 font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-sm">
+              <div className="text-slate-500 mb-6 font-semibold uppercase tracking-wider text-xs">{t.platformPages.sales.previewTitle}</div>
+              <div className="space-y-4 text-sm">
+                <div className="flex gap-3">
+                  <div className="w-7 h-7 rounded-full bg-teal-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
+                  <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">
+                    {t.platformPages.sales.preview.ai1}
+                  </div>
+                </div>
+                <div className="flex gap-3 flex-row-reverse">
+                  <div className="w-7 h-7 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold shrink-0">S</div>
+                  <div className="bg-teal-600 text-white p-3 rounded-2xl rounded-tr-sm">{t.platformPages.sales.preview.user}</div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="w-7 h-7 rounded-full bg-teal-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
+                  <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">
+                    {t.platformPages.sales.preview.ai2}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
+
+const ChatbotPage = ({ t }) => {
+  const cards = t.platformPages.chatbot.cards || [];
+  const icons = [MessageSquare, Calendar, Cpu];
+
+  return (
+    <div className="pt-32 pb-20 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-xs font-bold text-indigo-700 mb-6 uppercase tracking-wider">
+            <MessageSquare size={12} /> {t.platformPages.chatbot.badge}
+          </div>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 text-slate-900 tracking-tight">{t.platformPages.chatbot.title}</h1>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">{t.platformPages.chatbot.lead}</p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-20">
+          {icons.map((Icon, i) => (
+            <div key={i} className="bg-white border border-slate-200 p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6 text-indigo-600">
+                <Icon size={28} />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-slate-900">{cards[i]?.title}</h3>
+              <p className="text-slate-600 leading-relaxed">{cards[i]?.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+          <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-b from-indigo-50/50 to-transparent pointer-events-none"></div>
+          <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+              <h2 className="text-3xl font-bold mb-6 text-slate-900">{t.platformPages.chatbot.sectionTitle}</h2>
+              <p className="text-slate-600 mb-8 leading-relaxed text-lg">
+                <strong>{t.platformPages.chatbot.sectionBody.strong}</strong>
+                {t.platformPages.chatbot.sectionBody.suffix}
+              </p>
+              <ul className="space-y-5">
+                {t.platformPages.chatbot.bullets.map((item, i) => (
+                  <li key={i} className="flex items-center gap-4">
+                    <div className="w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
+                      <CheckCircle2 size={18} />
+                    </div>
+                    <span className="text-slate-700 font-medium">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-slate-50 rounded-2xl border border-slate-200 p-8 shadow-sm">
+              <div className="text-slate-500 mb-6 font-semibold uppercase tracking-wider text-xs">{t.platformPages.chatbot.previewTitle}</div>
+              <div className="space-y-4 text-sm">
+                <div className="flex gap-3">
+                  <div className="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
+                  <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">
+                    {t.platformPages.chatbot.preview.ai1}
+                  </div>
+                </div>
+                <div className="flex gap-3 flex-row-reverse">
+                  <div className="w-7 h-7 rounded-full bg-slate-200 flex items-center justify-center text-slate-600 text-xs font-bold shrink-0">V</div>
+                  <div className="bg-indigo-600 text-white p-3 rounded-2xl rounded-tr-sm">{t.platformPages.chatbot.preview.user}</div>
+                </div>
+                <div className="flex gap-3">
+                  <div className="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs font-bold shrink-0">AI</div>
+                  <div className="bg-white border border-slate-100 p-3 rounded-2xl rounded-tl-sm text-slate-700 shadow-sm">
+                    {t.platformPages.chatbot.preview.ai2}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 // --- Page Components ---
 
@@ -1408,7 +1714,7 @@ const PricingPage = ({ t }) => (
                     >
                         {i === 1 && (
                             <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-600 text-white text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-wider shadow-sm">
-                                Most Popular
+                                {t.pricing.mostPopular}
                             </div>
                         )}
                         <h3 className="text-2xl font-bold mb-3 text-slate-900">{tier.name}</h3>
@@ -1432,7 +1738,7 @@ const PricingPage = ({ t }) => (
                             ? 'bg-blue-600 hover:bg-blue-700 text-white' 
                             : 'bg-white border border-slate-300 hover:bg-slate-50 text-slate-900'
                         }`}>
-                            Choose {tier.name}
+                            {t.pricing.chooseCta.replace('{plan}', tier.name)}
                         </button>
                     </div>
                 ))}
@@ -1442,104 +1748,116 @@ const PricingPage = ({ t }) => (
                 <div className="w-16 h-16 bg-white border border-slate-200 rounded-full flex items-center justify-center mx-auto mb-6 text-slate-600 shadow-sm">
                     <Building size={24} />
                 </div>
-                <h4 className="text-2xl font-bold mb-4 text-slate-900">Need a Custom Enterprise Build?</h4>
-                <p className="text-slate-600 mb-8 text-lg">We architect custom AI models and integrations for high-compliance medical groups, legal networks, and large franchises.</p>
+                <h4 className="text-2xl font-bold mb-4 text-slate-900">{t.pricing.enterpriseTitle}</h4>
+                <p className="text-slate-600 mb-8 text-lg">{t.pricing.enterpriseDesc}</p>
                 <button className="text-blue-600 font-bold hover:text-blue-800 flex items-center gap-2 mx-auto bg-blue-50 px-6 py-3 rounded-full transition-colors">
-                    Contact Enterprise Sales <ArrowRight size={18} />
+                    {t.pricing.enterpriseCta} <ArrowRight size={18} />
                 </button>
             </div>
         </div>
     </div>
 );
 
-const PrivacyPage = () => (
+const PrivacyPage = ({ t }) => (
   <div className="pt-32 pb-20 px-6">
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-4xl font-extrabold mb-4 text-slate-900">Privacy Policy</h1>
-      <p className="text-slate-500 mb-10 text-sm">Last updated: February 2026</p>
+      <h1 className="text-4xl font-extrabold mb-4 text-slate-900">{t.legal.privacy.title}</h1>
+      <p className="text-slate-500 mb-10 text-sm">{t.legal.lastUpdated}</p>
       <div className="prose prose-slate max-w-none space-y-8 text-slate-700 leading-relaxed">
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">1. Information We Collect</h2>
-          <p>We collect information you provide directly, including name, email, phone number, and business details when you sign up, request a demo, or contact us. We also collect call recordings, transcripts, and analytics data generated through the use of our AI agents on your behalf.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.privacy.s1Title}</h2>
+          <p>{t.legal.privacy.s1Body}</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">2. How We Use Your Information</h2>
-          <p>We use your information to provide and improve our services, process transactions, communicate with you, and generate AI-powered call analytics. Call data is processed to deliver transcripts, sentiment analysis, and conversation summaries to your dashboard.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.privacy.s2Title}</h2>
+          <p>{t.legal.privacy.s2Body}</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">3. Data Storage & Security</h2>
-          <p>All data is encrypted in transit (TLS 1.2+) and at rest (AES-256). Call recordings and transcripts are stored on secure, access-controlled infrastructure. We implement industry-standard security practices including regular audits, role-based access controls, and intrusion detection.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.privacy.s3Title}</h2>
+          <p>{t.legal.privacy.s3Body}</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">4. HIPAA Compliance</h2>
-          <p>For healthcare and med spa clients, JuniVo operates as a HIPAA-compliant Business Associate. We execute Business Associate Agreements (BAAs) and maintain administrative, physical, and technical safeguards required under HIPAA regulations.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.privacy.s4Title}</h2>
+          <p>{t.legal.privacy.s4Body}</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">5. Data Sharing</h2>
-          <p>We do not sell your data. We share information only with service providers necessary to deliver our platform (cloud hosting, telephony providers) under strict data processing agreements. We may disclose data if required by law or to protect our legal rights.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.privacy.s5Title}</h2>
+          <p>{t.legal.privacy.s5Body}</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">6. Data Retention</h2>
-          <p>Call recordings and transcripts are retained for the duration of your subscription plus 30 days. You may request deletion of your data at any time by contacting us. Upon account termination, all data is permanently deleted within 90 days.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.privacy.s6Title}</h2>
+          <p>{t.legal.privacy.s6Body}</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">7. Your Rights</h2>
-          <p>You have the right to access, correct, or delete your personal data. For GDPR-covered individuals, you may also exercise rights to data portability and restriction of processing. Contact us at privacy@junivoai.com to exercise any of these rights.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.privacy.s7Title}</h2>
+          <p>{t.legal.privacy.s7Body}</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">8. Contact</h2>
-          <p>For privacy-related inquiries, contact us at <a href="mailto:privacy@junivoai.com" className="text-blue-600 hover:underline">privacy@junivoai.com</a>.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.privacy.s8Title}</h2>
+          <p>
+            {t.legal.privacy.s8BodyPrefix}{' '}
+            <a href={`mailto:${t.legal.privacy.s8Email}`} className="text-blue-600 hover:underline">
+              {t.legal.privacy.s8Email}
+            </a>
+            .
+          </p>
         </section>
       </div>
     </div>
   </div>
 );
 
-const TermsPage = () => (
+const TermsPage = ({ t }) => (
   <div className="pt-32 pb-20 px-6">
     <div className="max-w-4xl mx-auto">
-      <h1 className="text-4xl font-extrabold mb-4 text-slate-900">Terms of Service</h1>
-      <p className="text-slate-500 mb-10 text-sm">Last updated: February 2026</p>
+      <h1 className="text-4xl font-extrabold mb-4 text-slate-900">{t.legal.terms.title}</h1>
+      <p className="text-slate-500 mb-10 text-sm">{t.legal.lastUpdated}</p>
       <div className="prose prose-slate max-w-none space-y-8 text-slate-700 leading-relaxed">
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">1. Acceptance of Terms</h2>
-          <p>By accessing or using JuniVo Ai's services, you agree to be bound by these Terms of Service. If you do not agree, you may not use the platform. These terms apply to all users, including businesses and their authorized representatives.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.terms.s1Title}</h2>
+          <p>{t.legal.terms.s1Body}</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">2. Description of Service</h2>
-          <p>JuniVo Ai provides AI-powered voice agents, chat agents, and conversation analytics tools designed for business use. Our platform handles inbound/outbound calls, website chat, appointment scheduling, lead qualification, and call analysis on behalf of subscribing businesses.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.terms.s2Title}</h2>
+          <p>{t.legal.terms.s2Body}</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">3. Account Responsibilities</h2>
-          <p>You are responsible for maintaining the security of your account credentials and for all activities under your account. You agree to provide accurate business and contact information and to update it as needed. You must be at least 18 years old to use our services.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.terms.s3Title}</h2>
+          <p>{t.legal.terms.s3Body}</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">4. Acceptable Use</h2>
-          <p>You may not use JuniVo for any unlawful purpose, to harass or deceive individuals, to make unsolicited robocalls in violation of TCPA or equivalent regulations, or to process data in violation of applicable privacy laws. We reserve the right to suspend accounts that violate these terms.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.terms.s4Title}</h2>
+          <p>{t.legal.terms.s4Body}</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">5. Billing & Subscriptions</h2>
-          <p>Subscriptions are billed monthly. You authorize us to charge your payment method on file for all applicable fees. Subscriptions renew automatically unless cancelled before the next billing cycle. Refunds are handled on a case-by-case basis at our discretion.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.terms.s5Title}</h2>
+          <p>{t.legal.terms.s5Body}</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">6. Intellectual Property</h2>
-          <p>All platform technology, AI models, branding, and content are the property of JuniVo Ai. You retain ownership of your business data, call recordings, and transcripts. You grant us a limited license to process this data solely to provide and improve our services.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.terms.s6Title}</h2>
+          <p>{t.legal.terms.s6Body}</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">7. Limitation of Liability</h2>
-          <p>JuniVo Ai is provided "as is." We are not liable for indirect, incidental, or consequential damages arising from your use of the platform, including but not limited to lost revenue, missed calls due to service interruptions, or AI agent errors. Our total liability shall not exceed the fees paid by you in the 12 months preceding the claim.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.terms.s7Title}</h2>
+          <p>{t.legal.terms.s7Body}</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">8. Termination</h2>
-          <p>Either party may terminate at any time. Upon termination, your access to the platform will cease and your data will be deleted within 90 days, unless retention is required by law. We may immediately terminate accounts that violate these terms.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.terms.s8Title}</h2>
+          <p>{t.legal.terms.s8Body}</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">9. Governing Law</h2>
-          <p>These terms are governed by the laws of the State of California, United States. Any disputes shall be resolved through binding arbitration in Los Angeles County, California.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.terms.s9Title}</h2>
+          <p>{t.legal.terms.s9Body}</p>
         </section>
         <section>
-          <h2 className="text-2xl font-bold text-slate-900 mb-3">10. Contact</h2>
-          <p>For questions about these terms, contact us at <a href="mailto:legal@junivoai.com" className="text-blue-600 hover:underline">legal@junivoai.com</a>.</p>
+          <h2 className="text-2xl font-bold text-slate-900 mb-3">{t.legal.terms.s10Title}</h2>
+          <p>
+            {t.legal.terms.s10BodyPrefix}{' '}
+            <a href={`mailto:${t.legal.terms.s10Email}`} className="text-blue-600 hover:underline">
+              {t.legal.terms.s10Email}
+            </a>
+            .
+          </p>
         </section>
       </div>
     </div>
@@ -1708,8 +2026,8 @@ const App = () => {
           case 'chatbot': return <ChatbotPage t={t} />;
           case 'solutions': return <SolutionsPage t={t} />;
           case 'pricing': return <PricingPage t={t} />;
-          case 'privacy': return <PrivacyPage />;
-          case 'terms': return <TermsPage />;
+          case 'privacy': return <PrivacyPage t={t} />;
+          case 'terms': return <TermsPage t={t} />;
           default: return (
             <>
                 <HeroSection t={t} lang={lang} />
